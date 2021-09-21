@@ -25,13 +25,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             routeBasePath: "/",
             // Please change this to your repo.
             editUrl:
-              "https://github.com/facebook/docusaurus/edit/main/website/",
+              "https://github.com/deepak-kapoor/bitofbinary/edit/main/website/",
           },
           blog: {
             showReadingTime: true,
             // Please change this to your repo.
             editUrl:
-              "https://github.com/facebook/docusaurus/edit/main/website/blog/",
+              "https://github.com/deepak-kapoor/bitofbinary/edit/main/website/blog/",
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
