@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 (
   module.exports = {
     title: "Bit of Binary",
-    tagline: "My digital garden",
+    tagline: "Deepak's digital garden",
     url: "https://deepak-kapoor.github.io",
     baseUrl: "/",
     onBrokenLinks: "throw",
@@ -48,12 +48,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             src: "img/logo.svg",
           },
           items: [
-            // {
-            //   type: "doc",
-            //   docId: "intro",
-            //   position: "left",
-            //   label: "Tutorial",
-            // },
+            {
+              type: "doc",
+              docId: "intro",
+              position: "left",
+              label: "Notes",
+            },
             // { to: "/blog", label: "Blog", position: "left" },
             // {
             //   href: "https://github.com/facebook/docusaurus",
@@ -105,7 +105,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             //   ],
             // },
           ],
-          copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+          copyright: `Copyright © ${new Date().getFullYear()} Deepak. Built with Docusaurus.`,
         },
         prism: {
           theme: lightCodeTheme,
