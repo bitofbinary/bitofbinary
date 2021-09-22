@@ -3,8 +3,8 @@ sidebar_position: 1
 slug: /notes
 ---
 
-# bitofbinary.com
+# Notes
 
-This website is my **digital garden**.
+This is a collection of many of my notes.
 
-It is a brain dump of **my thoughts**.
+It is mostly a brain dump of **my thoughts**.
