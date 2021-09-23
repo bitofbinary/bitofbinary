@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "a409600a6f0f1c49",
+    "type": "split",
+    "children": [
+      {
+        "id": "d0eb6148a43a903a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "meta/1_landing_page.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a4441a53ce78eecf",
+    "type": "split",
+    "children": [
+      {
+        "id": "dee68468a89909f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5f57eaa163260a3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "10f7ece1fc9af51a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a542cd64c11a6889",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb513b75517bc90b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69dc6fedd0160747",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "meta/1_landing_page.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d0eb6148a43a903a",
+  "lastOpenFiles": [
+    "meta/1_landing_page.md",
+    "books/dark-emu.md",
+    "books/1_landing-page.md",
+    "daily-notes/2021-09-23.md",
+    "meta/Untitled.md",
+    "daily-notes/2021-09-22.md",
+    "daily-notes/Untitled.md"
+  ]
+}
