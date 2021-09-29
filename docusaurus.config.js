@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
   module.exports = {
     title: "Bit of Binary",
     tagline: "Deepak's digital garden",
-    url: "https://deepak-kapoor.github.io",
+    url: "https://bitofbinary.com",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -27,7 +27,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/docs/",
           },
           blog: {
-            showReadingTime: true,
+            path: "blog",
+            routeBasePath: "/stream",
+            showReadingTime: false,
             // Please change this to your repo.
             editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/blog/",
           },
@@ -52,9 +54,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               type: "doc",
               docId: "intro",
               position: "left",
-              label: "Notes",
+              label: "Garden",
             },
-            // { to: "/blog", label: "Blog", position: "left" },
+            { to: "/stream", label: "Stream", position: "left" },
             // {
             //   href: "https://github.com/facebook/docusaurus",
             //   label: "GitHub",
