@@ -24,14 +24,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             sidebarPath: require.resolve("./sidebars.js"),
             routeBasePath: "/",
             // Please change this to your repo.
-            editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/docs/",
+            // editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/docs/",
           },
           blog: {
             path: "blog",
             routeBasePath: "/stream",
             showReadingTime: false,
             // Please change this to your repo.
-            editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/blog/",
+            // editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/blog/",
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
@@ -46,7 +46,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
         navbar: {
           title: "Bit of Binary",
           logo: {
-            alt: "My Site Logo",
+            alt: "BitofBinary.com",
             src: "img/logo.svg",
           },
           items: [

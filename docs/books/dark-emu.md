@@ -4,10 +4,10 @@ Author: [Bruce Pascoe](https://www.goodreads.com/author/show/809165.Bruce_Pascoe
 
 Date Stamp: September 2021
 
-Aboriginal people who are natives of Australia have been on the continent for around sixty thousand years.
+## Key points
 
-Most of the recorded history (by British) mentions them as hunter gatherers. This book presents a different theory.
+The book is about natives of Australia also known as Aboriginals. It is a popular belief that Aboriginals were mostly hunter gatherers and lived a nomadic life. They did not have any engineering capabilities, never built houses, were not into agriculture and mostly did not do things that a civilized society would. This book challenges such beliefs and presents a different view based on documented observations by early Europeans and recent findings.
 
-### Similar books
+### Other books on Australian history
 
 - Commonwealth of Thieves
