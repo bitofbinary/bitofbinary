@@ -7,11 +7,8 @@
         "id": "d0eb6148a43a903a",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "antilibrary.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "antilibrary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

@@ -25,6 +25,25 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 
 </div>
 
+## Books I plan to read 
+
+<div class="book-list">
+
+- The People's Tycoon: Henry Ford and the American Century - Steven Watts
+- How to Measure Anything: Finding the Value of “Intangibles” in Business – Douglas W. Hubbard
+- The Soul of a Woman – Isabel Allende
+- Laziness Does Not Exist – Devon Price
+- His Truth Is Marching On: John Lewis and the Power of Hope – Jon Meacham
+- Candide – Voltaire
+- Mastermind – Maria Konnikova
+- The Confidence Game – Maria Konnikova
+- What to Expect When You’re Expecting Robots – Laura Major and Julie Shah
+- My Robot Gets Me – Carla Diana
+	
+	
+</div>
+
+
 ## Incomplete list of Books I have read
 
 ## History
