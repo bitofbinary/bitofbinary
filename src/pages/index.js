@@ -30,19 +30,6 @@ function Into() {
         developer.
       </p>
       <p>Writing code is my jam.</p>
-      <p>
-        Here you will find my{" "}
-        <a href="/garden">
-          <b>garden</b>
-        </a>{" "}
-        and
-        <a href="/stream">
-          <b> stream</b>
-        </a>
-      </p>
-      <p>
-        You can also checkout my <a href="/bookshelf">bookshelf</a>
-      </p>
     </div>
   );
 }
