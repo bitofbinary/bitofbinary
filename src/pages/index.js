@@ -32,7 +32,7 @@ function Into() {
       <p>Writing code is my jam.</p>
       <p>
         Here you will find my{" "}
-        <a href="/gardens">
+        <a href="/garden">
           <b>garden</b>
         </a>{" "}
         and
