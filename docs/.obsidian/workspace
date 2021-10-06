@@ -7,8 +7,11 @@
         "id": "d0eb6148a43a903a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "antilibrary.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "antilibrary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +88,15 @@
   },
   "active": "d0eb6148a43a903a",
   "lastOpenFiles": [
+    "antilibrary.md",
+    "intro.md",
+    "bookshelf.md",
+    "Untitled.md",
     "books/1_landing-page.md",
     "history/Earliest Art.md",
     "daily-notes/2021-09-24.md",
     "history/Untitled.md",
     "daily-notes/Untitled.md",
-    "meta/1_landing_page.md",
-    "books/dark-emu.md",
-    "daily-notes/2021-09-23.md",
-    "meta/Untitled.md",
-    "daily-notes/2021-09-22.md"
+    "meta/1_landing_page.md"
   ]
 }

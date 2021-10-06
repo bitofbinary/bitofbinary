@@ -39,6 +39,10 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+.markdown a {
+  background-color: #f0f8ff;
+}
+
 .book-list ul {
   list-style: none;
   padding: 0;
