@@ -20,12 +20,13 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 
 <div class="book-list">
 
+- ![](books/covers/deep-survival.jpg)<div>Deep Survival: Who Lives, Who Dies and Why by [Laurence Gonzales](https://www.goodreads.com/author/show/37584.Laurence_Gonzales)</div>
 - ![](books/covers/supermoney.jpg)<div>Supermoney by [Adam Smith](https://www.goodreads.com/author/show/5761714.George_Goodman)</div>
 - ![](books/covers/joys-of-compounding.jpg) <div>The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by [Gautam Baid](https://www.goodreads.com/author/show/18960770.Gautam_Baid)</div>
 
 </div>
 
-## Books I plan to read 
+## Books I plan to read
 
 <div class="book-list">
 
@@ -39,10 +40,8 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 - The Confidence Game – Maria Konnikova
 - What to Expect When You’re Expecting Robots – Laura Major and Julie Shah
 - My Robot Gets Me – Carla Diana
-	
-	
-</div>
 
+</div>
 
 ## Incomplete list of Books I have read
 
@@ -50,9 +49,6 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 
 <div class="book-list">
 
--  ![](books/covers/dark-emu.jpg) <div>[Dark Emu ](/books/dark-emu) by [Bruce Pascoe](https://www.goodreads.com/author/show/809165.Bruce_Pascoe)</div>
-
+- ![](books/covers/dark-emu.jpg) <div>[Dark Emu](/books/dark-emu) by [Bruce Pascoe](https://www.goodreads.com/author/show/809165.Bruce_Pascoe)</div>
 
 </div>
-
-

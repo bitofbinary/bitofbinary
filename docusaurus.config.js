@@ -57,6 +57,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               label: "Garden",
             },
             { to: "/stream", label: "Stream", position: "left" },
+            { to: "/about", label: "About", position: "right" },
             // {
             //   href: "https://github.com/facebook/docusaurus",
             //   label: "GitHub",
