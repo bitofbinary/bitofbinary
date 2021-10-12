@@ -16,6 +16,37 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 5. Biographies (Technically not a subject)
 6. Classics
 
+## My rating system
+
+<div class="rating-system">
+
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+Life changing
+
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+Excellent read
+
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+Good
+
+![](images/star-solid.svg)
+![](images/star-solid.svg)
+Acceptable
+
+![](images/star-solid.svg)
+Don't bother
+
+</div>
+
 ## Books I am reading
 
 <div class="book-list">
@@ -49,6 +80,6 @@ I enjoy reading books on anything and everything. Some of my favourite subjects 
 
 <div class="book-list">
 
-- ![](books/covers/dark-emu.jpg) <div>[Dark Emu](/books/dark-emu) by [Bruce Pascoe](https://www.goodreads.com/author/show/809165.Bruce_Pascoe)</div>
+- ![](books/covers/dark-emu.jpg) <div>[Dark Emu](/books/dark-emu) by [Bruce Pascoe](https://www.goodreads.com/author/show/809165.Bruce_Pascoe) <span class="stars">![](images/star-solid.svg)![](images/star-solid.svg)![](images/star-solid.svg)</span><p>This book presents a view that Australian Aborigines were more than hunter gatherers. They were skilled in agriculture, fishing, building homes for themselves and pretty much did all those things which are expected from a civilized society.</p></div>
 
 </div>

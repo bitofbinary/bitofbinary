@@ -21,7 +21,7 @@ function HomepageHeader() {
   );
 }
 
-function Into() {
+function Intro() {
   return (
     <div className={styles.heroBanner}>
       <h3>Who am I?</h3>
@@ -29,7 +29,10 @@ function Into() {
         I convert ideas into digital products using my skills as a software
         developer.
       </p>
-      <p>Writing code is my jam.</p>
+      <p>
+        This website is my <a href="/garden">Digital Garden</a> and{" "}
+        <a href="/stream">Stream</a>
+      </p>
     </div>
   );
 }
@@ -43,7 +46,7 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
-        <Into />
+        <Intro />
         {/* <HomepageFeatures /> */}
       </main>
     </Layout>

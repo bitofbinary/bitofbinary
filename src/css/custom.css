@@ -53,6 +53,22 @@ body {
   margin-bottom: 20px;
 }
 
+.book-list ul li .stars img {
+  width: 16px;
+  height: 16px;
+}
+
+.rating-system p {
+  display: flex;
+  align-items: center;
+}
+
+.rating-system img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
 .book-list ul li img {
   width: 100px;
   margin-right: 10px;
