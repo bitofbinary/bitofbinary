@@ -71,5 +71,6 @@ body {
 
 .book-list ul li img {
   width: 100px;
+  height: 150px;
   margin-right: 10px;
 }

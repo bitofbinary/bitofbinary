@@ -40,7 +40,7 @@ Good
 
 ![](images/star-solid.svg)
 ![](images/star-solid.svg)
-Acceptable
+Meh
 
 ![](images/star-solid.svg)
 Don't bother
