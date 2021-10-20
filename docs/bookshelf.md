@@ -31,7 +31,7 @@ Life changing
 ![](images/star-solid.svg)
 ![](images/star-solid.svg)
 ![](images/star-solid.svg)
-Excellent read
+Excellent
 
 ![](images/star-solid.svg)
 ![](images/star-solid.svg)
@@ -51,6 +51,7 @@ Don't bother
 
 <div class="book-list">
 
+- ![](books/covers/how-to-take-smart-notes.jpg)<div>How to Take Smart Notes by [Sönke Ahrens](https://www.goodreads.com/author/show/14876464.S_nke_Ahrens)</div>
 - ![](books/covers/deep-survival.jpg)<div>Deep Survival: Who Lives, Who Dies and Why by [Laurence Gonzales](https://www.goodreads.com/author/show/37584.Laurence_Gonzales)</div>
 - ![](books/covers/supermoney.jpg)<div>Supermoney by [Adam Smith](https://www.goodreads.com/author/show/5761714.George_Goodman)</div>
 - ![](books/covers/joys-of-compounding.jpg) <div>The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by [Gautam Baid](https://www.goodreads.com/author/show/18960770.Gautam_Baid)</div>
