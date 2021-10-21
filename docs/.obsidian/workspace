@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "technology/Fundamentals/arity.md",
+            "file": "0-Technology/Fundamentals/variadic-functions.md",
             "mode": "source"
           }
         }
@@ -48,8 +48,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "technology/Fundamentals/arity.md",
+                "file": "0-Technology/Fundamentals/variadic-functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +88,8 @@
   },
   "active": "d0eb6148a43a903a",
   "lastOpenFiles": [
-    "technology/Fundamentals/arity.md",
     "technology/Fundamentals/variadic-functions.md",
+    "technology/Fundamentals/arity.md",
     "antilibrary.md",
     "bookshelf.md",
     "intro.md",
