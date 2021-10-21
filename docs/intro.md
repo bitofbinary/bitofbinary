@@ -1,7 +1,6 @@
 ---
 sidebar_position: -1
 slug: /garden
-pagination_label: ""
 ---
 
 # Garden
