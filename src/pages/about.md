@@ -4,10 +4,18 @@ description: my hello page description
 hide_table_of_contents: true
 ---
 
-# About
+# About me
 
-In the early days of World Wide Web, there were these websites called portals. These portals on their homepage categorised information in broad topics. I got into the habit of randomly picking up a topic and browsing it for hours. I would discover things I did not know existed, find interesing places and learn from all the interesting web pages people were putting up. This started a journey of learning and increasing my knowledge about the world.
+Professionally, I am a software developer. I convert ideas into useable digital products. Over the years, I have worked with a range of technologies, enjoyed writing code in a variety of languages and mostly had a ball doing it.
 
-Another joyful habit I picked up in my early years was reading books on pretty much everything and anything that interests me.
+These days, I am focusing on **Golang**, **Typescript**, **React** and **AWS**.
 
-This website is a place where I try to write my sporadic thoughts as I try to figure [this](https://en.wikipedia.org/wiki/World) out.
+# About this website
+
+In the early days of World Wide Web, I was lucky enough to have access to a computer in my house. Connecting to Internet (via dial-up modem) was my goto activity. I got into the habit of randomly picking up a topic and exploring it for hours. I would discover things I did not know existed, find interesting places and learn from all the interesting web pages people were putting up. This started a journey of learning and increasing my knowledge about the world.
+
+Another joyful habit I picked up in my early years was [reading books](/bookshelf) on pretty much everything and anything that interests me.
+
+This website is a place where I try to write my [sporadic thoughts](/garden) as I try to figure [this](https://en.wikipedia.org/wiki/World) out. Here you will find a [digital garden](/garden) and a [stream](/stream).
+
+Thanks for visiting.
