@@ -4,6 +4,4 @@
 
 Author: [Laurence Gonzales](https://www.goodreads.com/author/show/37584.Laurence_Gonzales)
 
-Date Stamp: October 2021
-
 ## Key points

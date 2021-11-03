@@ -30,6 +30,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             path: "blog",
             routeBasePath: "/stream",
             showReadingTime: false,
+            blogTitle: "Stream",
             // Please change this to your repo.
             // editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/blog/",
           },
