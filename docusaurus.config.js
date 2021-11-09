@@ -31,6 +31,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             routeBasePath: "/stream",
             showReadingTime: false,
             blogTitle: "Stream",
+            feedOptions: {
+              type: "all",
+              description: "RSS/Atom feed of bitofbinary.com",
+              copyright: `Copyright © ${new Date().getFullYear()} Deepak.`,
+            },
             // Please change this to your repo.
             // editUrl: "https://github.com/deepak-kapoor/bitofbinary/edit/blog/",
           },
@@ -58,6 +63,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               label: "Garden",
             },
             { to: "/stream", label: "Stream", position: "left" },
+            { to: "/bookshelf", label: "Bookshelf", position: "left" },
+            { to: "/sites-i-like", label: "Sites I Like", position: "left" },
             { to: "/about", label: "About", position: "right" },
             // {
             //   href: "https://github.com/facebook/docusaurus",
