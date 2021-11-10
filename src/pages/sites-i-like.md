@@ -11,3 +11,8 @@ description: These are the sites I like visiting often
 ## Tech Blogs
 
 - [Dan Moore](https://www.mooreds.com/wordpress/)
+- [Christine Dodrill](https://christine.website/blog)
+
+## Investing
+
+- [Rational Walk](https://rationalwalk.com)

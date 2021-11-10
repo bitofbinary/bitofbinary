@@ -14,7 +14,8 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
         <p className="hero__subtitle">
-          Hi! I'm Deepak. Welcome to my online home
+          Online home of a programmer who likes learning about all things
+          interesting
         </p>
       </div>
     </header>
@@ -24,15 +25,31 @@ function HomepageHeader() {
 function Intro() {
   return (
     <div className={styles.heroBanner}>
-      <h3>Who am I?</h3>
       <p>
-        I convert ideas into digital products using my skills as a software
-        developer.
+        Welcome to the online home of a programmer who likes learning about all
+        things interesting.
       </p>
+      <h3>Hi! I'm Deepak</h3>
       <p>
         This website is my <a href="/garden">Digital Garden</a> and{" "}
         <a href="/stream">Stream</a>
       </p>
+      <div style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+        <hr />
+      </div>
+    </div>
+  );
+}
+
+function GardenLinks() {
+  return (
+    <div id="garden-links">
+      <div class="garden-link">
+        <a href="/technology/index">0-Technology</a>
+      </div>
+      <div class="garden-link">
+        <a href="/history-and-geography/index">9-History and Geography</a>
+      </div>
     </div>
   );
 }
@@ -44,10 +61,11 @@ export default function Home() {
       title={`Deepak's Digital Garden`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
       <main>
         <Intro />
         {/* <HomepageFeatures /> */}
+        <GardenLinks />
       </main>
     </Layout>
   );
