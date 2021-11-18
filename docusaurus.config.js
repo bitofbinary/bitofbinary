@@ -63,7 +63,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               label: "Garden",
             },
             { to: "/stream", label: "Stream", position: "left" },
-            { to: "/bookshelf", label: "Bookshelf", position: "left" },
             { to: "/sites-i-like", label: "Sites I Like", position: "left" },
             { to: "/about", label: "About", position: "right" },
             // {
