@@ -28,9 +28,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
           },
           blog: {
             path: "blog",
-            routeBasePath: "/stream",
+            routeBasePath: "/blog",
             showReadingTime: false,
-            blogTitle: "Stream",
+            blogTitle: "Blog",
             feedOptions: {
               type: "all",
               description: "RSS/Atom feed of bitofbinary.com",
@@ -56,13 +56,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             src: "img/logo.svg",
           },
           items: [
-            {
-              type: "doc",
-              docId: "intro",
-              position: "left",
-              label: "Garden",
-            },
-            { to: "/stream", label: "Stream", position: "left" },
+            { to: "/blog", label: "Blog", position: "left" },
             { to: "/sites-i-like", label: "Sites I Like", position: "left" },
             { to: "/about", label: "About", position: "right" },
             // {

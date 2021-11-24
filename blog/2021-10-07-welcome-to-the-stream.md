@@ -1,7 +1,0 @@
-# Welcome to The Stream
-
-This section of my website is called The Stream. Content here is presented chronologically. It is what you will know as a blog. I have only changed the name and called it The Stream.
-
-A stream is different from a [garden](/garden). Garden is a place where you are encouraged to wander as you like. Don't like the vegie patch, no problem, checkout the flower bed. That patch of dirt you see there, that's where I plan to plant some lilies. It is always changing and growing with the objective of maintaining the freshness all year around. In my garden I write content with the purpose of creating links to existing content.
-
-Stream on the other hand is where I post articles, updates, opinions etc. Content in the stream may become less useful as it gets olders. It is a log, a log on world wide web, a blog. Nah! It is a **stream**.

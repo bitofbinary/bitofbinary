@@ -65,7 +65,6 @@ export default function Home() {
       <main>
         <Intro />
         {/* <HomepageFeatures /> */}
-        <GardenLinks />
       </main>
     </Layout>
   );
