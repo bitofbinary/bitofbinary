@@ -25,18 +25,7 @@ function HomepageHeader() {
 function Intro() {
   return (
     <div className={styles.heroBanner}>
-      <p>
-        Welcome to the online home of a programmer who likes learning about all
-        things interesting.
-      </p>
       <h3>Hi! I'm Deepak</h3>
-      <p>
-        This website is my <a href="/garden">Digital Garden</a> and{" "}
-        <a href="/stream">Stream</a>
-      </p>
-      <div style={{ paddingLeft: "10%", paddingRight: "10%" }}>
-        <hr />
-      </div>
     </div>
   );
 }
