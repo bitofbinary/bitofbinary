@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 (
   module.exports = {
     title: "Bit of Binary",
-    tagline: "Deepak's digital garden",
+    tagline: "Deepak's Blog ",
     url: "https://bitofbinary.com",
     baseUrl: "/",
     onBrokenLinks: "throw",
