@@ -57,7 +57,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
           },
           items: [
             // { to: "/blog", label: "Blog", position: "left" },
-            { to: "/sites-i-like", label: "Sites I Like", position: "left" },
+            // { to: "/sites-i-like", label: "Sites I Like", position: "left" },
             { to: "/about", label: "About", position: "right" },
             // {
             //   href: "https://github.com/facebook/docusaurus",
