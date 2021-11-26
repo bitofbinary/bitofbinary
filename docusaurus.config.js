@@ -56,7 +56,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             src: "img/logo.svg",
           },
           items: [
-            { to: "/blog", label: "Blog", position: "left" },
+            // { to: "/blog", label: "Blog", position: "left" },
             { to: "/sites-i-like", label: "Sites I Like", position: "left" },
             { to: "/about", label: "About", position: "right" },
             // {
