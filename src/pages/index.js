@@ -26,6 +26,11 @@ function Intro() {
   return (
     <div className={styles.heroBanner}>
       <h3>Hi! I'm Deepak</h3>
+      <p>Welcome to my tech space</p>
+      <p>
+        Here you will find my <a href="/notes">notes</a> on programing and
+        related bits
+      </p>
     </div>
   );
 }

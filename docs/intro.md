@@ -1,8 +1,8 @@
 ---
 sidebar_position: -1
-slug: /garden
+slug: /notes
 ---
 
-# Garden
+# Notes
 
 This is a collection of many of my notes.
