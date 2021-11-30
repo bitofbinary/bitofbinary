@@ -25,7 +25,7 @@
   --ifm-code-font-size: 95%;
   /* --ifm-font-size-base: 18px; */
   --ifm-font-family-base: "Merriweather", Serif;
-  --ifm-font-color-base: rgb(58, 65, 69);
+  /* --ifm-font-color-base: rgb(58, 65, 69); */
 }
 
 .docusaurus-highlight-code-line {
@@ -45,6 +45,10 @@ body {
 
 main a {
   background-color: #f0f8ff;
+}
+
+html[data-theme="dark"] main a {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .markdown a {

@@ -2,19 +2,19 @@
 
 ### View V8 options
 
-```jsx
+```bash
 node --v8-options
 ```
 
 ### Check the syntax of a script
 
-```jsx
+```bash
 node --check index.js
 ```
 
 or
 
-```jsx
+```bash
 node -c index.js
 ```
 
@@ -26,7 +26,7 @@ node -c index.js
 
 A module can be preloaded with **—require option** or **-r** in short
 
-```jsx
+```bash
 node --require ./someModule.js myScript.js
 ```
 
@@ -36,6 +36,6 @@ Use **—stack-trace-limit option** which is a V8 option to increase the size of
 
 For example, the command below will increase the size of stack trace to 200
 
-```jsx
+```bash
 node --stack-trace-limit=200 myScript.js
 ```
