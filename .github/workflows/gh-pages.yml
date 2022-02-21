@@ -28,7 +28,7 @@ jobs:
         run: hugo --minify
 
       - name: Create cname keep_files
-        run: echo 'bitofbinary.com' > ./pubilc/CNAME
+        run: echo 'bitofbinary.com' > ./public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
