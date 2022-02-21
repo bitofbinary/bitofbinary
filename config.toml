@@ -1,5 +1,5 @@
 theme = "hugo-theme-console"
-baseURL = 'http://bitofbinary.com/'
+baseURL = 'https://bitofbinary.com/'
 languageCode = 'en-us'
 title = 'Bit of Binary'
 pygmentsUseClasses = true
