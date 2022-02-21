@@ -31,7 +31,8 @@ jobs:
           deploy_key: ${{ secrets.TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./public
-          allow_empty_commit: true
+          cname: bitofbinary.com
+          # allow_empty_commit: true
           # external_repository: deepak-kapoor/deepak-kapoor.github.io
           # publish_branch: master
           # personal_token: ${{secrets.TOKEN}}
