@@ -34,4 +34,4 @@ jobs:
           #   keep_files: true
           user_name: deepak-kapoor
           user_email: abc@example.com
-          publish_branch: master
+          publish_branch: gh-pages
