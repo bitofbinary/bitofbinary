@@ -28,12 +28,16 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/master'
         with:
-          external_repository: deepak-kapoor/deepak-kapoor.github.io
-          publish_branch: master
-          personal_token: ${{secrets.TOKEN}}
-          user_name: deepak-kapoor
-          user_email: deepak@example.com
+          deploy_key: ${{ secrets.TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./public
+          allow_empty_commit: true
+          # external_repository: deepak-kapoor/deepak-kapoor.github.io
+          # publish_branch: master
+          # personal_token: ${{secrets.TOKEN}}
+          # user_name: deepak-kapoor
+          # user_email: deepak@example.com
+          # publish_dir: ./public
           # github_token: ${{ secrets.TOKEN }}
           # external_repository: deepak-kapoor/deepak-kapoor.github.io
           # publish_dir: ./public
