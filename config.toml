@@ -1,0 +1,18 @@
+theme = "hugo-theme-console"
+baseURL = 'http://bitofbinary.com/'
+languageCode = 'en-us'
+title = 'Bit of Binary'
+pygmentsUseClasses = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    tabWidth = 4
