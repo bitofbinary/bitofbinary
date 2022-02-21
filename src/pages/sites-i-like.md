@@ -3,16 +3,8 @@ title: Sites I like
 description: These are the sites I like visiting often
 ---
 
-## Non-Tech Blogs
+These is a list of websites I like. Such a list in good old days of web (Dinosaur alert) would have been called a Blogroll.
 
-- [Melting Asphalt](https://meltingasphalt.com/)
-- [Ribbon Farm](https://www.ribbonfarm.com/)
-
-## Tech Blogs
-
-- [Dan Moore](https://www.mooreds.com/wordpress/)
 - [Christine Dodrill](https://christine.website/blog)
-
-## Investing
-
-- [Rational Walk](https://rationalwalk.com)
+- [Dan Moore](https://www.mooreds.com/wordpress/)
+- [Unix Sheikh](https://unixsheikh.com/index.html)
