@@ -21,16 +21,22 @@ jobs:
           hugo-version: "latest"
           # extended: true
 
+      - name: Clean public directory
+        run: rm -rf public
+
       - name: Build
         run: hugo --minify
+
+      - name: Create cname keep_files
+        run: echo 'bitofbinary.com' > pubilc/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.PERSONAL_TOKEN }}
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # publish_branch: gh-pages
           publish_dir: ./public
-          cname: bitofbinary.com
+          # cname: bitofbinary.com
           # allow_empty_commit: true
           # external_repository: deepak-kapoor/deepak-kapoor.github.io
           # publish_branch: master
