@@ -28,5 +28,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.TOKEN }}
+          personal_token: ${{ secrets.TOKEN }}
+          external_repository: deepak-kapoor/deepak-kapoor.github.io
           publish_dir: ./public
+          #   keep_files: true
+          user_name: deepak-kapoor
+          user_email: abc@example.com
+          publish_branch: master
