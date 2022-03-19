@@ -17,7 +17,7 @@ Recently, I made an executive decision of learning new things which are outside 
 3. Ruby and Ruby on Rails
 4. Python and Django
 
-I thought deep about this and decided that I should learn something which hopefully will more **fun** than others. Hence Ruby on Rails.
+I thought deep about this and decided that I should learn something which hopefully will be more **fun** than others. Hence Ruby on Rails.
 
 I am also trying something I have never done before i.e. write about what I learn. Sort of [Learn in Public](https://www.swyx.io/learn-in-public/). I plan to write unstructured posts about whatever I learn on this RoR journey.
 
