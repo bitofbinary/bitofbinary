@@ -1,7 +1,7 @@
 ---
 title: "Bundle Install Error Mac M1"
 date: 2022-03-19T13:13:06+11:00
-draft: true
+draft: false
 ---
 
 I am going through the excellent [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html) to start my learning journey.
