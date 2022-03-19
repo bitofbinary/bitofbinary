@@ -7,10 +7,10 @@ Hi! I'm Deepak.
 </p>
 <br/>
 
-<h1>Latest notes</h1>
+<h1>Latest posts</h1>
 
 <div class="posts-list">
-{{ with .Site.GetPage "/notes" }}
+{{ with .Site.GetPage "/posts" }}
     {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
         <div class="post">
             <p>
@@ -41,7 +41,7 @@ Hi! I'm Deepak.
 {{ end }}
 </div> -->
 
-<h1>Latest photos</h1>
+<!-- <h1>Latest photos</h1>
 
 <div class="image-grid">
 {{ with .Site.GetPage "/photos" }}
@@ -55,6 +55,6 @@ Hi! I'm Deepak.
         </a>
     {{ end }}
 {{ end }}
-</div>
+</div> -->
 
 {{ end }}
