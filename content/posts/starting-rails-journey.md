@@ -1,7 +1,7 @@
 ---
 title: "Starting Rails Journey"
 date: 2022-03-19T12:27:43+11:00
-draft: false
+draft: true
 ---
 
 I have been a professional programmer for more than two decades now. Most of my work has been around web development. I started by writing static websites then progressed to classic ASP. I worked with Coldfusion, ASP.NET Web Forms, ASP.NET MVC and in last five or so years, React.
