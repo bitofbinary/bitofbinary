@@ -19,7 +19,7 @@ That's what it was this time.
 The problem went away after specifying the correct architecture for bundle install.
 
 ```
-arch -arch arm64 bundle install
+arch -arm64 bundle install
 ```
 
 I now have all the required gems installed and I'm back on track.
