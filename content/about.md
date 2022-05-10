@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2022-05-10T16:42:03+11:00
-draft: true
+draft: false
 ---
 
 I’m on a lifelong journey of progressively trying to be less wrong.
