@@ -3,7 +3,10 @@ baseURL = 'https://bitofbinary.com/'
 languageCode = 'en-us'
 title = 'Bit of Binary'
 pygmentsUseClasses = true
-custom_css = ["css/styles.css"]
+
+[params]
+  customCSS = ["css/styles.css"]
+  syntaxCSS = ["css/syntax.css"]
 
 [markup]
   [markup.highlight]

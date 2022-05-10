@@ -1,0 +1,10 @@
+.book-cover {
+  width: 100px;
+  height: 150px;
+  margin-right: 1em;
+}
+
+.book-list-item {
+  display: flex;
+  margin-bottom: 3em;
+}

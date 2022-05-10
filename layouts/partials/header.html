@@ -1,5 +1,7 @@
 <!-- Keep - override to add code to <header /> tag -->
 
-<link rel="stylesheet" href="{{ "hugo-theme-console/css/styles.css" | absURL
-}}"> <link rel="stylesheet" href="{{ "hugo-theme-console/css/syntax.css" |
-absURL }}">
+{{ range .Site.Params.customCSS -}}
+<link rel="stylesheet" href="{{ . | absURL }}" />
+{{- end }} {{ range .Site.Params.syntaxCSS -}}
+<link rel="stylesheet" href="{{ . | absURL }}" />
+{{- end }}
