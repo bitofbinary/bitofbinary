@@ -10,7 +10,7 @@ Author: Conn Iggulden
 
 My rating: ★★★
 
-I got interested in Mongolian history and Genghis Khan after watching a brilliant series called Marco Polo on Netflix. After watching the series, I wanted to know more about Genghis Khan who was the founder of one of the greatest empires ever. I also wanted to be entertained so I picked up the historical fiction Conqueror series written by Conn Iggulden. This are my reflections on the first book in the series titled Wolf of the Plains.
+I got interested in Mongolian history and [Genghis Khan](https://en.wikipedia.org/wiki/Genghis_Khan) after watching a brilliant series called [Marco Polo](<https://en.wikipedia.org/wiki/Marco_Polo_(TV_series)>) on Netflix. After watching the series, I wanted to know more about Genghis Khan who was the founder of one of the greatest empires ever. I also wanted to be entertained so I picked up the historical fiction Conqueror series written by Conn Iggulden. This are my reflections on the first book in the series titled Wolf of the Plains.
 
 In the beginning was a tribe commanded by a powerful figure who seemed to have everything under control. Everything was going well until the turn of events which changed everything for the tribe and the leader’s family. A family found itself in the most difficult circumstances with one singular goal which was to survive.
 
