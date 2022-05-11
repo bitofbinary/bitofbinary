@@ -3,6 +3,7 @@ baseURL = 'https://bitofbinary.com/'
 languageCode = 'en-us'
 title = 'Bit of Binary'
 pygmentsUseClasses = true
+googleAnalytics = "UA-102351311-1"
 
 [taxonomies]
   category = "categories"
