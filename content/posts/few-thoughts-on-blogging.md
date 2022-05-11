@@ -1,6 +1,6 @@
 ---
 title: "Few Thoughts on Blogging"
-date: 2022-05-11T11:04:58+10:00
+date: 2022-05-01T11:04:58+10:00
 draft: false
 categories: [Meta]
 tags: [Blogging]

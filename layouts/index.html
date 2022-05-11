@@ -25,8 +25,25 @@ Hi! I'm Deepak.
 {{ end }}
 </div>
 
+<div>
+    <div>
+        <h1>Categories</h1>
+        <ul>
+        {{ range $key, $value := .Site.Taxonomies.categories }}
+            <li><a href="{{ "/categories/" }}{{ $key }}" style="text-transform: capitalize;">{{ $key }}</a> </li>
+        {{ end }} 
+        </ul>
+    </div>
 
-
+    <div>
+    <h1>Tags</h1>
+    <ul>
+    {{ range $key, $value := .Site.Taxonomies.tags }}
+        <li><a href="{{ "/tags/" }}{{ $key }}" style="text-transform: capitalize;">{{ $key }}</a> </li>
+    {{ end }}
+    </ul>
+    </div>
+</div>
 <!-- <h1>Latest posts</h1> -->
 
 <!-- <div class="posts-list">
