@@ -30,6 +30,10 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 ## Books I'm reading
 
 <div class="book-list-item">
+<img src="/images/covers/titan.jpg" alt="Titan" class="book-cover" />TITAN: Inside India’s Most Successful Consumer Brand by Vinay Kamath
+</div>
+
+<div class="book-list-item">
 <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />The Polymath: Unlocking the Power of Human Versatility by Waqas Ahmed
 </div>
 
