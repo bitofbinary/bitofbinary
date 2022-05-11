@@ -74,9 +74,9 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 ## 2021
 
 <div class="book-list-item">
-    <img src="/images/covers/wolf-of-the-plains.jpg" alt="Wolf of the Plains" class="book-cover" /><span><a href="/wolf-of-the-plains">Wolf of the Plains</a>&nbsp;by Conn Iggulden ★★★</span>
+    <img src="/images/covers/wolf-of-the-plains.jpg" alt="Wolf of the Plains" class="book-cover" /><span><a href="/posts/wolf-of-the-plains">Wolf of the Plains</a>&nbsp;by Conn Iggulden ★★★</span>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/dark-emu.jpg" alt="Dark Emu" class="book-cover" /><span><a href="/dark-emu">Dark Emu</a> by Bruce Pascoe ★★★</span>
+    <img src="/images/covers/dark-emu.jpg" alt="Dark Emu" class="book-cover" /><span><a href="/posts/dark-emu">Dark Emu</a> by Bruce Pascoe ★★★</span>
 </div>
