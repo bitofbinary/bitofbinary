@@ -12,6 +12,19 @@ googleAnalytics = "UA-102351311-1"
 [params]
   customCSS = ["css/styles.css"]
   syntaxCSS = ["css/syntax.css"]
+  [[params.navlinks]]
+    name = "About/"
+    url = "about/"
+
+  [[params.navlinks]]
+    name = "Blog/"
+    url = "posts/"
+
+  [[params.navlinks]]
+    name = "Books/"
+    url = "books/"
+
+
 
 [markup]
   [markup.highlight]
