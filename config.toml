@@ -4,6 +4,10 @@ languageCode = 'en-us'
 title = 'Bit of Binary'
 pygmentsUseClasses = true
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [params]
   customCSS = ["css/styles.css"]
   syntaxCSS = ["css/syntax.css"]
