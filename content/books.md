@@ -50,7 +50,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
   <img src="/images/covers/titan.jpg" alt="Titan" class="book-cover" />
   <div>
-    <span>TITAN: Inside India’s Most Successful Consumer Brand by Vinay Kamath</span>
+    <span>TITAN: Inside India’s Most Successful Consumer Brand by Vinay Kamath ★★★</span>
     <div>Date Finished: 2022 May 14</div>
   </div>
 </div>
