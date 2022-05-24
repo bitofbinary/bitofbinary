@@ -52,9 +52,6 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
   <div>
     <span>TITAN: Inside India’s Most Successful Consumer Brand by Vinay Kamath</span>
     <div>Date Finished: 2022 May 14</div>
-    <div>
-    My notes
-    </div>
   </div>
 </div>
 
