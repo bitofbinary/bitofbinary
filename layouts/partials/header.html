@@ -5,17 +5,3 @@
 {{- end }} {{ range .Site.Params.syntaxCSS -}}
 <link rel="stylesheet" href="{{ . | absURL }}" />
 {{- end }}
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=UA-102351311-1"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "UA-102351311-1");
-</script>

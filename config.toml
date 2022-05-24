@@ -1,9 +1,9 @@
 theme = "hugo-theme-console"
-baseURL = 'https://bitofbinary.com/'
+baseURL = 'https://deekap.com/'
 languageCode = 'en-us'
-title = 'Bit of Binary'
+title = 'deekap'
 pygmentsUseClasses = true
-googleAnalytics = "UA-102351311-1"
+googleAnalytics = ""
 
 [taxonomies]
   category = "categories"
@@ -21,7 +21,7 @@ googleAnalytics = "UA-102351311-1"
     url = "posts/"
 
   [[params.navlinks]]
-    name = "Books/"
+    name = "Bookshelf/"
     url = "books/"
 
 
