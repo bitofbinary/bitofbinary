@@ -23,3 +23,12 @@ blockquote:after {
 blockquote p {
   display: inline;
 }
+
+img {
+  width: auto;
+  height: auto;
+}
+
+code {
+  overflow-x: hidden !important;
+}
