@@ -30,5 +30,5 @@ img {
 }
 
 code {
-  overflow-x: hidden !important;
+  overflow-x: auto;
 }
