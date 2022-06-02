@@ -30,6 +30,10 @@ img {
   max-width: 100%;
 }
 
+pre {
+  overflow: auto;
+}
+
 code {
   overflow-x: auto;
 }
