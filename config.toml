@@ -24,7 +24,6 @@ googleAnalytics = ""
     name = "Bookshelf/"
     url = "books/"
 
-
 [markup]
   [markup.highlight]
     anchorLineNos = false
