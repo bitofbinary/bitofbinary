@@ -182,15 +182,15 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Mastery" class="book-cover" />
+    <img src="/images/covers/mastery.jpg" alt="Mastery" class="book-cover" />
     <div>
-        <span>Mastery</span> by <span>Greene, Robert *</span>
+        <span>Mastery</span> by <span>Robert Greene</span>
         <div>Date Finished: 23 Jan 2014</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Art of War" class="book-cover" />
+    <img src="/images/covers/the-art-of-war.jpg" alt="The Art of War" class="book-cover" />
     <div>
         <span>The Art of War</span> by <span>Sun Tzu</span>
         <div>Date Finished: 19 Dec 2013</div>
@@ -198,119 +198,103 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Don't Go Back to Where You Came From" class="book-cover" />
+    <img src="/images/covers/dont-go-where-you-came-from.jpg" alt="Don't Go Back to Where You Came From" class="book-cover" />
     <div>
-        <span>Don't Go Back to Where You Came From</span> by <span>Soutphommasane, Tim</span>
+        <span>Don't Go Back to Where You Came From</span> by <span>Tim Soutphommasane</span>
         <div>Date Finished: 17 Nov 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Bhagat Singh: Select Speeches and Writings" class="book-cover" />
+    <img src="/images/covers/bhagat-singh.jpg" alt="Bhagat Singh: Select Speeches and Writings" class="book-cover" />
     <div>
-        <span>Bhagat Singh: Select Speeches and Writings</span> by <span>Singh, Bhagat</span>
+        <span>Bhagat Singh: Select Speeches and Writings</span> by <span>Bhagat Singh</span>
         <div>Date Finished: 10 Nov 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Snowball: Warren Buffett and the Business of Life" class="book-cover" />
+    <img src="/images/covers/the-snowball.jpg" alt="The Snowball: Warren Buffett and the Business of Life" class="book-cover" />
     <div>
-        <span>The Snowball: Warren Buffett and the Business of Life</span> by <span>Schroeder, Alice</span>
+        <span>The Snowball: Warren Buffett and the Business of Life</span> by <span>Alice Schroeder</span>
         <div>Date Finished: 28 Oct 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Boy Kings: A Journey into the Heart of the Social Network" class="book-cover" />
+    <img src="/images/covers/the-sixteenth-round.jpg" alt="The Sixteenth Round: From Number 1 Contender to Number 45472" class="book-cover" />
     <div>
-        <span>The Boy Kings: A Journey into the Heart of the Social Network</span> by <span>Losse, Katherine</span>
-        <div>Date Finished: 8 Oct 2013</div>
-    </div>
-</div>
-
-<div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Sixteenth Round: From Number 1 Contender to Number 45472" class="book-cover" />
-    <div>
-        <span>The Sixteenth Round: From Number 1 Contender to Number 45472</span> by <span>Carter, Rubin</span>
+        <span>The Sixteenth Round: From Number 1 Contender to Number 45472</span> by <span>Rubin Carter</span>
         <div>Date Finished: 3 Oct 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Rise and Rise of Kerry Packer Uncut" class="book-cover" />
+    <img src="/images/covers/the-rise-and-rise.jpg" alt="The Rise and Rise of Kerry Packer Uncut" class="book-cover" />
     <div>
-        <span>The Rise and Rise of Kerry Packer Uncut</span> by <span>Barry, Paul</span>
+        <span>The Rise and Rise of Kerry Packer Uncut</span> by <span>Paul Barry</span>
         <div></div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Dongri To Dubai : Six Decades of The Mumbai Mafia" class="book-cover" />
+    <img src="/images/covers/dongri-to-dubai.jpg" alt="Dongri To Dubai : Six Decades of The Mumbai Mafia" class="book-cover" />
     <div>
-        <span>Dongri To Dubai : Six Decades of The Mumbai Mafia</span> by <span>Zaidi, S. Hussain *</span>
+        <span>Dongri To Dubai : Six Decades of The Mumbai Mafia</span> by <span>Zaidi, S. Hussain</span>
         <div>Date Finished: 3 Sep 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground" class="book-cover" />
+    <img src="/images/covers/kingpin.jpg" alt="Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground" class="book-cover" />
     <div>
-        <span>Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground</span> by <span>Poulsen, Kevin</span>
+        <span>Kingpin: How One Hacker Took Over the Billion-Dollar Cybercrime Underground</span> by <span>Kevin Poulsen</span>
         <div>Date Finished: 28 Aug 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Fugitive Game: Online with Kevin Mitnick" class="book-cover" />
+    <img src="/images/covers/the-fugitive-game.jpg" alt="The Fugitive Game: Online with Kevin Mitnick" class="book-cover" />
     <div>
-        <span>The Fugitive Game: Online with Kevin Mitnick</span> by <span>Littman, Jonathan</span>
+        <span>The Fugitive Game: Online with Kevin Mitnick</span> by <span>Jonathan Littman</span>
         <div>Date Finished: 22 Aug 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Beyond the Giant Personal Insight into the life of JRD Tata" class="book-cover" />
+    <img src="/images/covers/beyond-the-giant.jpg" alt="Beyond the Giant Personal Insight into the life of JRD Tata" class="book-cover" />
     <div>
-        <span>Beyond the Giant Personal Insight into the life of JRD Tata</span> by <span>Pendse, D.R.</span>
+        <span>Beyond the Giant Personal Insight into the life of JRD Tata</span> by <span>D.R. Pendse</span>
         <div>Date Finished: 19 Aug 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Third Chimpanzee: The Evolution and Future of the Human Animal" class="book-cover" />
+    <img src="/images/covers/the-third-chimpanzee.jpg" alt="The Third Chimpanzee: The Evolution and Future of the Human Animal" class="book-cover" />
     <div>
-        <span>The Third Chimpanzee: The Evolution and Future of the Human Animal</span> by <span>Diamond, Jared</span>
+        <span>The Third Chimpanzee: The Evolution and Future of the Human Animal</span> by <span>Jared Diamond</span>
         <div>Date Finished: 25 Jul 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography" class="book-cover" />
+    <img src="/images/covers/the-code-book.jpg" alt="The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography" class="book-cover" />
     <div>
-        <span>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</span> by <span>Singh, Simon</span>
+        <span>The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography</span> by <span>Simon Singh</span>
         <div>Date Finished: 11 Jul 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Just for Fun: The Story of an Accidental Revolutionary" class="book-cover" />
+    <img src="/images/covers/just-for-fun.jpg" alt="Just for Fun: The Story of an Accidental Revolutionary" class="book-cover" />
     <div>
-        <span>Just for Fun: The Story of an Accidental Revolutionary</span> by <span>Torvalds, Linus</span>
+        <span>Just for Fun: The Story of an Accidental Revolutionary</span> by <span>Linus Torvalds</span>
         <div>Date Finished: 27 Jun 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Mahatma Gandhi and His Myths: Civil Disobedience, Nonviolence, and Satyagraha in the Real World" class="book-cover" />
-    <div>
-        <span>Mahatma Gandhi and His Myths: Civil Disobedience, Nonviolence, and Satyagraha in the Real World</span> by <span>Shepard, Mark *</span>
-        <div>Date Finished: 4 Feb 2013</div>
-    </div>
-</div>
-
-<div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Books I Have Loved" class="book-cover" />
+    <img src="/images/covers/books-i-have-loved.jpg" alt="Books I Have Loved" class="book-cover" />
     <div>
         <span>Books I Have Loved</span> by <span>Osho</span>
         <div>Date Finished: 26 Jan 2013</div>
@@ -318,7 +302,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Autobiography of Martin Luther King, Jr." class="book-cover" />
+    <img src="/images/covers/autobiography-of-martin-luther-king.jpg" alt="The Autobiography of Martin Luther King, Jr." class="book-cover" />
     <div>
         <span>The Autobiography of Martin Luther King, Jr.</span> by <span>King Jr., Martin Luther</span>
         <div>Date Finished: 14 Jan 2013</div>
@@ -326,15 +310,15 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Guide" class="book-cover" />
+    <img src="/images/covers/the-guide.jpg" alt="The Guide" class="book-cover" />
     <div>
-        <span>The Guide</span> by <span>Narayan, R.K.</span>
+        <span>The Guide</span> by <span>R.K. Narayan</span>
         <div>Date Finished: 9 Jan 2013</div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Life Behind the Lobby: Indian American Motel Owners and the American Dream" class="book-cover" />
+    <img src="/images/covers/life-beyond-lobby.jpg" alt="Life Behind the Lobby: Indian American Motel Owners and the American Dream" class="book-cover" />
     <div>
         <span>Life Behind the Lobby: Indian American Motel Owners and the American Dream</span> by <span>Dhingra, Pawan</span>
         <div>Date Finished: 7 Jan 2013</div>
@@ -342,7 +326,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Life of Pi" class="book-cover" />
+    <img src="/images/covers/life-of-pi.jpg" alt="Life of Pi" class="book-cover" />
     <div>
         <span>Life of Pi</span> by <span>Martel, Yann</span>
         <div>Date Finished: 3 Jan 2013</div>
@@ -350,7 +334,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Thinking, Fast and Slow" class="book-cover" />
+    <img src="/images/covers/thinking-fast-and-slow.jpg" alt="Thinking, Fast and Slow" class="book-cover" />
     <div>
         <span>Thinking, Fast and Slow</span> by <span>Kahneman, Daniel</span>
         <div>Date Finished: 27 Dec 2012</div>
@@ -358,15 +342,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Life Without Limits" class="book-cover" />
-    <div>
-        <span>Life Without Limits</span> by <span>Vujicic, Nick</span>
-        <div>Date Finished: 22 Oct 2012</div>
-    </div>
-</div>
-
-<div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Boomerang: Travels in the New Third World" class="book-cover" />
+    <img src="/images/covers/boomerang.jpg" alt="Boomerang: Travels in the New Third World" class="book-cover" />
     <div>
         <span>Boomerang: Travels in the New Third World</span> by <span>Lewis, Michael</span>
         <div>Date Finished: 18 Oct 2012</div>
@@ -374,7 +350,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Liar's Poker" class="book-cover" />
+    <img src="/images/covers/liars-poker.jpg" alt="Liar's Poker" class="book-cover" />
     <div>
         <span>Liar's Poker</span> by <span>Lewis, Michael</span>
         <div>Date Finished: 16 Oct 2012</div>
@@ -382,7 +358,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Breaking the Spell" class="book-cover" />
+    <img src="/images/covers/breaking-the-spell.jpg" alt="Breaking the Spell" class="book-cover" />
     <div>
         <span>Breaking the Spell</span> by <span>Stork, Jane</span>
         <div>Date Finished: 9 Oct 2012</div>
@@ -390,7 +366,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Big Short: Inside the Doomsday Machine" class="book-cover" />
+    <img src="/images/covers/the-big-short.jpg" alt="The Big Short: Inside the Doomsday Machine" class="book-cover" />
     <div>
         <span>The Big Short: Inside the Doomsday Machine</span> by <span>Lewis, Michael</span>
         <div>Date Finished: 12 Sep 2012</div>
@@ -398,7 +374,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Business @ the Speed of Thought: Succeeding in the Digital Economy" class="book-cover" />
+    <img src="/images/covers/business-at-the-speed-of-thought.jpg" alt="Business @ the Speed of Thought: Succeeding in the Digital Economy" class="book-cover" />
     <div>
         <span>Business @ the Speed of Thought: Succeeding in the Digital Economy</span> by <span>Gates, Bill *</span>
         <div></div>
@@ -406,7 +382,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Richest Man in Babylon" class="book-cover" />
+    <img src="/images/covers/the-richest-man-in-babylon.jpg" alt="The Richest Man in Babylon" class="book-cover" />
     <div>
         <span>The Richest Man in Babylon</span> by <span>Clason, George S.</span>
         <div></div>
@@ -414,7 +390,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Code Complete" class="book-cover" />
+    <img src="/images/covers/code-complete.jpg" alt="Code Complete" class="book-cover" />
     <div>
         <span>Code Complete</span> by <span>McConnell, Steve *</span>
         <div></div>
@@ -422,7 +398,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Art of Deception: Controlling the Human Element of Security" class="book-cover" />
+    <img src="/images/covers/the-art-of-deception.jpg" alt="The Art of Deception: Controlling the Human Element of Security" class="book-cover" />
     <div>
         <span>The Art of Deception: Controlling the Human Element of Security</span> by <span>Mitnick, Kevin D.</span>
         <div></div>
@@ -430,7 +406,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Fermat's Enigma" class="book-cover" />
+    <img src="/images/covers/fermats-enigma.jpg" alt="Fermat's Enigma" class="book-cover" />
     <div>
         <span>Fermat's Enigma</span> by <span>Singh, Simon</span>
         <div></div>
@@ -438,7 +414,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Digital Fortress" class="book-cover" />
+    <img src="/images/covers/digital-fortress.jpg" alt="Digital Fortress" class="book-cover" />
     <div>
         <span>Digital Fortress</span> by <span>Brown, Dan *</span>
         <div></div>
@@ -689,14 +665,6 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
     <img src="/images/covers/placeholder.png" alt="Business Maharajas" class="book-cover" />
     <div>
         <span>Business Maharajas</span> by <span>Piramal, Gita</span>
-        <div></div>
-    </div>
-</div>
-
-<div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Satanic Verses" class="book-cover" />
-    <div>
-        <span>The Satanic Verses</span> by <span>Rushdie, Salman</span>
         <div></div>
     </div>
 </div>
@@ -1001,14 +969,6 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
     <img src="/images/covers/placeholder.png" alt="Tap Dancing to Work: Warren Buffett on Practically Everything, 1966-2012" class="book-cover" />
     <div>
         <span>Tap Dancing to Work: Warren Buffett on Practically Everything, 1966-2012</span> by <span>Loomis, Carol J.</span>
-        <div></div>
-    </div>
-</div>
-
-<div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Ayodhya: The Dark Night" class="book-cover" />
-    <div>
-        <span>Ayodhya: The Dark Night</span> by <span>Jha, Krishna</span>
         <div></div>
     </div>
 </div>
