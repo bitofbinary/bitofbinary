@@ -86,7 +86,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Exodus" class="book-cover" />
+    <img src="/images/covers/exodus.jpg" alt="Exodus" class="book-cover" />
     <div>
         <span>Exodus</span> by <span>Uris, Leon</span>
         <div>Date Finished: 12 Jan 2017</div>
@@ -94,7 +94,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Simpsons and Their Mathematical Secrets" class="book-cover" />
+    <img src="/images/covers/simpsons-mathematical-secret.jpg" alt="The Simpsons and Their Mathematical Secrets" class="book-cover" />
     <div>
         <span>The Simpsons and Their Mathematical Secrets</span> by <span>Singh, Simon</span>
         <div>Date Finished: 11 Sep 2014</div>
@@ -102,7 +102,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="First Raj of the Sikhs: The Life and Times of Banda Singh Bahadur" class="book-cover" />
+    <img src="/images/covers/first-raj-of-the-sikhs.jpg" alt="First Raj of the Sikhs: The Life and Times of Banda Singh Bahadur" class="book-cover" />
     <div>
         <span>First Raj of the Sikhs: The Life and Times of Banda Singh Bahadur</span> by <span>Dhillon, Harish</span>
         <div>Date Finished: 24 Jun 2014</div>
@@ -110,7 +110,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Secret of the Nagas (The Shiva Trilogy, #2)" class="book-cover" />
+    <img src="/images/covers/the-secret-of-the-nagas.jpg" alt="The Secret of the Nagas (The Shiva Trilogy, #2)" class="book-cover" />
     <div>
         <span>The Secret of the Nagas (The Shiva Trilogy, #2)</span> by <span>Tripathi, Amish *</span>
         <div>Date Finished: 13 May 2014</div>
@@ -118,7 +118,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Immortals of Meluha (Shiva Trilogy, #1)" class="book-cover" />
+    <img src="/images/covers/immortals-of-meluha.jpg" alt="The Immortals of Meluha (Shiva Trilogy, #1)" class="book-cover" />
     <div>
         <span>The Immortals of Meluha (Shiva Trilogy, #1)</span> by <span>Tripathi, Amish *</span>
         <div>Date Finished: 8 May 2014</div>
@@ -126,7 +126,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Billionaire's Apprentice: The Rise of The Indian-American Elite and The Fall of The Galleon Hedge Fund" class="book-cover" />
+    <img src="/images/covers/billionaires-apprentice.jpg" alt="The Billionaire's Apprentice: The Rise of The Indian-American Elite and The Fall of The Galleon Hedge Fund" class="book-cover" />
     <div>
         <span>The Billionaire's Apprentice: The Rise of The Indian-American Elite and The Fall of The Galleon Hedge Fund</span> by <span>Raghavan, Anita</span>
         <div>Date Finished: 2 May 2014</div>
@@ -134,7 +134,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Religion and Science" class="book-cover" />
+    <img src="/images/covers/religion-and-science.jpg" alt="Religion and Science" class="book-cover" />
     <div>
         <span>Religion and Science</span> by <span>Russell, Bertrand</span>
         <div>Date Finished: 8 Apr 2014</div>
@@ -142,7 +142,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Big Bang: The Origin of the Universe" class="book-cover" />
+    <img src="/images/covers/big-bang.jpg" alt="Big Bang: The Origin of the Universe" class="book-cover" />
     <div>
         <span>Big Bang: The Origin of the Universe</span> by <span>Singh, Simon</span>
         <div>Date Finished: 3 Apr 2014</div>
@@ -150,7 +150,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Wings of Fire: An Autobiography" class="book-cover" />
+    <img src="/images/covers/wings-of-fire.jpg" alt="Wings of Fire: An Autobiography" class="book-cover" />
     <div>
         <span>Wings of Fire: An Autobiography</span> by <span>Kalam, A.P.J. Abdul</span>
         <div>Date Finished: 27 Mar 2014</div>
@@ -158,7 +158,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Indian Summer: The Secret History of the End of an Empire" class="book-cover" />
+    <img src="/images/covers/indian-summer.jpg" alt="Indian Summer: The Secret History of the End of an Empire" class="book-cover" />
     <div>
         <span>Indian Summer: The Secret History of the End of an Empire</span> by <span>Tunzelmann, Alex von</span>
         <div>Date Finished: 24 Mar 2014</div>
@@ -166,7 +166,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="iCon: Steve Jobs, the Greatest Second Act in the History of Business" class="book-cover" />
+    <img src="/images/covers/icon-steve-jobs.jpg" alt="iCon: Steve Jobs, the Greatest Second Act in the History of Business" class="book-cover" />
     <div>
         <span>iCon: Steve Jobs, the Greatest Second Act in the History of Business</span> by <span>Young, Jeffrey S.</span>
         <div></div>
@@ -174,7 +174,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Chaos: Making a New Science" class="book-cover" />
+    <img src="/images/covers/chaos.jpg" alt="Chaos: Making a New Science" class="book-cover" />
     <div>
         <span>Chaos: Making a New Science</span> by <span>Gleick, James *</span>
         <div></div>
