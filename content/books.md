@@ -422,7 +422,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Gates: How Microsoft's Mogul Reinvented an Industry--and Made Himself the Richest Man in America" class="book-cover" />
+    <img src="/images/covers/gates.jpg" alt="Gates: How Microsoft's Mogul Reinvented an Industry--and Made Himself the Richest Man in America" class="book-cover" />
     <div>
         <span>Gates: How Microsoft's Mogul Reinvented an Industry--and Made Himself the Richest Man in America</span> by <span>Manes, Stephen</span>
         <div></div>
@@ -430,7 +430,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Varieties of Scientific Experience: A Personal View of the Search for God" class="book-cover" />
+    <img src="/images/covers/the-varities-of-scientific-experiments.jpg" alt="The Varieties of Scientific Experience: A Personal View of the Search for God" class="book-cover" />
     <div>
         <span>The Varieties of Scientific Experience: A Personal View of the Search for God</span> by <span>Sagan, Carl</span>
         <div></div>
@@ -438,15 +438,14 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Peopleware: Productive Projects and Teams" class="book-cover" />
-    <div>
+    <img src="/images/covers/peopleware.jpg" alt="Peopleware: Productive Projects and Teams" class="book-cover" /> <div>
         <span>Peopleware: Productive Projects and Teams</span> by <span>DeMarco, Tom *</span>
         <div></div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Autobiography of a Spiritually Incorrect Mystic" class="book-cover" />
+    <img src="/images/covers/autobiography-osho.jpg" alt="Autobiography of a Spiritually Incorrect Mystic" class="book-cover" />
     <div>
         <span>Autobiography of a Spiritually Incorrect Mystic</span> by <span>Osho</span>
         <div></div>
@@ -454,7 +453,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Blue Bedspread" class="book-cover" />
+    <img src="/images/covers/the-blue-bed-spread.jpg" alt="The Blue Bedspread" class="book-cover" />
     <div>
         <span>The Blue Bedspread</span> by <span>Jha, Raj Kamal</span>
         <div></div>
@@ -462,7 +461,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Five Point Someone: What Not to Do at IIT" class="book-cover" />
+    <img src="/images/covers/five-point-someone.jpg" alt="Five Point Someone: What Not to Do at IIT" class="book-cover" />
     <div>
         <span>Five Point Someone: What Not to Do at IIT</span> by <span>Bhagat, Chetan</span>
         <div></div>
@@ -470,15 +469,14 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Delhi" class="book-cover" />
+    <img src="/images/covers/delhi.jpg" alt="Delhi" class="book-cover" />
     <div>
         <span>Delhi</span> by <span>Singh, Khushwant</span>
         <div></div>
     </div>
 </div>
-
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Company of Women" class="book-cover" />
+    <img src="/images/covers/the-company-of-women.jpg" alt="The Company of Women" class="book-cover" />
     <div>
         <span>The Company of Women</span> by <span>Singh, Khushwant</span>
         <div></div>
@@ -486,7 +484,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Train to Pakistan" class="book-cover" />
+    <img src="/images/covers/train-to-pakistan.jpg" alt="Train to Pakistan" class="book-cover" />
     <div>
         <span>Train to Pakistan</span> by <span>Singh, Khushwant</span>
         <div></div>
@@ -494,7 +492,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="1984" class="book-cover" />
+    <img src="/images/covers/1984.jpg" alt="1984" class="book-cover" />
     <div>
         <span>1984</span> by <span>Orwell, George</span>
         <div></div>
@@ -502,7 +500,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)" class="book-cover" />
+    <img src="/images/covers/zen-and-the-art.jpg" alt="Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)" class="book-cover" />
     <div>
         <span>Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)</span> by <span>Pirsig, Robert M.</span>
         <div></div>
@@ -510,15 +508,14 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Lajja: Shame" class="book-cover" />
+    <img src="/images/covers/lajja.jpg" alt="Lajja: Shame" class="book-cover" />
     <div>
         <span>Lajja: Shame</span> by <span>Nasrin, Taslima</span>
         <div></div>
-    </div>
-</div>
+    </div> </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Polyester Prince: The Rise of Dhirubhai Ambani" class="book-cover" />
+    <img src="/images/covers/The-polyester-prince.jpg" alt="The Polyester Prince: The Rise of Dhirubhai Ambani" class="book-cover" />
     <div>
         <span>The Polyester Prince: The Rise of Dhirubhai Ambani</span> by <span>McDonald, Hamish</span>
         <div></div>
@@ -526,15 +523,15 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Godfather (The Godfather, #1)" class="book-cover" />
+    <img src="/images/covers/the-godfather.jpg" alt="The Godfather (The Godfather, #1)" class="book-cover" />
     <div>
-        <span>The Godfather (The Godfather, #1)</span> by <span>Puzo, Mario</span>
+        <span>The Godfather</span> by <span>Puzo, Mario</span>
         <div></div>
     </div>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="For the Term of His Natural Life" class="book-cover" />
+    <img src="/images/covers/for-the-term-of-his-natural-life.jpg" alt="For the Term of His Natural Life" class="book-cover" />
     <div>
         <span>For the Term of His Natural Life</span> by <span>Clarke, Marcus</span>
         <div></div>
@@ -542,7 +539,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Dhandho Investor: The Low-Risk Value Method to High Returns" class="book-cover" />
+    <img src="/images/covers/the-dhando-investor.jpg" alt="The Dhandho Investor: The Low-Risk Value Method to High Returns" class="book-cover" />
     <div>
         <span>The Dhandho Investor: The Low-Risk Value Method to High Returns</span> by <span>Pabrai, Mohnish</span>
         <div></div>
@@ -550,7 +547,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Imaginary Homelands: Essays and Criticism 1981-1991" class="book-cover" />
+    <img src="/images/covers/imaginary-homelands.jpg" alt="Imaginary Homelands: Essays and Criticism 1981-1991" class="book-cover" />
     <div>
         <span>Imaginary Homelands: Essays and Criticism 1981-1991</span> by <span>Rushdie, Salman</span>
         <div></div>
@@ -558,7 +555,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Bangalore Tiger: How Indian Tech Upstart Wipro Is Rewriting the Rules of Global Competition" class="book-cover" />
+    <img src="/images/covers/banglore-tiger.jpg" alt="Bangalore Tiger: How Indian Tech Upstart Wipro Is Rewriting the Rules of Global Competition" class="book-cover" />
     <div>
         <span>Bangalore Tiger: How Indian Tech Upstart Wipro Is Rewriting the Rules of Global Competition</span> by <span>Hamm, Steve *</span>
         <div></div>
@@ -566,7 +563,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Ignited Minds: Unleashing the Power Within India" class="book-cover" />
+    <img src="/images/covers/ignited-minds.jpg" alt="Ignited Minds: Unleashing the Power Within India" class="book-cover" />
     <div>
         <span>Ignited Minds: Unleashing the Power Within India</span> by <span>Kalam, A.P.J. Abdul</span>
         <div></div>
@@ -574,7 +571,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The World Is Flat: A Brief History of the Twenty-first Century" class="book-cover" />
+    <img src="/images/covers/the-world-is-flat.jpg" alt="The World Is Flat: A Brief History of the Twenty-first Century" class="book-cover" />
     <div>
         <span>The World Is Flat: A Brief History of the Twenty-first Century</span> by <span>Friedman, Thomas L.</span>
         <div></div>
@@ -582,7 +579,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The God of Small Things" class="book-cover" />
+    <img src="/images/covers/the-god-of-small-things.jpg" alt="The God of Small Things" class="book-cover" />
     <div>
         <span>The God of Small Things</span> by <span>Roy, Arundhati *</span>
         <div></div>
@@ -590,7 +587,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="A Fine Balance" class="book-cover" />
+    <img src="/images/covers/a-fine-balance.jpg" alt="A Fine Balance" class="book-cover" />
     <div>
         <span>A Fine Balance</span> by <span>Mistry, Rohinton</span>
         <div></div>
@@ -598,7 +595,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Catch Me If You Can: The True Story of a Real Fake" class="book-cover" />
+    <img src="/images/covers/catch-me-if-you-can.jpg" alt="Catch Me If You Can: The True Story of a Real Fake" class="book-cover" />
     <div>
         <span>Catch Me If You Can: The True Story of a Real Fake</span> by <span>Abagnale, Frank W.</span>
         <div></div>
@@ -606,7 +603,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Barbarians at the Gate: The Fall of RJR Nabisco" class="book-cover" />
+    <img src="/images/covers/barbarians-at-the-gate.jpg" alt="Barbarians at the Gate: The Fall of RJR Nabisco" class="book-cover" />
     <div>
         <span>Barbarians at the Gate: The Fall of RJR Nabisco</span> by <span>Burrough, Bryan</span>
         <div></div>
@@ -614,7 +611,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Midnight's Children" class="book-cover" />
+    <img src="/images/covers/midnights-children.jpg" alt="Midnight's Children" class="book-cover" />
     <div>
         <span>Midnight's Children</span> by <span>Rushdie, Salman</span>
         <div></div>
@@ -622,7 +619,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Extraordinary Popular Delusions and the Madness of Crowds" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Extraordinary Popular Delusions and the Madness of Crowds" class="book-cover" />
     <div>
         <span>Extraordinary Popular Delusions and the Madness of Crowds</span> by <span>Mackay, Charles</span>
         <div></div>
@@ -630,7 +627,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Life Isn't All Ha Ha Hee Hee" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Life Isn't All Ha Ha Hee Hee" class="book-cover" />
     <div>
         <span>Life Isn't All Ha Ha Hee Hee</span> by <span>Syal, Meera</span>
         <div></div>
@@ -638,7 +635,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Anita and Me" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Anita and Me" class="book-cover" />
     <div>
         <span>Anita and Me</span> by <span>Syal, Meera</span>
         <div></div>
@@ -646,7 +643,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Blink: The Power of Thinking Without Thinking" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Blink: The Power of Thinking Without Thinking" class="book-cover" />
     <div>
         <span>Blink: The Power of Thinking Without Thinking</span> by <span>Gladwell, Malcolm</span>
         <div></div>
@@ -654,7 +651,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Fathers and Sons" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Fathers and Sons" class="book-cover" />
     <div>
         <span>Fathers and Sons</span> by <span>Turgenev, Ivan</span>
         <div></div>
@@ -662,7 +659,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Business Maharajas" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Business Maharajas" class="book-cover" />
     <div>
         <span>Business Maharajas</span> by <span>Piramal, Gita</span>
         <div></div>
@@ -670,7 +667,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Buddha of Suburbia" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Buddha of Suburbia" class="book-cover" />
     <div>
         <span>The Buddha of Suburbia</span> by <span>Kureishi, Hanif</span>
         <div></div>
@@ -678,7 +675,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Road Ahead" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Road Ahead" class="book-cover" />
     <div>
         <span>The Road Ahead</span> by <span>Gates, Bill *</span>
         <div></div>
@@ -686,7 +683,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Tao of Physics: An Exploration of the Parallels between Modern Physics and Eastern Mysticism" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Tao of Physics: An Exploration of the Parallels between Modern Physics and Eastern Mysticism" class="book-cover" />
     <div>
         <span>The Tao of Physics: An Exploration of the Parallels between Modern Physics and Eastern Mysticism</span> by <span>Capra, Fritjof</span>
         <div></div>
@@ -694,7 +691,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Romantics" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Romantics" class="book-cover" />
     <div>
         <span>The Romantics</span> by <span>Mishra, Pankaj</span>
         <div></div>
@@ -702,7 +699,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Beyond The Last Blue Mountain: A Life Of J. R. D. Tata" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Beyond The Last Blue Mountain: A Life Of J. R. D. Tata" class="book-cover" />
     <div>
         <span>Beyond The Last Blue Mountain: A Life Of J. R. D. Tata</span> by <span>Lala, R.M.</span>
         <div></div>
@@ -710,7 +707,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The White Tiger" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The White Tiger" class="book-cover" />
     <div>
         <span>The White Tiger</span> by <span>Adiga, Aravind</span>
         <div></div>
@@ -718,7 +715,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Bombay Duck" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Bombay Duck" class="book-cover" />
     <div>
         <span>Bombay Duck</span> by <span>Dhondy, Farrukh</span>
         <div></div>
@@ -726,7 +723,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Mythical Man-Month: Essays on Software Engineering" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Mythical Man-Month: Essays on Software Engineering" class="book-cover" />
     <div>
         <span>The Mythical Man-Month: Essays on Software Engineering</span> by <span>Brooks Jr., Frederick P.</span>
         <div></div>
@@ -734,7 +731,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Autobiography of a Yogi" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Autobiography of a Yogi" class="book-cover" />
     <div>
         <span>Autobiography of a Yogi</span> by <span>Yogananda, Paramahansa</span>
         <div></div>
@@ -742,7 +739,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Sikhs" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Sikhs" class="book-cover" />
     <div>
         <span>The Sikhs</span> by <span>Singh, Patwant</span>
         <div></div>
@@ -750,7 +747,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Tipping Point: How Little Things Can Make a Big Difference" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Tipping Point: How Little Things Can Make a Big Difference" class="book-cover" />
     <div>
         <span>The Tipping Point: How Little Things Can Make a Big Difference</span> by <span>Gladwell, Malcolm</span>
         <div></div>
@@ -758,7 +755,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="A Commonwealth of Thieves: The Improbable Birth of Australia" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="A Commonwealth of Thieves: The Improbable Birth of Australia" class="book-cover" />
     <div>
         <span>A Commonwealth of Thieves: The Improbable Birth of Australia</span> by <span>Keneally, Thomas</span>
         <div></div>
@@ -766,7 +763,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Guns, Germs, and Steel: The Fates of Human Societies" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Guns, Germs, and Steel: The Fates of Human Societies" class="book-cover" />
     <div>
         <span>Guns, Germs, and Steel: The Fates of Human Societies</span> by <span>Diamond, Jared</span>
         <div></div>
@@ -774,7 +771,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="A Brief History of Time" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="A Brief History of Time" class="book-cover" />
     <div>
         <span>A Brief History of Time</span> by <span>Hawking, Stephen</span>
         <div></div>
@@ -782,7 +779,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Animal Farm" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Animal Farm" class="book-cover" />
     <div>
         <span>Animal Farm</span> by <span>Orwell, George</span>
         <div></div>
@@ -790,7 +787,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="A Short History of Nearly Everything" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="A Short History of Nearly Everything" class="book-cover" />
     <div>
         <span>A Short History of Nearly Everything</span> by <span>Bryson, Bill</span>
         <div></div>
@@ -798,7 +795,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="How to Win Friends and Influence People" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="How to Win Friends and Influence People" class="book-cover" />
     <div>
         <span>How to Win Friends and Influence People</span> by <span>Carnegie, Dale</span>
         <div></div>
@@ -806,7 +803,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="All I Really Need to Know I Learned in Kindergarten" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="All I Really Need to Know I Learned in Kindergarten" class="book-cover" />
     <div>
         <span>All I Really Need to Know I Learned in Kindergarten</span> by <span>Fulghum, Robert</span>
         <div></div>
@@ -814,7 +811,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Wikinomics: How Mass Collaboration Changes Everything" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Wikinomics: How Mass Collaboration Changes Everything" class="book-cover" />
     <div>
         <span>Wikinomics: How Mass Collaboration Changes Everything</span> by <span>Tapscott, Don</span>
         <div></div>
@@ -822,7 +819,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Sister of My Heart (Anju and Sudha #1)" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Sister of My Heart (Anju and Sudha #1)" class="book-cover" />
     <div>
         <span>Sister of My Heart (Anju and Sudha #1)</span> by <span>Divakaruni, Chitra Banerjee *</span>
         <div></div>
@@ -830,7 +827,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Google Story: Inside the Hottest Business, Media and Technology Success of Our Time" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Google Story: Inside the Hottest Business, Media and Technology Success of Our Time" class="book-cover" />
     <div>
         <span>The Google Story: Inside the Hottest Business, Media and Technology Success of Our Time</span> by <span>Vise, David A.</span>
         <div></div>
@@ -838,7 +835,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Da Vinci Code (Robert Langdon, #2)" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Da Vinci Code (Robert Langdon, #2)" class="book-cover" />
     <div>
         <span>The Da Vinci Code (Robert Langdon, #2)</span> by <span>Brown, Dan *</span>
         <div></div>
@@ -846,7 +843,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The God Delusion" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The God Delusion" class="book-cover" />
     <div>
         <span>The God Delusion</span> by <span>Dawkins, Richard *</span>
         <div></div>
@@ -854,7 +851,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Deception Point" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Deception Point" class="book-cover" />
     <div>
         <span>Deception Point</span> by <span>Brown, Dan *</span>
         <div></div>
@@ -862,7 +859,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Shantaram" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Shantaram" class="book-cover" />
     <div>
         <span>Shantaram</span> by <span>Roberts, Gregory David</span>
         <div></div>
@@ -870,7 +867,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Edward Britton" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Edward Britton" class="book-cover" />
     <div>
         <span>Edward Britton</span> by <span>Crew, Gary</span>
         <div></div>
@@ -878,7 +875,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Angels & Demons (Robert Langdon, #1)" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Angels & Demons (Robert Langdon, #1)" class="book-cover" />
     <div>
         <span>Angels & Demons (Robert Langdon, #1)</span> by <span>Brown, Dan *</span>
         <div></div>
@@ -886,7 +883,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Outliers: The Story of Success" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Outliers: The Story of Success" class="book-cover" />
     <div>
         <span>Outliers: The Story of Success</span> by <span>Gladwell, Malcolm</span>
         <div></div>
@@ -894,7 +891,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Crime and Punishment" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Crime and Punishment" class="book-cover" />
     <div>
         <span>Crime and Punishment</span> by <span>Dostoevsky, Fyodor</span>
         <div></div>
@@ -902,7 +899,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Field Notes on Democracy: Listening to Grasshoppers" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Field Notes on Democracy: Listening to Grasshoppers" class="book-cover" />
     <div>
         <span>Field Notes on Democracy: Listening to Grasshoppers</span> by <span>Roy, Arundhati *</span>
         <div></div>
@@ -910,7 +907,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Difficulty of Being Good: On the Subtle Art of Dharma" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Difficulty of Being Good: On the Subtle Art of Dharma" class="book-cover" />
     <div>
         <span>The Difficulty of Being Good: On the Subtle Art of Dharma</span> by <span>Das, Gurcharan</span>
         <div></div>
@@ -918,7 +915,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="John Ilhan: A Crazy Life" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="John Ilhan: A Crazy Life" class="book-cover" />
     <div>
         <span>John Ilhan: A Crazy Life</span> by <span>Dabkowski, Stephen</span>
         <div></div>
@@ -926,7 +923,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Mahabharata in Polyester: The Making of the World's Richest Brothers and Their Feud" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Mahabharata in Polyester: The Making of the World's Richest Brothers and Their Feud" class="book-cover" />
     <div>
         <span>Mahabharata in Polyester: The Making of the World's Richest Brothers and Their Feud</span> by <span>McDonald, Hamish</span>
         <div></div>
@@ -934,7 +931,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Steve Jobs" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Steve Jobs" class="book-cover" />
     <div>
         <span>Steve Jobs</span> by <span>Isaacson, Walter *</span>
         <div></div>
@@ -942,7 +939,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity" class="book-cover" />
     <div>
         <span>Behind the Beautiful Forevers: Life, Death, and Hope in a Mumbai Undercity</span> by <span>Boo, Katherine</span>
         <div></div>
@@ -950,7 +947,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Oath of the Vayuputras (Shiva Trilogy, #3)" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Oath of the Vayuputras (Shiva Trilogy, #3)" class="book-cover" />
     <div>
         <span>The Oath of the Vayuputras (Shiva Trilogy, #3)</span> by <span>Tripathi, Amish *</span>
         <div></div>
@@ -958,7 +955,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="The Art of Thinking Clearly" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="The Art of Thinking Clearly" class="book-cover" />
     <div>
         <span>The Art of Thinking Clearly</span> by <span>Dobelli, Rolf</span>
         <div></div>
@@ -966,7 +963,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/placeholder.png" alt="Tap Dancing to Work: Warren Buffett on Practically Everything, 1966-2012" class="book-cover" />
+    <img src="/images/covers/placeholder.jpg" alt="Tap Dancing to Work: Warren Buffett on Practically Everything, 1966-2012" class="book-cover" />
     <div>
         <span>Tap Dancing to Work: Warren Buffett on Practically Everything, 1966-2012</span> by <span>Loomis, Carol J.</span>
         <div></div>
