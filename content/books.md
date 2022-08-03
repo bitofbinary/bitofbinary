@@ -15,6 +15,8 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 - Biographies (Technically not a subject)
 - Classics
 
+<br/>
+
 ## My rating system
 
 ★★★★★ Life Changing. Had a profound impact on me
@@ -27,7 +29,13 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 ★ Don’t bother. Just don’t
 
+<br/>
+
 ## Books I'm reading
+
+<div class="book-list-item">
+<img src="/images/covers/breath.jpg" alt="The Polymath" class="book-cover" />Breath: The New Science of a Lost Art by James Nestor
+</div>
 
 <div class="book-list-item">
 <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />The Polymath: Unlocking the Power of Human Versatility by Waqas Ahmed
@@ -45,7 +53,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <img src="/images/covers/joys-of-compounding.jpg" alt="The Joys of Compounding" class="book-cover" />The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by Gautam Baid
 </div>
 
-## 2022
+## Books I have read in no particular order
 
 <div class="book-list-item">
   <img src="/images/covers/titan.jpg" alt="Titan" class="book-cover" />
@@ -74,8 +82,6 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
     <img src="/images/covers/how-to-take-smart-notes.jpg" alt="How to Take Smart Notes" class="book-cover" />How to Take Smart Notes by Sönke Ahrens ★★★★
 </div>
-
-## 2021
 
 <div class="book-list-item">
     <img src="/images/covers/wolf-of-the-plains.jpg" alt="Wolf of the Plains" class="book-cover" /><span><a href="/posts/wolf-of-the-plains">Wolf of the Plains</a>&nbsp;by Conn Iggulden ★★★</span>
