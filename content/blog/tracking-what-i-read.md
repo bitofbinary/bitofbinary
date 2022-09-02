@@ -16,4 +16,4 @@ But how would I do that?
 
 Whenever I finish a book and if it is a printed copy (they mostly are), I write the date I finished reading it on the last page. I don't know how I got into this habit but it is something I have been doing for years. This habit has come in handy for this project.
 
-I don't think I'll be able to add all the read books to this catalogue but I think I'll cover around 80%.
+I don't think I'll be able to add all the read books to this catalogue but hopefully I should be able to get around 80% coverage.
