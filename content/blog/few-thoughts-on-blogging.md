@@ -46,8 +46,6 @@ I don't see anything bad about blogging or having an online presence. The only n
 
 I have been thinking of getting back into it for sometime and I have made some trial attempts. I have been collecting notes in Notion and I feel that I have started enjoying the process of writing once again.
 
-So I started of making a clean start and write this as the first post.
-
 One of the things I'm doing differently is that this blog/digital-garden/website has one and only purpose i.e. to serve me. If anyone else gets any benefit out of this, it is purely incidental.
 
 Also, it will not be a blog in the strict sense. It will be a bit more close to what can be called a digital garden. An assortment of stuff which I find interesting.
