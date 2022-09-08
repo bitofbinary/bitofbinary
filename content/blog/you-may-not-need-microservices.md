@@ -3,7 +3,7 @@ title: "You May Not Need Microservices"
 date: 2022-09-08T16:36:35+10:00
 draft: false
 categories: [Technology]
-tags: [Programming]
+tags: []
 ---
 
 You most likely don't need microservices.

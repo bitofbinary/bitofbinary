@@ -3,7 +3,7 @@ title: "Building My Bookshelf"
 date: 2022-06-01T19:57:27+10:00
 draft: false
 categories: [Books, Technology]
-tags: []
+tags: [Programming, Python]
 ---
 
 Few days ago, I wrote about [tracking what I read](/blog/tracking-what-i-read/). What I want out of this is add books I have read to my [bookshelf](/books). There are 116 books that I have marked as read on Goodreads and my goal is to add them to my bookshelf.
