@@ -2,7 +2,7 @@
 title: "Building My Bookshelf"
 date: 2022-06-01T19:57:27+10:00
 draft: false
-categories: [Books, Technology]
+categories: [Technology]
 tags: [Programming, Python]
 ---
 

@@ -34,10 +34,6 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 ## Books I'm reading
 
 <div class="book-list-item">
-<img src="/images/covers/breath.jpg" alt="The Polymath" class="book-cover" />Breath: The New Science of a Lost Art by James Nestor
-</div>
-
-<div class="book-list-item">
 <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />The Polymath: Unlocking the Power of Human Versatility by Waqas Ahmed
 </div>
 
@@ -54,6 +50,14 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 ## Books I have read in no particular order
+
+<div class="book-list-item">
+    <img src="/images/covers/breath.jpg" alt="The Polymath" class="book-cover" />
+    <div>
+        <span><a href="/blog/breath-james-nestor/">Breath: The New Science of a Lost Art</a> by James Nestor ★★★★</span>
+        <div>Date Finished: 2022 Sep 8</div>
+    </div>
+</div>
 
 <div class="book-list-item">
   <img src="/images/covers/titan.jpg" alt="Titan" class="book-cover" />
