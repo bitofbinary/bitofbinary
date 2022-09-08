@@ -1,5 +1,5 @@
 ---
-title: "Wolf of the Plains"
+title: ":closed_book: Wolf of the Plains"
 date: 2022-05-11T15:04:13+10:00
 draft: false
 categories: [Books]

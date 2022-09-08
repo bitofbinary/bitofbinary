@@ -1,5 +1,5 @@
 ---
-title: "Black Emu"
+title: ":closed_book: Black Emu"
 date: 2022-05-07T11:04:58+10:00
 draft: false
 categories: [Books]

@@ -9,7 +9,7 @@ Hi! I'm Deepak.
 <p>To know more about me and this website, visit my <a href="/about">About</a> page. </p>
 <br/>
 
-<h1>Latest posts</h1>
+<h1>Latest blog posts</h1>
 
 <div class="posts-list">
 {{ with .Site.GetPage "/blog" }}
@@ -17,13 +17,16 @@ Hi! I'm Deepak.
         <div class="post">
             <p>
                 <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ emojify .Title }}</a></h1>
                 {{ .Summary }}
             </p>
         </div>    
     {{ end }}
 {{ end }}
+<a href="/blog">More Posts...</a>
 </div>
+
+<hr />
 
 <div>
     <div>
