@@ -1,7 +1,7 @@
 ---
 title: "My setup"
 date: 2022-06-01T14:13:01+10:00
-draft: true
+draft: false
 ---
 
 ## Operating System and hardware
