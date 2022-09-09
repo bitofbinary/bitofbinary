@@ -2,10 +2,12 @@
 
 <h1>About</h1>
 
+{{ $greeting := "Hi! I'm Deepak :pray:" }}
 <p>
-Hi! I'm Deepak. 
+  {{ emojify $greeting }}
 </p>
-<p>This is my online space where I collect and reflect on an array of topics. These include <a href="/books">Books</a>, Technology, and Life in general. </p>
+
+<p>This is my online space where I collect and reflect on an array of topics. These include <a href="/books">Books</a>, <a href="/categories/technology">Technology</a>, and life in general. </p>
 <p>To know more about me and this website, visit my <a href="/about">About</a> page. </p>
 <br/>
 
