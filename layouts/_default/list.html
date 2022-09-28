@@ -3,6 +3,7 @@
 <br/>
 {{ .Content }}
 
+
 <div class="posts-list">
 {{ range sort .Data.Pages "Date" "desc" }}
     {{ if not .Params.private }}
