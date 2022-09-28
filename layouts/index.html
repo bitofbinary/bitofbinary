@@ -13,16 +13,7 @@
 <br/>
 
 
-<div style="text-align:center;padding-top: 1em;">
-    <div>
-        {{ range $key, $value := .Site.Taxonomies.categories }}
-            <a href="{{ "/categories/" }}{{ $key }}" style="text-transform: capitalize;">{{ $key }}</a>
-        {{ end }} 
-    </div>
-
-</div>
-
-<h1>Latest blog posts</h1>
+<h1>Latest</h1>
 
 <div class="posts-list">
 {{ with .Site.GetPage "/blog" }}
