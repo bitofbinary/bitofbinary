@@ -18,4 +18,4 @@ According to 16personalities, my personality type is [Logician INTP-A](https://w
 
 Take what you will from this. All I can say is that is not completely wrong. [Strengths and Weaknesses](https://www.16personalities.com/intp-strengths-and-weaknesses) are of particular interest.
 
-This website is built using the awesome Hugo static site generator and is hosted on Github pages.
+This website is built using the awesome Hugo static site generator and it is hosted on Github pages.

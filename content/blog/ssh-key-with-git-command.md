@@ -1,6 +1,6 @@
 ---
 title: "ssh Key With Git Command"
-date: 2022-02-21T17:47:57+11:00
+date: 2022-06-21T17:47:57+11:00
 draft: false
 ---
 
