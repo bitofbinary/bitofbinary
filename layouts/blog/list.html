@@ -1,0 +1,56 @@
+
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br/>
+{{ .Content }}
+
+
+<div class="posts-list">
+{{ range sort .Data.Pages "Date" "desc" }}
+    {{ if not .Params.private }}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>    
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ emojify .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+<div>
+<h1>Categories</h1>
+    <ul>
+        {{ range $key, $value := .Site.Taxonomies.categories }}
+            <li><a href="{{ "/categories/" }}{{ $key }}" style="text-transform: capitalize;">{{ $key }}</a> </li>
+        {{ end }} 
+    </ul>
+</div>
+
+    
+<div>
+    <h1>Tags</h1>
+
+    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+      {{ $largestFontSize := 1.4 }}
+      {{ $smallestFontSize := 1.0 }}
+      {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+      {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+      {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+      {{ $spread := sub $max $min }}
+      {{ $fontStep := div $fontSpread $spread }}
+        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+          {{ $tagCount := len $taxonomy.Pages }}
+          {{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
+          {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+          {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+            <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" 
+            class="tagcloud-item" style="font-size: {{ $currentFontSize }}rem;">
+              {{ $name }}
+            </a>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}
+

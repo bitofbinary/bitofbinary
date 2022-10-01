@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br />
+{{ .Content }}
+
+<p>These are all my notes</p>
+<div class="">
+  {{ range sort .Data.Pages "Date" "desc" }} {{ if not .Params.private }}
+  <div class="">
+    <h1>
+      <a href="{{ .Permalink }}" title="{{ .Title }}">{{ emojify .Title }}</a>
+    </h1>
+  </div>
+  {{ end }} {{ end }}
+</div>
+
+{{ end }}

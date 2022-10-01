@@ -15,12 +15,12 @@ MacOS on Macbook air with M1 chip.
 
 ## Shell
 
-- [Z shell](https://www.zsh.org/) with [Oh my Zsh](https://github.com/ohmyzsh/ohmyzsh) and a bunch of useful plugins
+- [Z shell](https://www.zsh.org/) with [Oh my Zsh](https://github.com/ohmyzsh/ohmyzsh) and a bunch of useful plugins. Oh my!
 
 ## Terminal
 
 - [Alacritty](https://github.com/alacritty/alacritty) Fast and furious
-- MacOs Terminal Scrolling is better
+- [MacOs Terminal](https://www.apple.com/in/macos/monterey/) Scrolling is better
 
 ## Multiplexer
 

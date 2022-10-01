@@ -8,7 +8,7 @@ Hi! I'm Deepak.
 
 I’m on a lifelong journey of progressively trying to be less wrong.
 
-Writing software is my profession and I have been doing this programming thing for more than twenty years. It has been a wonderful journey.
+I write software for fun and profit. I have been doing this for more than twenty years and it has been a wonderful journey.
 
 Other than programming, my interests are reading <a href="/books">books</a>, holidaying with my family and cooking.
 
