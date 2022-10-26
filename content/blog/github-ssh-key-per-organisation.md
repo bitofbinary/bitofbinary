@@ -6,7 +6,7 @@ categories: [Technology]
 tags: [Git, Linux]
 ---
 
-To perform operations such as clone, push etc. on Github, I want the right key to be uses.
+To perform git operations, I want the right key to be used.
 
 This is how I configure it. This approach works when the Github account is an organisation account.
 
