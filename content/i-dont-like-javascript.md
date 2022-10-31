@@ -1,6 +1,8 @@
 +++
 title = "I don't like JavaScript"
 date = 2019-02-02
+draft = true
+
 
 [taxonomies]
 tags = ["javascript", "rant"]

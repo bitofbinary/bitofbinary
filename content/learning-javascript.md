@@ -1,6 +1,8 @@
 +++
 title = "Learning JavaScript"
 date = 2019-01-03
+draft = true
+
 
 [taxonomies]
 tags = ["javascript"]
