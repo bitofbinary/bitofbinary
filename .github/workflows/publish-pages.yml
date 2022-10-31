@@ -1,4 +1,4 @@
-name: Publish demo on GitHub Pages
+name: Publish on GitHub Pages
 
 on:
  push:
@@ -14,5 +14,7 @@ jobs:
       uses: actions/checkout@v3.0.0
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@master
+    - name: Create cname
+      run: echo 'deekap.com' > ./public/CNAME
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
