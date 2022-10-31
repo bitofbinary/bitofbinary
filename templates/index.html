@@ -56,6 +56,20 @@
     <div class="content">
         {% block content %}
         <div class="posts">
+            <p>
+            Hi! I'm Deepak 🙏
+            </p>
+            This is my online space where I collect and reflect on an array of topics. Books, Technology, and life in general.
+            <p>
+            To know more about me and this website, visit my <a href="/about">About</a> page.
+            </p>
+
+            <br/>
+
+            <hr/>
+
+            <h4>Latest posts</h4>
+            
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
             {% else %}
@@ -65,7 +79,6 @@
             {%- for page in show_pages %}
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
-                    {{ post_macros::content(page=page, summary=true) }}
                 </div>
             {% endfor -%}
             <div class="pagination">

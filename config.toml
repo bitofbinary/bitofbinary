@@ -11,6 +11,8 @@ taxonomies = [
     {name = "tags"}
 ]
 
+render_emoji = true
+
 # Code highlighting
 [markdown]
 highlight_code = true
@@ -47,17 +49,16 @@ logo_text = "deekap"
 menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
-    {name = "blog", url = "$BASE_URL"},
+    {name = "home", url = "$BASE_URL"},
+    {name = "about", url = "$BASE_URL/about"},
     {name = "books", url = "$BASE_URL/books"},
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "tags", url = "$BASE_URL/tags"},
     {name = "archive", url = "$BASE_URL/archive"},
-    {name = "about me", url = "$BASE_URL/about"},
+    {name = "setup", url = "$BASE_URL/setup"},
+    {name = "sites I like", url = "$BASE_URL/sites-i-like"},
 
-    # set newtab to true to make the link open in new tab
-    {name = "github", url = "https://github.com/pawroman/zola-theme-terminimal", newtab = true},
 ]
 
 # Whether to show links to earlier and later posts
