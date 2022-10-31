@@ -1,12 +1,13 @@
 # Be sure to change these!
-base_url = "https://pawroman.github.io/zola-theme-terminimal"
-title = "Zola Terminimal theme"
+base_url = "https://deekap.com"
+title = "deekap"
 
 # Sass compilation is required
 compile_sass = true
 
 # Optional: enable tags
 taxonomies = [
+    {name = "categories"},
     {name = "tags"}
 ]
 
@@ -28,7 +29,7 @@ accent_color = "blue"
 background_color = "blue"
 
 # The logo text - defaults to "Terminimal theme"
-logo_text = "Terminimal theme"
+logo_text = "deekap"
 
 # The logo link - defaults to base_url.
 #logo_home_link = "/take/me/away!"
@@ -47,6 +48,7 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "blog", url = "$BASE_URL"},
+    {name = "books", url = "$BASE_URL/books"},
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
