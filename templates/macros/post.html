@@ -60,17 +60,11 @@
 {% macro header(page) %}
     <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
     <div class="post-meta-inline">
-        {{ post_macros::date(page=page) }}
+        {{ post_macros::date(page=page) }} 
+        {{ post_macros::categories(page=page, short=true) }}
+        {{ post_macros::tags(page=page, short=true) }}
+
     </div>
-    <ul>
-        <li>
-            {{ post_macros::categories(page=page, short=true) }}
-        </li>
-        <li>
-            {{ post_macros::tags(page=page, short=true) }}
-        </li>
-    </ul>
-        
 {% endmacro header %}
 
 
