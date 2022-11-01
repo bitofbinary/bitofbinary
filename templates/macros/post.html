@@ -62,12 +62,14 @@
     <div class="post-meta-inline">
         {{ post_macros::date(page=page) }}
     </div>
-    <div>
-        {{ post_macros::categories(page=page) }}
-    </div>
-    <div>
-        {{ post_macros::tags(page=page) }}
-    </div>
+    <ul>
+        <li>
+            {{ post_macros::categories(page=page, short=true) }}
+        </li>
+        <li>
+            {{ post_macros::tags(page=page, short=true) }}
+        </li>
+    </ul>
         
 {% endmacro header %}
 

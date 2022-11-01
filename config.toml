@@ -40,7 +40,7 @@ logo_text = "deekap"
 # Author name: when specified, modifies the default
 # copyright text. Apart from author, it will
 # contain current year and a link to the theme.
-#author = "My Name"
+author = "Deepak"
 
 # Copyright text in HTML format. If specified,
 # entirely replaces default copyright and author.
@@ -51,6 +51,7 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "home", url = "$BASE_URL"},
+    {name = "blog", url = "$BASE_URL/archive"},
     {name = "about", url = "$BASE_URL/about"},
     {name = "books", url = "$BASE_URL/books"},
 
