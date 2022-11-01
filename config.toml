@@ -2,6 +2,9 @@
 base_url = "https://deekap.com"
 title = "deekap"
 
+# generate the feed. This is how it use to be in good old days
+generate_feed = true
+
 # Sass compilation is required
 compile_sass = true
 
@@ -59,7 +62,6 @@ menu_items = [
     # see documentation below for more details
     {name = "archive", url = "$BASE_URL/archive"},
     {name = "setup", url = "$BASE_URL/setup"},
-    {name = "sites I like", url = "$BASE_URL/sites-i-like"},
 
 ]
 
