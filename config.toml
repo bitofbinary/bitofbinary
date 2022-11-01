@@ -16,7 +16,8 @@ render_emoji = true
 # Code highlighting
 [markdown]
 highlight_code = true
-highlight_theme = "boron"
+# highlight_theme = "boron"
+highlight_theme = "base16-ocean-dark"
 
 [extra]
 

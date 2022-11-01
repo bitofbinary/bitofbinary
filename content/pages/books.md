@@ -54,7 +54,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
     <img src="/images/covers/breath.jpg" alt="The Polymath" class="book-cover" />
     <div>
-        <span><a href="/blog/breath-james-nestor/">Breath: The New Science of a Lost Art</a> by James Nestor ★★★★</span>
+        <span><a href="/breath-james-nestor/">Breath: The New Science of a Lost Art</a> by James Nestor ★★★★</span>
         <div>Date Finished: 2022 Sep 8</div>
     </div>
 </div>
@@ -88,11 +88,11 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/wolf-of-the-plains.jpg" alt="Wolf of the Plains" class="book-cover" /><span><a href="/posts/wolf-of-the-plains">Wolf of the Plains</a>&nbsp;by Conn Iggulden ★★★</span>
+    <img src="/images/covers/wolf-of-the-plains.jpg" alt="Wolf of the Plains" class="book-cover" /><span><a href="/wolf-of-the-plains">Wolf of the Plains</a>&nbsp;by Conn Iggulden ★★★</span>
 </div>
 
 <div class="book-list-item">
-    <img src="/images/covers/dark-emu.jpg" alt="Dark Emu" class="book-cover" /><span><a href="/posts/dark-emu">Dark Emu</a> by Bruce Pascoe ★★★</span>
+    <img src="/images/covers/dark-emu.jpg" alt="Dark Emu" class="book-cover" /><span><a href="/dark-emu">Dark Emu</a> by Bruce Pascoe ★★★</span>
 </div>
 
 <div class="book-list-item">

@@ -100,10 +100,43 @@
                     </span>
                 {% endif -%}
                 </div>
+
+                <div class="post">
+                    <h3 class="">all categories</h3>
+                    {% set categories = get_taxonomy(kind="categories") %}
+
+                    <ul>
+                        {% for cat in categories.items %}
+                        <li class="tag-list">
+                            <a href="{{ cat.permalink | safe }}">
+                                {{ cat.name }} ({{ cat.pages | length }} post{{ cat.pages | length | pluralize }})
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="post">
+                    <h3 class="">all tags</h3>
+                    {% set tags = get_taxonomy(kind="tags") %}
+
+                    <ul>
+                        {% for tag in tags.items %}
+                        <li class="tag-list">
+                            <a href="{{ tag.permalink | safe }}">
+                                {{ tag.name }} ({{ tag.pages | length }} post{{ tag.pages | length | pluralize }})
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
             </div>
         </div>
         {% endblock content %}
     </div>
+
+    <hr/>
+
 
     {% block footer %}
     <footer class="footer">

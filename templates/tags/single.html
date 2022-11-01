@@ -7,9 +7,9 @@
             ({{ term.pages | length }} post{{ term.pages | length | pluralize }})
         </h1>
 
-        <a href="{{ config.base_url | safe }}/tags">
+        <!-- <a href="{{ config.base_url | safe }}/tags">
             Show all tags
-        </a>
+        </a> -->
 
         {{ post_macros::list_posts(pages=term.pages) }}
     </div>
