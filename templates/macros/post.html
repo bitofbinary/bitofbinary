@@ -61,8 +61,8 @@
     <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
     <div class="post-meta-inline">
         {{ post_macros::date(page=page) }} 
-        {{ post_macros::categories(page=page, short=true) }}
-        {{ post_macros::tags(page=page, short=true) }}
+        {{ post_macros::categories_dull(page=page, short=true) }}
+        {{ post_macros::tags_dull(page=page, short=true) }}
 
     </div>
 {% endmacro header %}
@@ -115,6 +115,42 @@
             {% endif -%}
             {%- for cat in page.taxonomies.categories %}
                <a class="post-tag" href="{{ get_taxonomy_url(kind='categories', name=cat) | safe }}">{{ cat }}</a>
+                {%- if not loop.last %}{{ sep | safe }}{% endif -%}
+            {% endfor -%}
+        </span>
+    {% endif -%}
+{% endmacro categories %}
+
+{% macro tags_dull(page, short=false) %}
+    {%- if page.taxonomies and page.taxonomies.tags %}
+        <span class="">
+            {%- if short %}
+                ::
+                {%- set sep = "," -%}
+            {% else %}
+                :: tags:&nbsp;
+                {%- set sep = "&nbsp;" -%}
+            {% endif -%}
+            {%- for tag in page.taxonomies.tags %}
+                <a class="dull" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">#{{ tag }}</a>
+                {%- if not loop.last %}{{ sep | safe }}{% endif -%}
+            {% endfor -%}
+        </span>
+    {% endif -%}
+{% endmacro tags %}
+
+{% macro categories_dull(page, short=false) %}
+    {%- if page.taxonomies and page.taxonomies.categories %}
+        <span class="">
+            {%- if short %}
+                ::
+                {%- set sep = "," -%}
+            {% else %}
+                :: categories:&nbsp;
+                {%- set sep = "&nbsp;" -%}
+            {% endif -%}
+            {%- for cat in page.taxonomies.categories %}
+               <a class="dull" href="{{ get_taxonomy_url(kind='categories', name=cat) | safe }}">{{ cat }}</a>
                 {%- if not loop.last %}{{ sep | safe }}{% endif -%}
             {% endfor -%}
         </span>

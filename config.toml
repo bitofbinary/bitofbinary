@@ -60,7 +60,6 @@ menu_items = [
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "archive", url = "$BASE_URL/archive"},
     {name = "setup", url = "$BASE_URL/setup"},
 
 ]
