@@ -60,7 +60,7 @@
 {% macro header(page) %}
     <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
     <div class="post-meta-inline">
-        {{ post_macros::date(page=page) }} 
+        <!-- {{ post_macros::date(page=page) }}  -->
         {{ post_macros::categories_dull(page=page, short=true) }}
         {{ post_macros::tags_dull(page=page, short=true) }}
 
@@ -76,8 +76,8 @@
         {% endif -%}
         <li class="post-list">
             <a href="{{ page.permalink | safe }}">
-                <span class="post-date">{{ page.date }}</span>
-                :: <span class="post-list-title">{{ page.title }}</span></a>
+                <!-- <span class="post-date">{{ page.date }}</span> -->
+                <span class="post-list-title">{{ page.title }}</span></a>
             {{ post_macros::tags(page=page, short=true) }}
         </li>
     {% endfor -%}
