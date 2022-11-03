@@ -1,6 +1,6 @@
 # Be sure to change these!
 base_url = "https://deekap.com"
-title = "deekap"
+title = "{ deekap }"
 
 # generate the feed. This is how it use to be in good old days
 generate_feed = true
@@ -35,7 +35,7 @@ accent_color = "blue"
 background_color = "blue"
 
 # The logo text - defaults to "Terminimal theme"
-logo_text = "deekap"
+logo_text = "{ deekap }"
 
 # The logo link - defaults to base_url.
 #logo_home_link = "/take/me/away!"
