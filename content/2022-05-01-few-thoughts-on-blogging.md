@@ -3,7 +3,7 @@ title = "Few Thoughts on Blogging"
 date = 2022-05-01
 
 [taxonomies]
-categories = ["meta"]
+categories = ["this"]
 tags = ["blogging"]
 +++
 
