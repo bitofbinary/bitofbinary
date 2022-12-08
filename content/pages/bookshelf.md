@@ -1,6 +1,6 @@
 +++
-title = "books"
-path = "books"
+title = "bookshelf"
+path = "bookshelf"
 +++
 
 

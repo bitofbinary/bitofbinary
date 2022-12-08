@@ -11,6 +11,9 @@ Sites I find interesting.
 - [Xe Iaso](https://xeiaso.net/)
 - [Byte Cellar](https://bytecellar.com/)
 
+### Ruby 
+- https://blog.saeloun.com/
+
 ### Finance & Investing
 
 - [Longterm Trends](https://www.longtermtrends.net/)

@@ -54,9 +54,10 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "home", url = "$BASE_URL"},
-    {name = "blog", url = "$BASE_URL/archive"},
+    {name = "stream", url = "$BASE_URL/archive"},
+    {name = "garden", url = "$BASE_URL/garden"},
     {name = "about", url = "$BASE_URL/about"},
-    {name = "books", url = "$BASE_URL/books"},
+    {name = "bookshelf", url = "$BASE_URL/bookshelf"},
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
