@@ -43,21 +43,19 @@
 
       <div class="content">
         {% block content %}
+        {% set current = section | default(value=section) %} 
+
         <div class="posts">
-          <h2>Welcome to my digital garden 🪴</h2>
-          <p>What is a digital garden?</p>
-          <p>It is a place where I put my notes, observations, thoughts etc.</p>
-          <p>It is a repository of things I come across and find interesting</p>
-          <p>It is a learning tool tailored specifically for me. It may or may not be useful to you</p>
-          <p>It is a personal Wiki</p>
+          {{ section.content | safe }}
+          
 
           <h3>Topics</h3>
 
-          {% set current = section | default(value=section) %} 
           {% for subsection in current.subsections %} 
             {% set section = get_section(path=subsection) %}
             <a class="breadcrumb-path" href="{{ section.permalink }}">{{ section.title }}</a>
           {% endfor %}
+          
 
         </div>
         {% endblock content %}

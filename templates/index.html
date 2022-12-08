@@ -62,9 +62,15 @@
                 </p>
                 This is my online space where I collect and reflect on an array of topics. Books, Technology, and life in general.
                 <p>
-                    This site is ogranized into two major areas. One is a <a href="/archive">stream</a> and the other is the 🪴<a href="/garden">garden</a>. Stream has date relevant content. You can think of the stream as a tradidional blog. It is a blog, I have just given it a fancy schmancy name. It is a collection of notes which are frequently updated. The garden is organised into topics and sub-topics. My objective here is to create a knowledge source I can go to when I need to look up something.
+                    This site is ogranized into two major areas. One is a <a href="/archive">stream</a> and the other is the 🪴<a href="/garden">garden</a>. 
                 </p>
-                <p>I also use category and tag taxonomy for all the content.</p>
+                <p>
+                    Stream has date relevant content. You can think of the stream as a tradidional blog. It is a blog, I have just given it a fancy schmancy name. 
+                </p>
+                <p>
+                    The garden is a collection of notes which are frequently updated. It is organised into topics and sub-topics. My objective here is to create a knowledge source I can go to when I need to look up something.
+                </p>
+                <p>I also use <a href="/categories">categories</a> and <a href="/tags">tags</a> taxonomy for all the content.</p>
                 <p>
                 To know more about me, you can visit my <a href="/about">About</a> page.
                 </p>
@@ -73,21 +79,23 @@
             </div>
 
             <hr/>
+            <div style="margin-bottom:3em;">
+              <h3>Topics from garden</h3>
 
-            <h3>What's going on in my garden?</h3>
-
-            {% set garden_section = get_section(path="garden/_index.md")%}
-           
-            {% for subsection in garden_section.subsections %} 
-              {% set section = get_section(path=subsection) %}
-              <a class="breadcrumb-path" href="{{ section.permalink }}">{{ section.title }}</a>
-              {% for subsub_section in section.subsections %}
-                {% set subsubsection = get_section(path=subsub_section) %}
-                  <a class="breadcrumb-path" href="{{ subsubsection.permalink }}">{{ subsubsection.title }}</a>
+              {% set garden_section = get_section(path="garden/_index.md")%}
+             
+              {% for subsection in garden_section.subsections %} 
+                {% set section = get_section(path=subsection) %}
+                <a class="breadcrumb-path" href="{{ section.permalink }}">{{ section.title }}</a>
+                {% for subsub_section in section.subsections %}
+                  {% set subsubsection = get_section(path=subsub_section) %}
+                    <a class="breadcrumb-path" href="{{ subsubsection.permalink }}">{{ subsubsection.title }}</a>
+                {% endfor %}
               {% endfor %}
-            {% endfor %}
+            </div>
+            <hr/>
 
-            <h4>Latest posts</h4>
+            <h4>Latest from stream</h4>
             
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
