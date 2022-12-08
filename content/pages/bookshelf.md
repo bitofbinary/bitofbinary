@@ -34,7 +34,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 ## Books I'm reading
 
 <div class="book-list-item">
-<img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />The Polymath: Unlocking the Power of Human Versatility by Waqas Ahmed
+<img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" /><a href="garden/books/the-polymath">The Polymath: Unlocking the Power of Human Versatility</a>
 </div>
 
 <div class="book-list-item">
