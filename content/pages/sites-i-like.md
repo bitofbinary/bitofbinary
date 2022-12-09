@@ -3,21 +3,17 @@ title = "Sites I Like"
 path = "sites-i-like"
 +++
 
-Sites I find interesting.
-
-### Tech
-
-- [Dan Luu](https://danluu.com/)
-- [Xe Iaso](https://xeiaso.net/)
-- [Byte Cellar](https://bytecellar.com/)
-
-### Ruby 
-- https://blog.saeloun.com/
+Sites/blogs I find interesting.
 
 ### Finance & Investing
 
+- [Woodstock House Family Capital](https://www.woodlockhousefamilycapital.com/blog)
 - [Longterm Trends](https://www.longtermtrends.net/)
 - [Whale Wisdom](https://whalewisdom.com/)
+
+### Ruby 
+- [https://blog.saeloun.com](https://blog.saeloun.com/)
+
 
 ### Data
 

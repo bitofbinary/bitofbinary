@@ -34,7 +34,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 ## Books I'm reading
 
 <div class="book-list-item">
-<img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" /><a href="garden/books/the-polymath">The Polymath: Unlocking the Power of Human Versatility</a>
+<img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />Investing: The Last Liberal Art
 </div>
 
 <div class="book-list-item">
@@ -50,6 +50,11 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 ## Books I have read in no particular order
+
+<div class="book-list-item">
+    <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />
+        <a href="garden/books/the-polymath">The Polymath: Unlocking the Power of Human Versatility</a>&nbsp;★★★
+</div>
 
 <div class="book-list-item">
     <img src="/images/covers/breath.jpg" alt="The Polymath" class="book-cover" />

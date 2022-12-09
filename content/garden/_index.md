@@ -2,6 +2,7 @@
 title = "garden"
 render = true
 template = "garden.html"
+sorted_by = "title"
 +++
 
 

@@ -72,6 +72,16 @@ a {
   }
 }
 
+.garden {
+  a {
+    color: var(--accent);
+  }
+  .topic {
+    font-size: 1.5em;
+    margin-right: 1em;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;

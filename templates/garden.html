@@ -17,7 +17,7 @@
     {% endif -%} {%- block extra_head %} {% endblock extra_head -%}
   </head>
 
-  <body class="">
+  <body class="garden">
     <div class="container">
       {% block header %}
       <header class="header">
@@ -53,7 +53,7 @@
 
           {% for subsection in current.subsections %} 
             {% set section = get_section(path=subsection) %}
-            <a class="breadcrumb-path" href="{{ section.permalink }}">{{ section.title }}</a>
+            <a class="topic" href="{{ section.permalink }}">{{ section.title }}</a>
           {% endfor %}
           
 
