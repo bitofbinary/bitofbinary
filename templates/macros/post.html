@@ -52,6 +52,16 @@ config.extra.enable_post_view_navigation and page.earlier or page.later %}
     <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
   </h1>
   <div class="post-meta-inline">
+  {{ post_macros::categories_dull(page=page,
+  short=true) }} {{ post_macros::tags_dull(page=page, short=true) }}
+</div>
+{% endmacro header %} 
+
+{% macro header_old(page) %}
+  <h1 class="post-title">
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+  </h1>
+  <div class="post-meta-inline">
   {{ post_macros::date(page=page) }} {{ post_macros::categories_dull(page=page,
   short=true) }} {{ post_macros::tags_dull(page=page, short=true) }}
 </div>

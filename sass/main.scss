@@ -56,9 +56,18 @@ a {
   color: inherit;
 }
 
+a:hover {
+  background: var(--accent-alpha-70);
+  color: var(--background);
+}
+
 .post-content {
   a {
     color: var(--accent);
+  }
+  a:hover {
+    background: var(--accent-alpha-70);
+    color: var(--background);
   }
 }
 
