@@ -8,6 +8,7 @@ generate_feed = true
 # Sass compilation is required
 compile_sass = true
 
+
 # Optional: enable tags
 taxonomies = [
     {name = "categories"},
@@ -15,6 +16,10 @@ taxonomies = [
 ]
 
 render_emoji = true
+
+[slugify]
+taxonomies = "on"
+anchors = "on"
 
 # Code highlighting
 [markdown]
@@ -54,8 +59,7 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "home", url = "$BASE_URL"},
-    {name = "stream", url = "$BASE_URL/archive"},
-    {name = "garden", url = "$BASE_URL/garden"},
+    {name = "blog", url = "$BASE_URL/archive"},
     {name = "about", url = "$BASE_URL/about"},
     {name = "bookshelf", url = "$BASE_URL/bookshelf"},
 

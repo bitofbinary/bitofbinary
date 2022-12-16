@@ -79,6 +79,10 @@ a:hover {
   a {
     color: var(--accent);
   }
+  a:hover {
+    background: var(--accent-alpha-70);
+    color: var(--background);
+  }
 }
 
 .garden {
