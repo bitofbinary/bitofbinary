@@ -1,10 +1,10 @@
 +++
-title = "📕 Wolf of the Plains"
+title = "Wolf of the Plains"
 date = 2022-05-11
 
 [taxonomies]
 categories = ["books"]
-tags = ["history", "leadership"]
+tags = ["book-notes", "history", "leadership"]
 +++
 
 Author: Conn Iggulden

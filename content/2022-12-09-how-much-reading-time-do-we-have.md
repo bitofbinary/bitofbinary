@@ -10,8 +10,6 @@ tags = ["reading"]
 
 My napkin math on how much time we have for reading throughout our life and how can we use it best.
 
-
-
 How much reading time do we have?
 
 Calculate this based on days hours etc.

@@ -1,10 +1,10 @@
 +++
-title = "📕 Breath"
+title = "Breath"
 date = 2022-09-19
 
 [taxonomies]
 categories = ["books"]
-tags = ["health", "breathing"]
+tags = ["book-notes", "breathing", "health"]
 +++
 
 Breath: The new science of a lost art by James Nestor.

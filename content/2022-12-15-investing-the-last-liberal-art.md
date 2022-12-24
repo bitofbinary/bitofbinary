@@ -6,4 +6,3 @@ date = 2022-12-15
 categories = ["books"]
 tags = ["book-notes"]
 +++
-

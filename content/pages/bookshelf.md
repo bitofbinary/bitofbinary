@@ -35,7 +35,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
     <img src="/images/covers/einstein-his-life-and-universe.jpg" alt="Einstein His Life and Universe" class="book-cover" />
         <div>
-            <a href="garden/books/the-polymath">Einstein His Life and Universe</a>
+            <a href="/einstein-his-life-and-universe">Einstein His Life and Universe</a>
         </div>
 </div>
 
@@ -60,7 +60,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
     <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />
         <div>
-            <a href="garden/books/the-polymath">The Polymath: Unlocking the Power of Human Versatility</a>&nbsp;★★★
+            <a href="the-polymath">The Polymath: Unlocking the Power of Human Versatility</a>&nbsp;★★★
         </div>
 </div>
 
