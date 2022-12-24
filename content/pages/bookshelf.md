@@ -3,7 +3,6 @@ title = "bookshelf"
 path = "bookshelf"
 +++
 
-
 Leave me alone with a book and the concept of time goes into a state of non-existence for me.
 
 I enjoy reading books on anything and everything. Some of my favorite subjects are
@@ -19,19 +18,26 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 ## My rating system
 
-★★★★★ Life Changing. Had a profound impact on me
+★★★★★ Life Changing
 
-★★★★ Excellent. Learned stuff I can use in my life
+★★★★ Excellent
 
-★★★ Good. I learned something I did not know
+★★★ Good
 
-★★ Meh. I should have done something else
+★★ Meh
 
-★ Don’t bother. Just don’t
+★ Don’t bother
 
 <br/>
 
 ## Books I'm reading
+
+<div class="book-list-item">
+    <img src="/images/covers/einstein-his-life-and-universe.jpg" alt="Einstein His Life and Universe" class="book-cover" />
+        <div>
+            <a href="garden/books/the-polymath">Einstein His Life and Universe</a>
+        </div>
+</div>
 
 <div class="book-list-item">
 <img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />Investing: The Last Liberal Art
