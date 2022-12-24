@@ -79,10 +79,12 @@ config.extra.enable_post_view_navigation and page.earlier or page.later %}
 <ul>
   {%- for page in pages %} {%- if page.draft %} {% continue %} {% endif -%}
   <li class="post-list">
-    <a href="{{ page.permalink | safe }}">
-      <span class="post-date">{{ page.date }}</span>
-      <span class="post-list-title">{{ page.title }}</span></a
-    >
+    <div>
+      <a href="{{ page.permalink | safe }}">
+        <span class="post-date">{{ page.date }}</span>
+        <span class="post-list-title">{{ page.title }}</span>
+      </a>
+    </div>
     {{ post_macros::tags(page=page, short=true) }}
   </li>
   {% endfor -%}

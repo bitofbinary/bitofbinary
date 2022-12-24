@@ -40,7 +40,10 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 </div>
 
 <div class="book-list-item">
-<img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />Investing: The Last Liberal Art
+  <img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />
+  <div>
+    <a href="investing-the-last-liberal-art">Investing: The Last Liberal Art</a>
+  </div>
 </div>
 
 <div class="book-list-item">
