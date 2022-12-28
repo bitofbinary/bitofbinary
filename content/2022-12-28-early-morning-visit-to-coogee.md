@@ -15,7 +15,7 @@ Today we decided to get to the beach early in the morning to see the sunrise. We
 These are some of the shots I took at Coogee beach.
 
 
-<img src="/images/posts/20221228_coogee1.jpg" style="margin-bottom:40px;" />
-<img src="/images/posts/20221228_coogee2.jpg" style="margin-bottom:40px;" />
-<img src="/images/posts/20221228_coogee3.jpg" style="margin-bottom:40px;" />
-<img src="/images/posts/20221228_coogee4.jpg" style="margin-bottom:40px;" />
+<img src="/images/posts/20221228_coogee1_lr.jpg" style="margin-bottom:40px;" />
+<img src="/images/posts/20221228_coogee2_lr.jpg" style="margin-bottom:40px;" />
+<img src="/images/posts/20221228_coogee3_lr.jpg" style="margin-bottom:40px;" />
+<img src="/images/posts/20221228_coogee4_lr.jpg" style="margin-bottom:40px;" />
