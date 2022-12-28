@@ -62,6 +62,7 @@ menu_items = [
     {name = "blog", url = "$BASE_URL/archive"},
     {name = "about", url = "$BASE_URL/about"},
     {name = "bookshelf", url = "$BASE_URL/bookshelf"},
+    {name = "photography", url = "$BASE_URL/photography"},
 
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
