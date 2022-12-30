@@ -4,7 +4,7 @@ date = 2022-12-28
 draft = false
 
 [taxonomies]
-categories = ["Travel"]
+categories = ["travel"]
 tags = ["australia", "photography", "sydney" ]
 +++
 
