@@ -7,7 +7,7 @@ categories = ["this"]
 tags = ["self-reviews"]
 +++
 
-New Year resolutions are dumb. I made them for many years to witness them crumble within the first few days. They are the wrong device to use for mmmm! anyhting. With that in mind, I write these notes to myself. You and me already know that these are resolutions in disguise. Old habits die hard.
+New Year resolutions are dumb. I made them for many years to witness them crumble within the first few days. They are the wrong device to use for mmmm! anything. With that in mind, I write these notes to myself. You and me already know that these are resolutions in disguise. Old habits die hard.
 
 ## Learning 
 
