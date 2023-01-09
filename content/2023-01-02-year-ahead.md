@@ -11,9 +11,9 @@ New Year resolutions are dumb. I made them for many years to witness them crumbl
 
 ## Learning 
 
-I start many courses online and most of them lay unfinished. However, in 2022, I finished a course on digital photography on LinkedIn Learning and last Black Friday sale, I bought the Ruby and Ruby on Rails course from Pragmatic Stuido which I'm going through and having fun going through it.
+I start many courses online and most of them lay unfinished. However, in 2022, I finished a course on digital photography on LinkedIn Learning and last Black Friday sale, I bought the Ruby and Ruby on Rails course from Pragmatic Studio which I'm going through and having fun going through it.
 
-I have always enjoyed writing Ruby code but somehow I have never pursued a job writing Ruby. I plan to change this and find a contract where I work on Ruby on Rails. I don't understand why some poeple find it RoR hard, to me it makes total sense. I am at a point where I find RoR and Django to be the most complete and sensible frameworks to write web applications or APIs.
+I have always enjoyed writing Ruby code but somehow I have never pursued a job writing Ruby. I plan to change this and find a contract where I work on Ruby on Rails. I don't understand why some people find it RoR hard, to me it makes total sense. I am at a point where I find RoR and Django to be the most complete and sensible frameworks to write web applications or APIs.
 
 The learning in this area shall continue as long as it remains fun.
 
@@ -39,7 +39,7 @@ The number does not matter at all, but this is embarrassing. I'm sure that I can
 
 Let's start with a confession. I have sinned and my sin is gluttony. Ever since I started cooking myself, I have became more of a foodie than I was. This has started to show around the belly. My plan is to consume only 1 full meal a day which includes carbs. Other two will be broken up into smaller meals of mostly healthy food such as fruits, yoghurt, nuts etc. 
 
-Excersice is another area which needs to be worked on 2023. I somehow could never make it a part of my day and I plan to change this. Maybe I could apply lessons I learned form Atomic Habits.
+Exercise is another area which needs to be worked on 2023. I somehow could never make it a part of my day and I plan to change this. Maybe I could apply lessons I learned form Atomic Habits.
 
 ## Travel
 

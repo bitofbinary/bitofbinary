@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "297f72632277b92e",
+        "id": "0cfd9b91b4e4b1a1",
         "type": "tabs",
         "children": [
           {
-            "id": "a3476415a9327fde",
+            "id": "aa0f6966a4c3fea2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Asteroid Belt.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "Asteroid Belt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "Asteroid Belt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,12 +127,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
+                "file": "Asteroid Belt.md"
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -150,17 +149,17 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "6dd76d4c95f8b5a9",
+  "active": "aa0f6966a4c3fea2",
   "lastOpenFiles": [
-    "2023-01-08.md",
-    "Home.md",
-    "Untitled.md",
+    "Astronomy.md",
     "Fleeting Notes.md",
-    "KMS.md",
-    "Dashboard.md",
-    "Another Note.md",
-    "Third Note.md",
-    "{ Investing The last }.md",
-    "Stream/Thinking about setting up a KMS.md"
+    "Asteroid Belt.md",
+    "Home.md",
+    "202301092139.md",
+    "2023-01-09.md",
+    "Mars.md",
+    "Jupiter.md",
+    "2023-01-08.md",
+    "KMS.md"
   ]
 }
