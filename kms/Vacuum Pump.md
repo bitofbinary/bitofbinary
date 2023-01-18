@@ -1,0 +1,1 @@
+A device which sucks air out. If it was connected to say a container and operated then it would suck all the air out of that container and leave nothing in it.

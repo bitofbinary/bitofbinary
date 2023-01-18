@@ -13,7 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Asteroid Belt.md",
+                "file": "2023-01-11.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47d9471a3c752dc0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vacuum Pump.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba22388ec032d91f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Category Mistake.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Asteroid Belt.md",
+                "file": "2023-01-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Asteroid Belt.md",
+                "file": "2023-01-11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Asteroid Belt.md"
+                "file": "2023-01-11.md"
               }
             }
           }
@@ -151,15 +177,15 @@
   },
   "active": "aa0f6966a4c3fea2",
   "lastOpenFiles": [
+    "Vacuum Pump.md",
+    "2023-01-11.md",
+    "Category Mistake.md",
+    "Asteroid Belt.md",
     "Astronomy.md",
     "Fleeting Notes.md",
-    "Asteroid Belt.md",
     "Home.md",
     "202301092139.md",
     "2023-01-09.md",
-    "Mars.md",
-    "Jupiter.md",
-    "2023-01-08.md",
-    "KMS.md"
+    "Mars.md"
   ]
 }

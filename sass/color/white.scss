@@ -1,9 +1,15 @@
 :root {
-  --accent: rgb(26, 149, 224);
-  --accent-alpha-70: rgba(26, 149, 224, .8);
-  --accent-alpha-20: rgba(255,98,102,.2);
+  --accent: rgb(3, 118, 206);
+  --accent-alpha-70: rgba(3, 118, 206, .8);
+  --accent-alpha-20: rgba(255,98,102, .2);
 
   --background: #FFFFFF;
   --color: black;
   --border-color: rgba(255, 255, 255, .1);
 }
+
+.logo {
+  color: #ffffff;
+  font-weight: 800;
+}
+
