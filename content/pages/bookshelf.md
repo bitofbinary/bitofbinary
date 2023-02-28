@@ -32,12 +32,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 ## Books I'm reading
 
-<div class="book-list-item">
-    <img src="/images/covers/einstein-his-life-and-universe.jpg" alt="Einstein His Life and Universe" class="book-cover" />
-        <div>
-            <a href="/einstein-his-life-and-universe">Einstein His Life and Universe</a>
-        </div>
-</div>
+
 
 <div class="book-list-item">
   <img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />
@@ -58,7 +53,19 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <img src="/images/covers/joys-of-compounding.jpg" alt="The Joys of Compounding" class="book-cover" />The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by Gautam Baid
 </div>
 
-## Books I have read in no particular order
+## Books I have read 
+
+### 2023
+
+<div class="book-list-item">
+    <img src="/images/covers/einstein-his-life-and-universe.jpg" alt="Einstein His Life and Universe" class="book-cover" />
+        <div>
+            <a href="/einstein-his-life-and-universe">Einstein His Life and Universe</a>
+        </div>
+</div>
+
+
+### 2022
 
 <div class="book-list-item">
     <img src="/images/covers/the-polymath.jpg" alt="The Polymath" class="book-cover" />
@@ -110,6 +117,11 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
     <img src="/images/covers/dark-emu.jpg" alt="Dark Emu" class="book-cover" /><span><a href="/dark-emu">Dark Emu</a> by Bruce Pascoe ★★★</span>
 </div>
+
+
+
+### in no particular order
+
 
 <div class="book-list-item">
     <img src="/images/covers/exodus.jpg" alt="Exodus" class="book-cover" />
