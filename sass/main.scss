@@ -283,7 +283,7 @@ ol ol {
 
 hr {
   width: 100%;
-  border: none;
+  border: dashed 1px;
   background: var(--border-color);
   height: 1px;
 }
@@ -302,3 +302,26 @@ hr {
   display: flex;
   margin-bottom: 3em;
 }
+
+$book-carousel-img-width: 125px;
+$book-carousel-img-height: 175px;
+
+.books-carousel  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > a {
+    > img {
+      width: $book-carousel-img-width;
+      height: $book-carousel-img-height;
+    }    
+  }
+
+  > img {
+    width: $book-carousel-img-width;
+    height: $book-carousel-img-height;
+  }
+
+}
+

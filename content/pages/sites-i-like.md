@@ -11,7 +11,8 @@ Sites/blogs I find interesting.
 - [Longterm Trends](https://www.longtermtrends.net/)
 - [Whale Wisdom](https://whalewisdom.com/)
 
-### Ruby 
+### Tech 
+- [https://eugeneyan.com](https://eugeneyan.com/)
 - [https://blog.saeloun.com](https://blog.saeloun.com/)
 
 

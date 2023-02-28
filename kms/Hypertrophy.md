@@ -1,0 +1,3 @@
+Hypertrophy is increase and growth of muscle cells. When someone lifts weights, he is increasing hypertrophy. 
+
+So, trophy are muscles and hyper is hyper as in hyper activity, hyper tension....
