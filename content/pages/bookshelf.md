@@ -16,6 +16,10 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 <br/>
 
+This is my library. These are the books I have read. More valuable than the library is my [antilibrary](/antilibrary).
+
+<br/>
+
 ## My rating system
 
 ★★★★★ Life Changing
@@ -32,6 +36,19 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 ## Books I'm reading
 
+<div class="book-list-item">
+  <img src="/images/covers/i-am-a-strange-loop.jpg" alt="I Am a Strange Loop" class="book-cover" />
+  <div>
+    <a href="i-am-a-strange-loop">I Am a Strange Loop by Douglas Hofstadter</a>
+  </div>
+</div>
+
+<div class="book-list-item">
+  <img src="/images/covers/elon-musk.jpg" alt="Elon Musk" class="book-cover" />
+  <div>
+    <a href="elon-musk">Elon Musk by Ashlee Vance</a>
+  </div>
+</div>
 
 
 <div class="book-list-item">
@@ -41,6 +58,8 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
   </div>
 </div>
 
+<!--
+
 <div class="book-list-item">
 <img src="/images/covers/bullshit-jobs.jpg" alt="Bullshit Jobs" class="book-cover" />Bullshit Jobs: A Theory by David Graeber
 </div>
@@ -48,10 +67,7 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 <div class="book-list-item">
 <img src="/images/covers/supermoney.jpg" alt="Supermoney" class="book-cover" />Supermoney by Adam Smith
 </div>
-
-<div class="book-list-item">
-<img src="/images/covers/joys-of-compounding.jpg" alt="The Joys of Compounding" class="book-cover" />The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by Gautam Baid
-</div>
+-->
 
 ## Books I have read 
 
@@ -121,6 +137,12 @@ I enjoy reading books on anything and everything. Some of my favorite subjects a
 
 
 ### in no particular order
+
+
+
+<div class="book-list-item">
+<img src="/images/covers/joys-of-compounding.jpg" alt="The Joys of Compounding" class="book-cover" />The Joys of Compounding: The Passionate Pursuit of Lifelong Learning by Gautam Baid
+</div>
 
 
 <div class="book-list-item">
