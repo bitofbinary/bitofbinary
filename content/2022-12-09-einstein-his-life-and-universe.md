@@ -1,5 +1,5 @@
 +++
-title = "Einstein His Life and Universe"
+title = "Einstein His Life and Universe by Walter Isaacson"
 date = 2022-12-09
 
 [taxonomies]
