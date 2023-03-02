@@ -24,9 +24,9 @@ anchors = "on"
 # Code highlighting
 [markdown]
 highlight_code = true
-# highlight_theme = "boron"
-highlight_theme = "base16-ocean-dark"
-# highlight_theme = "monokai"
+highlight_theme = "inspired-github"
+#highlight_theme = "base16-ocean-dark"
+#highlight_theme = "monokai"
 
 [extra]
 
