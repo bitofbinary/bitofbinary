@@ -37,6 +37,13 @@ This is my library. These are the books I have read. More valuable than the libr
 ## Books I'm reading
 
 <div class="book-list-item">
+  <img src="/images/covers/flash-crash.jpg" alt="Flash Crash" class="book-cover" />
+  <div>
+    <a href="flash-crash">Flash Crash</a>
+  </div>
+</div>
+
+<div class="book-list-item">
   <img src="/images/covers/i-am-a-strange-loop.jpg" alt="I Am a Strange Loop" class="book-cover" />
   <div>
     <a href="i-am-a-strange-loop">I Am a Strange Loop by Douglas Hofstadter</a>
@@ -44,15 +51,7 @@ This is my library. These are the books I have read. More valuable than the libr
 </div>
 
 <div class="book-list-item">
-  <img src="/images/covers/elon-musk.jpg" alt="Elon Musk" class="book-cover" />
-  <div>
-    <a href="elon-musk">Elon Musk by Ashlee Vance</a>
-  </div>
-</div>
-
-
-<div class="book-list-item">
-  <img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Bullshit Jobs" class="book-cover" />
+  <img src="/images/covers/investing-the-last-liberal-art.jpg" alt="Investing: The Last liberal Art" class="book-cover" />
   <div>
     <a href="investing-the-last-liberal-art">Investing: The Last Liberal Art</a>
   </div>
@@ -72,6 +71,14 @@ This is my library. These are the books I have read. More valuable than the libr
 ## Books I have read 
 
 ### 2023
+
+
+<div class="book-list-item">
+  <img src="/images/covers/elon-musk.jpg" alt="Elon Musk" class="book-cover" />
+  <div>
+    <a href="elon-musk">Elon Musk by Ashlee Vance</a>
+  </div>
+</div>
 
 <div class="book-list-item">
     <img src="/images/covers/einstein-his-life-and-universe.jpg" alt="Einstein His Life and Universe" class="book-cover" />

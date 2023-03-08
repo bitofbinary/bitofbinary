@@ -13,7 +13,13 @@
   <div class="post-content">{{ page.content | safe }}</div>
 {%- endif %} 
 
-{% endmacro content %} {% macro date(page) %}
+{% endmacro content %} 
+
+
+
+{% endmacro blogarticle %} 
+
+{% macro date(page) %}
 <span class="post-date">
   {%- if page.date %} {{ page.date | date(format="%Y-%m-%d") }} {% endif -%}
 </span>
@@ -48,12 +54,12 @@ config.extra.enable_post_view_navigation and page.earlier or page.later %}
 
 
 {% macro header(page) %}
-  <h1 class="post-title">
+  <h1>
     <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
   </h1>
   <div class="post-meta-inline">
-  {{ post_macros::categories_dull(page=page,
-  short=true) }} {{ post_macros::tags_dull(page=page, short=true) }}
+  {{ post_macros::categories_dull(page=page, short=true) }} 
+  {{ post_macros::tags_dull(page=page, short=true) }}
 </div>
 {% endmacro header %} 
 

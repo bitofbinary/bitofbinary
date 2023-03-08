@@ -19,3 +19,7 @@ Sites/blogs I find interesting.
 ### Data
 
 - [Our World in Data](https://ourworldindata.org/)
+
+### ebooks
+
+- [Standard ebooks](https://standardebooks.org/)

@@ -14,9 +14,6 @@ import boto3
 import json
 import psycopg2
 
-
-# Get secret values from the Secret Manager
-
 REGION = '<region>'
 PROFILE = '<profile-name>'
 SECRET_ARN = '<Secret-ARN-From-Secret-Manager>'
@@ -25,8 +22,10 @@ def main():
     session = boto3.Session(profile_name=PROFILE)
     client = session.client('secretsmanager', region_name=REGION)
 
+    # Get secret from Secret Manager
     secret = client.get_secret_value(SecretId=SECRET_ARN)
 
+    # Load secrets into a dictionary
     secret_dict = json.loads(secret['SecretString'])
     username = secret_dict['username']
     password = secret_dict['password']
@@ -34,6 +33,7 @@ def main():
     port = secret_dict['port']
     database = secret_dict['dbname']
 
+    # Make a connection 
     conn= psycopg2.connect(
             user=username,
             password=password,
@@ -44,7 +44,6 @@ def main():
     )
 
     print("Connection created")
-
 
 
 if __name__ == '__main__':
