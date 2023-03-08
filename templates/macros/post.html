@@ -10,14 +10,11 @@
     </a>
   </div>
 {% else %}
-  <div class="post-content">{{ page.content | safe }}</div>
+  <div class="article">{{ page.content | safe }}</div>
 {%- endif %} 
 
 {% endmacro content %} 
 
-
-
-{% endmacro blogarticle %} 
 
 {% macro date(page) %}
 <span class="post-date">
@@ -57,9 +54,9 @@ config.extra.enable_post_view_navigation and page.earlier or page.later %}
   <h1>
     <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
   </h1>
-  <div class="post-meta-inline">
-  {{ post_macros::categories_dull(page=page, short=true) }} 
-  {{ post_macros::tags_dull(page=page, short=true) }}
+  <div>
+  {{ post_macros::categories(page=page, short=true) }} 
+  {{ post_macros::tags(page=page, short=true) }}
 </div>
 {% endmacro header %} 
 
@@ -97,32 +94,46 @@ config.extra.enable_post_view_navigation and page.earlier or page.later %}
 </ul>
 {% endmacro list_posts %} 
 
-{% macro tags(page, short=false) %} {%- if
-page.taxonomies and page.taxonomies.tags %}
+{% macro tags(page, short=false) %} 
+
+{%- if page.taxonomies and page.taxonomies.tags %}
 <span class="post-tags-inline">
-  {%- if short %} :: {%- set sep = "," -%} {% else %} :: tags:&nbsp; {%- set sep
-  = "&nbsp;" -%} {% endif -%} {%- for tag in page.taxonomies.tags %}
-  <a
-    class="post-tag"
-    href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}"
-    >#{{ tag }}</a
-  >
-  {%- if not loop.last %}{{ sep | safe }}{% endif -%} {% endfor -%}
+  {%- if short %} {%- set sep = "," -%} {% else %} tags:&nbsp; {%- set sep
+  = "&nbsp;" -%} {% endif -%} 
+  
+  <span>Tags: </span>
+  {%- for tag in page.taxonomies.tags %}
+    <a
+      class="post-tag"
+      href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}"
+      >#{{ tag }}</a
+    >
+    {%- if not loop.last %}{{ sep | safe }}{% endif -%} 
+
+  {% endfor -%}
 </span>
-{% endif -%} {% endmacro tags %} {% macro categories(page, short=false) %} {%-
-if page.taxonomies and page.taxonomies.categories %}
+{% endif -%} 
+
+{% endmacro tags %} 
+
+{% macro categories(page, short=false) %} 
+{%- if page.taxonomies and page.taxonomies.categories %}
 <span class="post-tags-inline">
-  {%- if short %} :: {%- set sep = "," -%} {% else %} :: categories:&nbsp; {%-
-  set sep = "&nbsp;" -%} {% endif -%} {%- for cat in page.taxonomies.categories
-  %}
+
+  <span>Category: </span>
+  {%- for cat in page.taxonomies.categories %}
   <a
-    class="post-tag"
+    class="post-category"
     href="{{ get_taxonomy_url(kind='categories', name=cat) | safe }}"
     >{{ cat }}</a
   >
   {%- if not loop.last %}{{ sep | safe }}{% endif -%} {% endfor -%}
 </span>
-{% endif -%} {% endmacro categories %} {% macro tags_dull(page, short=false) %}
+{% endif -%} 
+{% endmacro categories %} 
+
+
+{% macro tags_dull(page, short=false) %}
 {%- if page.taxonomies and page.taxonomies.tags %}
 <span class="">
   {%- if short %} :: {%- set sep = "," -%} {% else %} :: tags:&nbsp; {%- set sep
@@ -132,7 +143,9 @@ if page.taxonomies and page.taxonomies.categories %}
   >
   {%- if not loop.last %}{{ sep | safe }}{% endif -%} {% endfor -%}
 </span>
-{% endif -%} {% endmacro tags %} {% macro categories_dull(page, short=false) %}
+{% endif -%} {% endmacro tags %} 
+
+{% macro categories_dull(page, short=false) %}
 {%- if page.taxonomies and page.taxonomies.categories %}
 <span class="">
   {%- if short %} :: {%- set sep = "," -%} {% else %} :: categories:&nbsp; {%-
