@@ -10,7 +10,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML 5 Boilerplate</title>
+    <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
     <link rel="stylesheet" href="/tufte.css" />
     <link rel="stylesheet" href="/main.css" />
   </head>
@@ -55,5 +55,25 @@
 
     {% endblock content %}
     </div>
+
+
+    {% block footer %}
+    <footer class="footer">
+        <div class="footer__inner">
+            {%- if config.extra.copyright_html %}
+                <div class="copyright copyright--user">{{ config.extra.copyright_html | safe }}</div>
+            {% else %}
+                <div class="copyright">
+                    {%- if config.extra.author %}
+                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
+                    {% else %}
+                        <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    {% endif -%}
+
+                </div>
+            {% endif -%}
+        </div>
+    </footer>
+    {% endblock footer %}
   </body>
 </html>

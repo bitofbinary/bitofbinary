@@ -404,6 +404,7 @@ h3 > code {
 }
 
 pre > code {
+  background: #fffff8;
   padding: 2.5%;
   overflow-x: auto;
   display: block;
