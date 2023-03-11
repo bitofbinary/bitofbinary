@@ -82,6 +82,11 @@ body {
   color: #111;
   max-width: 1080px;
   counter-reset: sidenote-counter;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Adds dark mode */

@@ -1,5 +1,5 @@
 +++
-title = "photography"
+title = "Photography"
 path = "photography"
 +++
 

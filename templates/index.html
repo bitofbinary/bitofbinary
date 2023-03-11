@@ -15,33 +15,35 @@
     <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
-    <h1 class="logo">
-    {%- if config.logo_home_link %}
-        {% set logo_link = config.logo_home_link %}
-    {% else %}
-        {% set logo_link = config.base_url %}
-    {% endif -%}
-    
-    <a href="{{ logo_link | safe }}" style="text-decoration: none;">
-    {%- if config.extra.logo_text %}
-        {{ config.extra.logo_text }}
-    {% else %}
-        Logo Text
-    {% endif -%}
-    </a>
-    </h1>
+    <header>
+      <h1 class="logo">
+        {%- if config.logo_home_link %}
+            {% set logo_link = config.logo_home_link %}
+        {% else %}
+            {% set logo_link = config.base_url %}
+        {% endif -%}
+        
+        <a href="{{ logo_link | safe }}" style="text-decoration: none;">
+        {%- if config.extra.logo_text %}
+            {{ config.extra.logo_text }}
+        {% else %}
+            Logo Text
+        {% endif -%}
+        </a>
+      </h1>
+    </header>
 
 
-    <div style="margin-top: 4rem;">
+    <main style="margin-top: 3rem; margin-bottom: 3rem;">
     {% block content %}
 
       <div>
         <p>Hi! I'm Deepak</p>
         <p>
-          This is my online space which you can think of as a hybrid of <a href="/blog">blog</a> and digital garden. For me it is my thinking tool.
+          This is my online space which you can think of as a hybrid of <a href="/blog">blog</a> and digital garden. For me, it is my thinking tool.
         </p>
         <p>
-          Some of my interest are <a href="/library">Books</a>, Technology, Photography
+          Some of my interest are <a href="/library">Books</a>, Technology, <a href="/photography">Photography</a>
         </p>
         <p>
           This website is a personal project which will forever remain under construction.
@@ -54,7 +56,7 @@
 
 
     {% endblock content %}
-    </div>
+    </main>
 
 
     {% block footer %}
@@ -69,7 +71,6 @@
                     {% else %}
                         <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
                     {% endif -%}
-
                 </div>
             {% endif -%}
         </div>
