@@ -11,11 +11,11 @@ According to the [History of Blogging](https://online.ndm.edu/news/communication
 
 For me blogging started around 2003 when Wordpress was launched. This was also the time when I was heavily invested in Microsoft ecosystem. After spending many years working with ASP and VB, I found .NET to be a relief. During this time I also got involved with the local [Microsoft community](https://www.ssw.com.au/ssw/NETUG/SSWUpdate/_2006_02__Do%20you%20understand%20the%20value%20of%20consistency_.htm)
 
-I created a website which I don't remember and wrote content which is not relevant or useful to either me or anyone else (I think). This went on for few years and I finally hosted my blog on my own domain called [OneDotNetWay.com](https://web.archive.org/web/20100602053942/http://www.onedotnetway.com/page/2/). I no longer own that domain. At that time, I thought that my site looked kinda cool. Yes, this is an opinion :)
+I created a website which I don't remember and wrote content which is not relevant or useful to either me or anyone else (I think). This went on for few years and I finally hosted my blog on my own domain called [OneDotNetWay.com](https://web.archive.org/web/20100602053942/http://www.onedotnetway.com/page/2/). I no longer own that domain. At that time, I thought that my site looked kinda cool. You may think otherwise, and I will be in complete agreement with you.
 
 ![onedotnetway.com](/images/posts/onedotnetway.png)
 
-Things were looking good and my blog was getting popular. The traffic was growing and other popular sites were linking to my content. It was nowhere near some of the [top technical blogs](https://blog.codinghorror.com/) of that time, but still I was enjoying the attention and benefits I was getting.
+Things were looking good and my blog was getting popular. The traffic was growing and other popular sites were linking to my content. It was nowhere near some of the [top technical blogs](https://blog.codinghorror.com/) of that time, but I was enjoying the attention and benefits coming my way.
 
 With that only-interesting-to-me history, it is time to reflect on the good and bad.
 

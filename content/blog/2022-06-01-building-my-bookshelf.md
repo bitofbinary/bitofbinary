@@ -7,7 +7,7 @@ categories = ["technology"]
 tags = ["programming", "python"]
 +++
 
-Few days ago, I wrote about [tracking what I read](/blog/tracking-what-i-read/). What I want out of this is add books I have read to my [bookshelf](/books). There are 116 books that I have marked as read on Goodreads and my goal is to add them to my bookshelf.
+Few days ago, I wrote about [tracking what I read](/blog/tracking-what-i-read/). What I want out of this is add books I have read to my [bookshelf](/library). There are 116 books that I have marked as read on Goodreads and my goal is to add them to my bookshelf.
 
 One way of doing this is to add each book manually. Afterall 116 is not a big number. But, what's the fun in adding them manually.
 
@@ -25,7 +25,7 @@ Copy the table by selecting it on my Goodreads page.
 
 This gives a nice csv which I can parse with some code
 
-```
+```bash
 cover,title,author,"avg rating",rating,shelves,"date read","date added",""
 "",Exodus,"Uris, Leon",4.34,"1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars 5 of 5 stars","read [edit]","Jan 12, 2017 [edit]","Dec 22, 2016","edit view »"
 "","The Simpsons and Their Mathematical Secrets","Singh, Simon",3.88,"1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]","read [edit]","Sep 11, 2014 [edit]","Oct 08, 2013","edit view »"
@@ -84,6 +84,6 @@ with open('goodreads.csv') as file:
 
 ```
 
-And that's about it. Most of the [books I have read](/books) are now in my bookshelf.
+And that's about it. Most of the [books I have read](/library) are now in my bookshelf.
 
 One of the things I need to do is add cover images for all the books I have added. Maybe I will automate that too, but I have not decided that yet.
