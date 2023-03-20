@@ -1,9 +1,8 @@
-.logo {
-  > a:hover, a:visited, a:link, a:active
-  {
-      text-decoration: none;
-  }
+.logo-link
+{
+    text-decoration: none!important;
 }
+
 .book-list {
   list-style: none;
   padding: 0;

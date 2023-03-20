@@ -5,6 +5,10 @@ path = "sites-i-like"
 
 Sites/blogs I find interesting.
 
+### Awesome cool blogs
+
+- [https://www.benkuhn.net](https://www.benkuhn.net/)
+
 ### Finance & Investing
 
 - [Woodstock House Family Capital](https://www.woodlockhousefamilycapital.com/blog)
@@ -23,3 +27,4 @@ Sites/blogs I find interesting.
 ### ebooks
 
 - [Standard ebooks](https://standardebooks.org/)
+

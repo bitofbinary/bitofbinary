@@ -23,7 +23,7 @@
             {% set logo_link = config.base_url %}
         {% endif -%}
         
-        <a href="{{ logo_link | safe }}" style="text-decoration: none;">
+        <a href="{{ logo_link | safe }}" class="logo-link">
         {%- if config.extra.logo_text %}
             {{ config.extra.logo_text }}
         {% else %}
@@ -54,6 +54,16 @@
 
       </div>
 
+      <h2>Pages on this website</h2>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/library">Library</a></li>
+        <li><a href="/micro-thoughts">Micro Thoughts</a></li>
+        <li><a href="/photography">Photopgraphy</a></li>
+        <li><a href="/setup">Setup</a></li>
+        
+      </ul>
 
     {% endblock content %}
     </main>

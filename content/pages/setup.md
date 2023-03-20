@@ -13,7 +13,7 @@ MacOS on Macbook air with M1 chip.
 
 ## Editors
 
-- [Nvim](https://neovim.io/) Nothing comes close to the power of VIM once you have learned how to exit out of it. <a href="https://www.youtube.com/watch?v=9n1dtmzqnCU" target="_blank">You don't change VIM, VIM changes you
+- [Neovim](https://neovim.io/) Nothing comes close to the power of VIM once you have learned how to exit out of it. <a href="https://www.youtube.com/watch?v=9n1dtmzqnCU" target="_blank">You don't change VIM, VIM changes you
 - [VSCode](https://code.visualstudio.com/) Everyone is using it so it must be good. Remember that saying about millions of flies?
 
 ## Shell
@@ -31,5 +31,5 @@ MacOS on Macbook air with M1 chip.
 
 ## Colorscheme
 
-- [Gruvbox](https://github.com/morhetz/gruvbox) everywhere (mostly)
+- [Sonokai](https://github.com/sainnhe/sonokai) everywhere (mostly)
 - [Nord](https://www.nordtheme.com/) when I fantasise about travelling to Norway
