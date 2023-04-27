@@ -39,6 +39,24 @@ This is my library. These are the books I have read. More valuable than the libr
 <ul class="book-list">
     <li>
         <div>
+            <img src="/images/covers/emperor-of-all-maladies.jpg" alt="Emperor of all Maladies" class="book-cover" />
+            <div>
+                <div><a href="/the-victorian-internet">Emperor Of All Maladies</a></div>
+                <div>&nbsp;</div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <img src="/images/covers/the-victorian-internet.jpg" alt="The Victorian Internet" class="book-cover" />
+            <div>
+                <div><a href="/the-victorian-internet">The Victorian Internet</a></div>
+                <div>&nbsp;</div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div>
             <img src="/images/covers/flash-crash.jpg" alt="Flash Crash" class="book-cover" />
             <div>
                 <div><a href="/flash-crash">Flash Crash</a></div>
