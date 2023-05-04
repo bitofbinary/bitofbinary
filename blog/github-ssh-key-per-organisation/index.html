@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{ deekap }</title>
+    <link rel="stylesheet" href="/tufte.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+            
+        <a href="https://deekap.com" class="logo-link">
+            { deekap }
+        </a>
+      </h1>
+    </header>
+
+
+    <main style="margin-top: 3rem; margin-bottom: 3rem;">
+    
+    <div class="section">
+        
+  <h1>
+    <a href="https://deekap.com/blog/github-ssh-key-per-organisation/">Github SSH Key per Organisation</a>
+  </h1>
+  <div>
+  
+<span class="post-tags-inline">
+
+  <span>Category: </span>
+  <a
+    class="post-category"
+    href="https://deekap.com/categories/technology/"
+    >technology</a
+  ></span>
+ 
+  
+<span class="post-tags-inline"><span>Tags: </span>
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/git/"
+      >#git</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/linux/"
+      >#linux</a
+    ></span>
+
+</div>
+
+        
+  <div class="article"><p>To perform git operations, I want the right key to be used.</p>
+<p>This is how I configure it. This approach works when the Github account is an organisation account.</p>
+<p>In <code>~/.ssh/config</code> add</p>
+<pre data-lang="bash" style="background-color:#ffffff;color:#323232;" class="language-bash "><code class="language-bash" data-lang="bash"><span>Host </span><span style="font-weight:bold;color:#a71d5d;">&lt;</span><span>CompanyName</span><span style="font-weight:bold;color:#a71d5d;">&gt;</span><span>.github.com
+</span><span>    HostName github.com
+</span><span>    User git
+</span><span>    IdentifyFile ~/.ssh/</span><span style="font-weight:bold;color:#a71d5d;">&lt;</span><span>KeyIWantToUse</span><span style="font-weight:bold;color:#a71d5d;">&gt;
+</span><span>    IdentitiesOnly yes
+</span></code></pre>
+<p>Then in <code>~/.gitconfig</code> I add</p>
+<pre data-lang="bash" style="background-color:#ffffff;color:#323232;" class="language-bash "><code class="language-bash" data-lang="bash"><span>[url </span><span style="color:#183691;">&quot;git@&lt;CompanyName&gt;:github.com:&lt;CompanyName&quot;</span><span>]
+</span></code></pre>
+<p>I add this information for each organisation I have access to.</p>
+</div> 
+
+
+        
+    </div>
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2023
+ Deepak</span>
+                    </div>
+            </div>
+    </footer>
+    
+  </body>
+</html>

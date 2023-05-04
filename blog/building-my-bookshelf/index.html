@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{ deekap }</title>
+    <link rel="stylesheet" href="/tufte.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+            
+        <a href="https://deekap.com" class="logo-link">
+            { deekap }
+        </a>
+      </h1>
+    </header>
+
+
+    <main style="margin-top: 3rem; margin-bottom: 3rem;">
+    
+    <div class="section">
+        
+  <h1>
+    <a href="https://deekap.com/blog/building-my-bookshelf/">Building My Bookshelf</a>
+  </h1>
+  <div>
+  
+<span class="post-tags-inline">
+
+  <span>Category: </span>
+  <a
+    class="post-category"
+    href="https://deekap.com/categories/technology/"
+    >technology</a
+  ></span>
+ 
+  
+<span class="post-tags-inline"><span>Tags: </span>
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/programming/"
+      >#programming</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/python/"
+      >#python</a
+    ></span>
+
+</div>
+
+        
+  <div class="article"><p>Few days ago, I wrote about <a href="/blog/tracking-what-i-read/">tracking what I read</a>. What I want out of this is add books I have read to my <a href="/library">bookshelf</a>. There are 116 books that I have marked as read on Goodreads and my goal is to add them to my bookshelf.</p>
+<p>One way of doing this is to add each book manually. Afterall 116 is not a big number. But, what's the fun in adding them manually.</p>
+<p>In true developer style, I thought of automating the process.</p>
+<p>This is a log of how I did it.</p>
+<p>Add this extension to Firefox</p>
+<p>https://github.com/nirantak/copytables</p>
+<p>Copy the table by selecting it on my Goodreads page.</p>
+<p><img src="/images/posts/goodreads-capture.png" alt="list-of-books" /></p>
+<p>This gives a nice csv which I can parse with some code</p>
+<pre data-lang="bash" style="background-color:#ffffff;color:#323232;" class="language-bash "><code class="language-bash" data-lang="bash"><span>cover,title,author,</span><span style="color:#183691;">&quot;avg rating&quot;</span><span>,rating,shelves,</span><span style="color:#183691;">&quot;date read&quot;</span><span>,</span><span style="color:#183691;">&quot;date added&quot;</span><span>,</span><span style="color:#183691;">&quot;&quot;
+</span><span style="color:#183691;">&quot;&quot;</span><span>,Exodus,</span><span style="color:#183691;">&quot;Uris, Leon&quot;</span><span>,4.34,</span><span style="color:#183691;">&quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars 5 of 5 stars&quot;</span><span>,</span><span style="color:#183691;">&quot;read [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Jan 12, 2017 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Dec 22, 2016&quot;</span><span>,</span><span style="color:#183691;">&quot;edit view »&quot;
+</span><span style="color:#183691;">&quot;&quot;</span><span>,</span><span style="color:#183691;">&quot;The Simpsons and Their Mathematical Secrets&quot;</span><span>,</span><span style="color:#183691;">&quot;Singh, Simon&quot;</span><span>,3.88,</span><span style="color:#183691;">&quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&quot;</span><span>,</span><span style="color:#183691;">&quot;read [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Sep 11, 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Oct 08, 2013&quot;</span><span>,</span><span style="color:#183691;">&quot;edit view »&quot;
+</span><span style="color:#183691;">&quot;&quot;</span><span>,</span><span style="color:#183691;">&quot;First Raj of the Sikhs: The Life and Times of Banda Singh Bahadur&quot;</span><span>,</span><span style="color:#183691;">&quot;Dhillon, Harish&quot;</span><span>,3.96,</span><span style="color:#183691;">&quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&quot;</span><span>,</span><span style="color:#183691;">&quot;read , 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Jun 24, 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;Jun 24, 2014&quot;</span><span>,</span><span style="color:#183691;">&quot;edit view »&quot;
+</span><span style="color:#183691;">&quot;&quot;</span><span>,</span><span style="color:#183691;">&quot;The Secret of the Nagas (The Shiva Trilogy, #2)&quot;</span><span>,</span><span style="color:#183691;">&quot;Tripathi, Amish *&quot;</span><span>,4.08,</span><span style="color:#183691;">&quot;1 of 5 stars 2 of 5 stars 3 of 5 stars [ 4 of 5 stars ] 5 of 5 stars&quot;</span><span>,</span><span style="color:#183691;">&quot;read , 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;May 13, 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;May 13, 2014&quot;</span><span>,</span><span style="color:#183691;">&quot;edit view »&quot;
+</span><span style="color:#183691;">&quot;&quot;</span><span>,</span><span style="color:#183691;">&quot;The Immortals of Meluha (Shiva Trilogy, #1)&quot;</span><span>,</span><span style="color:#183691;">&quot;Tripathi, Amish *&quot;</span><span>,4.12,</span><span style="color:#183691;">&quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&quot;</span><span>,</span><span style="color:#183691;">&quot;read , 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;May 08, 2014 [edit]&quot;</span><span>,</span><span style="color:#183691;">&quot;May 08, 2014&quot;</span><span>,</span><span style="color:#183691;">&quot;edit view »&quot;
+</span></code></pre>
+<p>What I need is the title, author and the date I read the book. I thought of also getting the stars but my rating system is much different from what it use to be and I honestly don't remember my rating system of that time when these books were added to Goodreads.</p>
+<p>The output I want for each book in the csv file is a tiny bit of markup which display the placeholder image with title and date I finished the book (if available).</p>
+<p>This simple and dirty Python script gives me the markup I need</p>
+<pre data-lang="python" style="background-color:#ffffff;color:#323232;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#969896;">#!/usr/bin/env python3
+</span><span>
+</span><span style="font-weight:bold;color:#a71d5d;">import </span><span>csv
+</span><span style="font-weight:bold;color:#a71d5d;">from </span><span>datetime </span><span style="font-weight:bold;color:#a71d5d;">import </span><span>datetime
+</span><span>
+</span><span style="font-weight:bold;color:#a71d5d;">def </span><span style="font-weight:bold;color:#323232;">parse_date</span><span>(date_str):
+</span><span>    date_str </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>date_str.replace(</span><span style="color:#183691;">&#39;[edit]&#39;</span><span>,</span><span style="color:#183691;">&#39;&#39;</span><span>).strip()
+</span><span>    format_str </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#183691;">&#39;</span><span style="color:#0086b3;">%b %d</span><span style="color:#183691;">, </span><span style="color:#0086b3;">%Y</span><span style="color:#183691;">&#39;
+</span><span>    </span><span style="font-weight:bold;color:#a71d5d;">try</span><span>:
+</span><span>        date </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>datetime.strptime(date_str, format_str)
+</span><span>        </span><span style="font-weight:bold;color:#a71d5d;">return </span><span>date
+</span><span>    </span><span style="font-weight:bold;color:#a71d5d;">except</span><span>:
+</span><span>        </span><span style="font-weight:bold;color:#a71d5d;">return </span><span style="color:#183691;">&quot;&quot;
+</span><span>
+</span><span>
+</span><span>
+</span><span style="font-weight:bold;color:#a71d5d;">with </span><span style="color:#62a35c;">open</span><span>(</span><span style="color:#183691;">&#39;goodreads.csv&#39;</span><span>) </span><span style="font-weight:bold;color:#a71d5d;">as </span><span>file:
+</span><span>    csv_reader </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>csv.reader(file, delimiter</span><span style="font-weight:bold;color:#a71d5d;">=</span><span style="color:#183691;">&#39;,&#39;</span><span>)
+</span><span>    line_count </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#0086b3;">0
+</span><span>    </span><span style="font-weight:bold;color:#a71d5d;">for </span><span>row </span><span style="font-weight:bold;color:#a71d5d;">in </span><span>csv_reader:
+</span><span>        </span><span style="font-weight:bold;color:#a71d5d;">if </span><span>line_count </span><span style="font-weight:bold;color:#a71d5d;">&gt; </span><span style="color:#0086b3;">0</span><span>:
+</span><span>            parsed_date </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>parse_date(row[</span><span style="color:#0086b3;">6</span><span>])
+</span><span>            </span><span style="font-weight:bold;color:#a71d5d;">if </span><span>parsed_date </span><span style="font-weight:bold;color:#a71d5d;">!= </span><span style="color:#183691;">&quot;&quot;</span><span>:
+</span><span>                month_name </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>parsed_date.strftime(</span><span style="color:#183691;">&quot;</span><span style="color:#0086b3;">%b</span><span style="color:#183691;">&quot;</span><span>)
+</span><span>                date </span><span style="font-weight:bold;color:#a71d5d;">= f</span><span style="color:#183691;">&#39;</span><span>{parsed_date.day} {month_name} {parsed_date.year}</span><span style="color:#183691;">&#39;
+</span><span>                date </span><span style="font-weight:bold;color:#a71d5d;">= f</span><span style="color:#183691;">&#39;Date Finished: </span><span>{date}</span><span style="color:#183691;">&#39;
+</span><span>            </span><span style="font-weight:bold;color:#a71d5d;">else</span><span>:
+</span><span>                date </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#183691;">&quot;&quot;
+</span><span>            </span><span style="color:#62a35c;">print</span><span>(
+</span><span>                    </span><span style="font-weight:bold;color:#a71d5d;">f</span><span style="color:#183691;">&#39;&#39;&#39;
+</span><span style="color:#183691;">                    &lt;div class=&quot;book-list-item&quot;&gt;
+</span><span style="color:#183691;">                        &lt;img src=&quot;/images/covers/placeholder.png&quot; alt=&quot;</span><span>{row[</span><span style="color:#0086b3;">1</span><span>]}</span><span style="color:#183691;">&quot; class=&quot;book-cover&quot; /&gt;
+</span><span style="color:#183691;">                        &lt;div&gt;
+</span><span style="color:#183691;">                            &lt;span&gt;</span><span>{row[</span><span style="color:#0086b3;">1</span><span>]}</span><span style="color:#183691;">&lt;/span&gt;
+</span><span style="color:#183691;">                            &lt;div&gt;</span><span>{date}</span><span style="color:#183691;">&lt;/div&gt;
+</span><span style="color:#183691;">                        &lt;/div&gt;
+</span><span style="color:#183691;">                    &lt;/div&gt;
+</span><span style="color:#183691;">                    &#39;&#39;&#39;
+</span><span>                    )
+</span><span>        line_count </span><span style="font-weight:bold;color:#a71d5d;">+= </span><span style="color:#0086b3;">1
+</span><span>
+</span></code></pre>
+<p>And that's about it. Most of the <a href="/library">books I have read</a> are now in my bookshelf.</p>
+<p>One of the things I need to do is add cover images for all the books I have added. Maybe I will automate that too, but I have not decided that yet.</p>
+</div> 
+
+
+        
+    </div>
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2023
+ Deepak</span>
+                    </div>
+            </div>
+    </footer>
+    
+  </body>
+</html>

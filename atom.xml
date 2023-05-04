@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>{ deekap }</title>
+    <link href="https://deekap.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://deekap.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-03T00:00:00+00:00</updated>
+    <id>https://deekap.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Connect to AWS RDS instance using boto3 and Secret Manager</title>
+        <published>2023-03-03T00:00:00+00:00</published>
+        <updated>2023-03-03T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/connect-rds-secret-manager/" type="text/html"/>
+        <id>https://deekap.com/blog/connect-rds-secret-manager/</id>
+        <content type="html">&lt;p&gt;Code to connect to an AWS RDS instance with &lt;a href=&quot;https:&#x2F;&#x2F;boto3.amazonaws.com&#x2F;v1&#x2F;documentation&#x2F;api&#x2F;latest&#x2F;index.html&quot;&gt;boto3&lt;&#x2F;a&gt; and Secret Manager&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;boto3
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;json
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;psycopg2
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;REGION &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&amp;lt;region&amp;gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;PROFILE &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&amp;lt;profile-name&amp;gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;SECRET_ARN &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&amp;lt;Secret-ARN-From-Secret-Manager&amp;gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#323232;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    session &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;boto3.Session(profile_name&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;PROFILE&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    client &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;session.client(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;secretsmanager&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;, region_name&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;REGION&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#969896;&quot;&gt;# Get secret from Secret Manager
+&lt;&#x2F;span&gt;&lt;span&gt;    secret &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;client.get_secret_value(SecretId&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;SECRET_ARN&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#969896;&quot;&gt;# Load secrets into a dictionary
+&lt;&#x2F;span&gt;&lt;span&gt;    secret_dict &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;json.loads(secret[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;SecretString&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;])
+&lt;&#x2F;span&gt;&lt;span&gt;    username &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;secret_dict[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;username&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    password &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;secret_dict[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;password&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    host &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;secret_dict[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;host&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    port &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;secret_dict[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;port&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    database &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;secret_dict[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;dbname&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#969896;&quot;&gt;# Make a connection 
+&lt;&#x2F;span&gt;&lt;span&gt;    conn&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;psycopg2.connect(
+&lt;&#x2F;span&gt;&lt;span&gt;            user&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;username,
+&lt;&#x2F;span&gt;&lt;span&gt;            password&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;password,
+&lt;&#x2F;span&gt;&lt;span&gt;            host&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;host,
+&lt;&#x2F;span&gt;&lt;span&gt;            port&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;port,
+&lt;&#x2F;span&gt;&lt;span&gt;            database&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;database,
+&lt;&#x2F;span&gt;&lt;span&gt;            connect_timeout&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;10
+&lt;&#x2F;span&gt;&lt;span&gt;    )
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Connection created&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;__name__ &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;__main__&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    main()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Thoughts on working remotely</title>
+        <published>2023-02-28T00:00:00+00:00</published>
+        <updated>2023-02-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/thoughts-on-remote-working/" type="text/html"/>
+        <id>https://deekap.com/blog/thoughts-on-remote-working/</id>
+        <content type="html">&lt;p&gt;Since last 5 plus years, I have been working remotely for most of the time. I started doing this before COVID pandamic. These are some of the thoughts I have on remote working.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-did-it-start-for-me&quot;&gt;How did it start for me&lt;&#x2F;h2&gt;
+&lt;p&gt;CIRCA 2017, I joined an organisation where I developed the first React based system for that company. The work was fun and the team was great. My kids were young at that time, and I wanted to be involved in some of their after-school activities. Because the job was about an hour commute each way, it became challenging for me to get home on time and be a part of kids&#x27; activities. &lt;&#x2F;p&gt;
+&lt;p&gt;I asked my manager if working from home on some of the days was a possibility and he denied. It was not the reply I was expecting and it got me thinking about the work and family life balance. After giving it some thought for few days, I decided that I will resign and look for something else. I went to my manager to convey my decision and he asked me to not resign but work from home on some of the days in a week.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;first-few-days-and-months&quot;&gt;First few days and months&lt;&#x2F;h2&gt;
+&lt;p&gt;I started by working two days from home and each work-from-home-day turned out to be more productive than other three days in the office combined. I was pumping out code at a speed and accuracy which I had not experienced in the past. &lt;&#x2F;p&gt;
+&lt;p&gt;Gradually, I started building what I can call a dream tech setup at home. Over few months, my home office became my santuary. It had everything I needed to feel productive. A big screen monitor, a high spec computer and most important, a comfortable chair.&lt;&#x2F;p&gt;
+&lt;p&gt;Seeing how productive I was, my manager reached out with a suggestion of working more days from home. Other team members were also offered the same choice. Most of them took it. The overall performance of the team improved significantly. There were less distractions and minimum senseless meetings. Of course we missed the coffee runs and lunches but overall it was working out well for the company, team and individuals.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;&#x2F;h2&gt;
+&lt;p&gt;As I got more into the routine of working from home, I realised that there were some new issues I had to face. Luckily these were dealt with easily. I will mention them here for the sake of completeness.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Distractions:&lt;&#x2F;strong&gt; As I was around the house, new types of distractions surfaced. On the top of the list was other people thinking that I&#x27;m available for a casual chat or a chore. I explained to my wife and kids that when I&#x27;m working from home, I&#x27;m still working and I cannot be available for anything else. Unless there is an emergency, I don&#x27;t want to know about it. Any thing which needs to be discussed should be discussed when my work day is over. Linked to this is the second issue.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Boundaries:&lt;&#x2F;strong&gt; After few days, I realised that the boundaries between work time and home time blurred. I&#x27;d be on the computer until late in the afternoon and then hop back on after dinner. Initially it felt good that I can finish the thing I was working on after spending some time with family. If I happen to be working on a hard problem after dinner then it would cause sleep issues. I&#x27;d be so charged up trying to solve an issue that sleep became a struggle. One day, I decided that this has to stop and I started turning the computer off when the day&#x27;s work was done. By doing this, I resolved the sleep issue.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;what-can-make-wfh-work&quot;&gt;What can make WFH work&lt;&#x2F;h2&gt;
+&lt;p&gt;There are few things which I have learned are important to make working from home a success.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Environment:&lt;&#x2F;strong&gt; This I think is the most important. You need an environment which is separate from rest of the living space. A separate room is the best. However, it does not have to be. A dedicated space can be a home office during the day as long as there are no distractions. I luckily have a room in the house which is my home office. You also need to make the environment which suites you best to do work. For me, I like to have some plants around me and not so cluttered desk.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Communication:&lt;&#x2F;strong&gt; You need the right tools. A high-spec webcam with a good sound system is a must. If you are into headphones then a good noise cancelling headphone will serve you well.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Music:&lt;&#x2F;strong&gt; Not everyone likes to listen to music while working but for me it is very important. When I start coding, I always turn on some Lofi beats or chill out music. It just gets me into the zone. The music becomes a que and the brain quickly goes into full concentration mode.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Walks:&lt;&#x2F;strong&gt; Sitting all day on a chair is no fun at all. I have made it a habit to go on walks after lunch and after the work has finished. This can be very relaxing. It changes the scenery and the mood.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;the-present-and-the-future&quot;&gt;The present and the future&lt;&#x2F;h2&gt;
+&lt;p&gt;What started as a few days working from home turned into fully working remotely for me. Over the years, I have also realized that for the kind of work I do, an office is not required. I have a setup at home which no office can provide. And my productivity is at all time high.&lt;&#x2F;p&gt;
+&lt;p&gt;For the future, my intention is to continue working from home. These days I reject contracts which require me to come to the office. If things turn and going to office is forced upon me, then I will most do something else. What will that be? I don&#x27;t know but I also don&#x27;t think about it too much. &lt;&#x2F;p&gt;
+&lt;p&gt;Work From Home is here to stay for me.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Year Ahead 2023 Edition</title>
+        <published>2023-01-02T00:00:00+00:00</published>
+        <updated>2023-01-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/year-ahead/" type="text/html"/>
+        <id>https://deekap.com/blog/year-ahead/</id>
+        <content type="html">&lt;p&gt;New Year resolutions are dumb. I made them for many years to witness them crumble within the first few days. They are the wrong device to use for mmmm! anything. With that in mind, I write these notes to myself. You and me already know that these are resolutions in disguise. Old habits die hard.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;learning&quot;&gt;Learning&lt;&#x2F;h2&gt;
+&lt;p&gt;I start many courses online and most of them lay unfinished. However, in 2022, I finished a course on digital photography on LinkedIn Learning and last Black Friday sale, I bought the Ruby and Ruby on Rails course from Pragmatic Studio which I&#x27;m going through and having fun going through it.&lt;&#x2F;p&gt;
+&lt;p&gt;I have always enjoyed writing Ruby code but somehow I have never pursued a job writing Ruby. I plan to change this and find a contract where I work on Ruby on Rails. I don&#x27;t understand why some people find it RoR hard, to me it makes total sense. I am at a point where I find RoR and Django to be the most complete and sensible frameworks to write web applications or APIs.&lt;&#x2F;p&gt;
+&lt;p&gt;The learning in this area shall continue as long as it remains fun.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;reading&quot;&gt;Reading&lt;&#x2F;h2&gt;
+&lt;p&gt;To me reading is a lot of things. It is a hobby, a stress reliever, boredom buster and the best return on the time spent. It is hard to find a pursuit which gives delivers all these things. Yet, somehow I did not do much of it. These are the only books I read last year.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dark Emu&lt;&#x2F;li&gt;
+&lt;li&gt;Wolf of the Plains&lt;&#x2F;li&gt;
+&lt;li&gt;How to Take Smart Notes&lt;&#x2F;li&gt;
+&lt;li&gt;Richer, Wiser, Happer&lt;&#x2F;li&gt;
+&lt;li&gt;The Rebel Allocator&lt;&#x2F;li&gt;
+&lt;li&gt;Deep Survival&lt;&#x2F;li&gt;
+&lt;li&gt;Viral&lt;&#x2F;li&gt;
+&lt;li&gt;TITAN&lt;&#x2F;li&gt;
+&lt;li&gt;Breath&lt;&#x2F;li&gt;
+&lt;li&gt;The Polymath&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The number does not matter at all, but this is embarrassing. I&#x27;m sure that I can do better.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;health&quot;&gt;Health&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s start with a confession. I have sinned and my sin is gluttony. Ever since I started cooking myself, I have became more of a foodie than I was. This has started to show around the belly. My plan is to consume only 1 full meal a day which includes carbs. Other two will be broken up into smaller meals of mostly healthy food such as fruits, yoghurt, nuts etc. &lt;&#x2F;p&gt;
+&lt;p&gt;Exercise is another area which needs to be worked on 2023. I somehow could never make it a part of my day and I plan to change this. Maybe I could apply lessons I learned form Atomic Habits.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;travel&quot;&gt;Travel&lt;&#x2F;h2&gt;
+&lt;p&gt;Last few years have not been too good on travel side. When I did travel, it was because of family emergencies or taking care of things. Hopefully this year will be different. I have already made plans for some travel in the first and second quarter of this year. I&#x27;ll post photos if those trips materialize.&lt;&#x2F;p&gt;
+&lt;p&gt;Now this is already becoming longer that I expected. I think I&#x27;ll end it here. &lt;&#x2F;p&gt;
+&lt;p&gt;Happy New Year.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Fix asdf ruby-build definition not found</title>
+        <published>2022-12-28T00:00:00+00:00</published>
+        <updated>2022-12-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/2022-12-28/" type="text/html"/>
+        <id>https://deekap.com/blog/2022-12-28/</id>
+        <content type="html">&lt;p&gt;I was installing Ruby version 3.1.2 on my machine by running&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;asdf install ruby 3.1.2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I got this error&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;ruby-build: definition not found: 3.1.2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The way to fix it is by updating the ruby plugin for asdf&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;asdf plugin-update ruby
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I have been using asdf to manage multiple versions of Ruby. I prefer it over rvm and rbenv. I have always had issues with those two.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Early Morning Visit to Coogee</title>
+        <published>2022-12-28T00:00:00+00:00</published>
+        <updated>2022-12-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/early-morning-visit-to-coogee/" type="text/html"/>
+        <id>https://deekap.com/blog/early-morning-visit-to-coogee/</id>
+        <content type="html">&lt;p&gt;Walking on the beach at sunrise can be an excellent start to the day. The freshness of ocean breeze and looking at the sun when it is right above the horizon makes you appriciate the beauty of the planet and for me the beauty of the city I live in. Coogee beach in Sydney is one such place we love visiting. &lt;&#x2F;p&gt;
+&lt;p&gt;Today we decided to get to the beach early in the morning to see the sunrise. We missed the sunrise by 10 minutes but still had a wonderful morning. On the way back we stopped at another Kiribilli for breakfast and did a half walk across the Harbour Bridge. &lt;&#x2F;p&gt;
+&lt;p&gt;These are some of the shots I took at Coogee beach.&lt;&#x2F;p&gt;
+&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;20221228_coogee1_lr.jpg&quot; style=&quot;margin-bottom:40px;&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;20221228_coogee2_lr.jpg&quot; style=&quot;margin-bottom:40px;&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;20221228_coogee3_lr.jpg&quot; style=&quot;margin-bottom:40px;&quot; &#x2F;&gt;
+&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;20221228_coogee4_lr.jpg&quot; style=&quot;margin-bottom:40px;&quot; &#x2F;&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>DynamoDB Batch Write</title>
+        <published>2022-12-16T00:00:00+00:00</published>
+        <updated>2022-12-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/2022-12-16/" type="text/html"/>
+        <id>https://deekap.com/blog/2022-12-16/</id>
+        <content type="html">&lt;p&gt;In &lt;a href=&quot;&#x2F;tags&#x2F;dynamodb&quot;&gt;DynamoDB&lt;&#x2F;a&gt; you can write a &lt;strong&gt;maximum of 25 objects&lt;&#x2F;strong&gt; as a Batch Write &lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;TypeScript&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-TypeScript &quot;&gt;&lt;code class=&quot;language-TypeScript&quot; data-lang=&quot;TypeScript&quot;&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;client &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= new &lt;&#x2F;span&gt;&lt;span&gt;AWS.DynamoDB.DocumentClient();
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;tableName &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;process.env.tableName;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(tableName) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;putRequests &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;users.&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#795da3;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;((user) &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        PutRequest: {
+&lt;&#x2F;span&gt;&lt;span&gt;          Item: {
+&lt;&#x2F;span&gt;&lt;span&gt;            HashKeyName: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;HashKeyValue&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;            SortKeyname: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;SortKeyValue&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;Other attributes
+&lt;&#x2F;span&gt;&lt;span&gt;          },
+&lt;&#x2F;span&gt;&lt;span&gt;        },
+&lt;&#x2F;span&gt;&lt;span&gt;      };
+&lt;&#x2F;span&gt;&lt;span&gt;    });
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;params &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      [tableName]: putRequests,
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    client
+&lt;&#x2F;span&gt;&lt;span&gt;      .&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#795da3;&quot;&gt;batchWrite&lt;&#x2F;span&gt;&lt;span&gt;({ RequestItems: params })
+&lt;&#x2F;span&gt;&lt;span&gt;      .&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#795da3;&quot;&gt;promise&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;      .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;then&lt;&#x2F;span&gt;&lt;span&gt;((data) &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Batch successful&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(data);
+&lt;&#x2F;span&gt;&lt;span&gt;      })
+&lt;&#x2F;span&gt;&lt;span&gt;      .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;catch&lt;&#x2F;span&gt;&lt;span&gt;((err) &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&amp;gt; &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Batch failed&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;console&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(err);
+&lt;&#x2F;span&gt;&lt;span&gt;      });
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;div id=&quot;on-organizing-information&quot;&gt;&lt;&#x2F;div&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Investing: The Last Liberal Art</title>
+        <published>2022-12-15T00:00:00+00:00</published>
+        <updated>2022-12-15T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/investing-the-last-liberal-art/" type="text/html"/>
+        <id>https://deekap.com/blog/investing-the-last-liberal-art/</id>
+        <content type="html"></content>
+    </entry>
+    <entry xml:lang="en">
+        <title>The Polymath</title>
+        <published>2022-12-10T00:00:00+00:00</published>
+        <updated>2022-12-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/the-polymath/" type="text/html"/>
+        <id>https://deekap.com/blog/the-polymath/</id>
+        <content type="html">&lt;h1 id=&quot;the-polymath-unlocking-the-power-of-human-versatility-by-waqas-ahmed&quot;&gt;The Polymath: Unlocking the Power of Human Versatility by Waqas Ahmed&lt;&#x2F;h1&gt;
+&lt;p&gt;This book advocates Polymathy over specialization.&lt;&#x2F;p&gt;
+&lt;p&gt;Some of the most famous Polymaths such as Leonardo Da Vinci, Benjamin Franklin and such we all recognise. However there are many more who are not that famous and remain in obsecurity.&lt;&#x2F;p&gt;
+&lt;p&gt;Polymath are not know-it-all individuals.&lt;&#x2F;p&gt;
+&lt;p&gt;They are courious and ask a lot of Why questions&lt;&#x2F;p&gt;
+&lt;p&gt;Steve Jobs is identified as a Polymath. He was a visionary and beyond excellent businessman. But Polymath? I don&#x27;t know about that. Tim Ferris is also mentioned as polymath. Right!&lt;&#x2F;p&gt;
+&lt;p&gt;There were times when I felt that either the author does not understand what Polymathy is or he is mentioning people just to score brownie points with them. The ones who are living of course. &lt;&#x2F;p&gt;
+&lt;p&gt;I was expecting more from this book than what was delivered. I was looking for some deep insights rather than an enumeration of polymaths page after page.&lt;&#x2F;p&gt;
+&lt;p&gt;Personally, I have always desired to be more of a generalist than a specialist but because of the reasons mentioned in the book, I had to specialize.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;related-external-links&quot;&gt;Related External Links&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.prospectmagazine.co.uk&#x2F;other&#x2F;the-decline-of-the-polymath&quot;&gt;The decline of the polymath&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Einstein His Life and Universe by Walter Isaacson</title>
+        <published>2022-12-09T00:00:00+00:00</published>
+        <updated>2022-12-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/einstein-his-life-and-universe/" type="text/html"/>
+        <id>https://deekap.com/blog/einstein-his-life-and-universe/</id>
+        <content type="html">&lt;p&gt;Einstein His Life and Universe is one of the best biographies I have read. &lt;&#x2F;p&gt;
+&lt;p&gt;After reading it, I have gained more understanding of Einstein as a physicist and as a person. On one hand are these unparalleled achievements in Physics and on the other are the complexities of a person who is just like any other bloke.&lt;&#x2F;p&gt;
+&lt;p&gt;I particularly enjoyed reading about his quest to figure out general relativity and then in his older years, his work on unified theory which did not yield any results. &lt;&#x2F;p&gt;
+&lt;p&gt;Einstein was a rebel of Physics in his younger days and then as he got older, he became more of a traditionalist with his views on Quantum Mechanics.&lt;&#x2F;p&gt;
+&lt;p&gt;The book was so well written that I read slowly as I got to some of the last chapters. He life story was so captivating for me that I did not want the book to end.&lt;&#x2F;p&gt;
+&lt;p&gt;This was the second biography I read by Walter Isaacson. The first was Jobs. I did not think too much about Jobs (the biography), but Einstein (the biography) was superb.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Blockchain Shmockchain</title>
+        <published>2022-10-26T00:00:00+00:00</published>
+        <updated>2022-10-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/blockchain/" type="text/html"/>
+        <id>https://deekap.com/blog/blockchain/</id>
+        <content type="html">&lt;p&gt;Last year (2021), I was approached by at least four to five organisations for positions which would have lifted my career to new heights. Some of these approaches were direct via LinkedIn and others were by recuriters. A common thread was that all except one of these positions had something to do with Blockchain.&lt;&#x2F;p&gt;
+&lt;p&gt;The non-blockchain position sounded interesting and I agreed to meet the founder of the company. It was a well funded profitable startup and I had a long and interesting discussion with the founder. The founder and his partner developed a product which was one of a kind in the world. It was a SAAS product which was used to manage blockchain transactions for users. We went into some details of their stack and it turned out that it was a tried and tested RoR application with a RDBMS backend. They had figured out that it was more rewarding selling shovels then mining for gold. It got me interested and I continued asking him about the future plans. The plan I was told was to move the rig to their own blockchain and re-write the entire thing. This is what they wanted me to be a part of. It turned out that this too was a blockchain gig. No thanks! I said and moved on.&lt;&#x2F;p&gt;
+&lt;p&gt;I always thought that blockchain was a hype which would end at some point and leave a lot of companies on life support. All we needed was a big failure and every buzz word CIO&#x2F;CTO will start calling BS on the whole thing. That big failure was delivered this month when ASX pulled the plug on their ambitions of moving to a blockchain platform. &lt;&#x2F;p&gt;
+&lt;p&gt;In it&#x27;s early days this move by ASX was received as the most welcome news by blockchian aficionados. Here was a stock exchange of a developed country moving everything to blockchain. The future was blockchain and if you are not with it then you will be left behind. What other endorsement do you need? A stock exchange which deals with real money and not some BS like NFTs was going all blockchain. There were also a few dumb Australian banks which also got onto the bandwagon and made some big announcements of their blockchain ambitions. But nothing compared to what ASX had planned. All of those entangled dreams came crashing when they finally admitted that it ain&#x27;t gonna happen.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t think there is anything wrong with the technology. It has some excellent use cases and in the future we will see it being adapted to address some genuine problems. The problem as we tech folks say is between the chair the keyboard. It is people&#x27;s interpretation and expectation of a magical solution to a problem which does not exist. &lt;&#x2F;p&gt;
+&lt;p&gt;I have stayed clear of the hype many times in my career and I plan to stick with this approach. &lt;&#x2F;p&gt;
+&lt;p&gt;Boring can be good and profitable.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Github SSH Key per Organisation</title>
+        <published>2022-10-26T00:00:00+00:00</published>
+        <updated>2022-10-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/github-ssh-key-per-organisation/" type="text/html"/>
+        <id>https://deekap.com/blog/github-ssh-key-per-organisation/</id>
+        <content type="html">&lt;p&gt;To perform git operations, I want the right key to be used.&lt;&#x2F;p&gt;
+&lt;p&gt;This is how I configure it. This approach works when the Github account is an organisation account.&lt;&#x2F;p&gt;
+&lt;p&gt;In &lt;code&gt;~&#x2F;.ssh&#x2F;config&lt;&#x2F;code&gt; add&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;Host &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;CompanyName&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;.github.com
+&lt;&#x2F;span&gt;&lt;span&gt;    HostName github.com
+&lt;&#x2F;span&gt;&lt;span&gt;    User git
+&lt;&#x2F;span&gt;&lt;span&gt;    IdentifyFile ~&#x2F;.ssh&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;KeyIWantToUse&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    IdentitiesOnly yes
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then in &lt;code&gt;~&#x2F;.gitconfig&lt;&#x2F;code&gt; I add&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;[url &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;git@&amp;lt;CompanyName&amp;gt;:github.com:&amp;lt;CompanyName&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I add this information for each organisation I have access to.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Breath</title>
+        <published>2022-09-19T00:00:00+00:00</published>
+        <updated>2022-09-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/breath-james-nestor/" type="text/html"/>
+        <id>https://deekap.com/blog/breath-james-nestor/</id>
+        <content type="html">&lt;p&gt;Breath: The new science of a lost art by James Nestor.&lt;&#x2F;p&gt;
+&lt;p&gt;What is one activity that we do constantly from the moment we are born to the second we die? The answer is breathing.&lt;&#x2F;p&gt;
+&lt;p&gt;In the hierarchy of importance, breathing is way on top above everything else. Think about it. Without breathing there is no you and without you, there is nothing.&lt;&#x2F;p&gt;
+&lt;p&gt;Sadly, I did not think too much about breathing until I read this book. I have been aware of breathing techniques such as &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pranayama&quot;&gt;pranayam&lt;&#x2F;a&gt; but I never looked into it&#x27;s benefits or practiced it. This book changed that for me.&lt;&#x2F;p&gt;
+&lt;p&gt;The author describes (not in too much detail) many breathing techniques. I was able to practice few of them while reading. I thought, that there is no equipment required or any special arrangement and I have got everything I need to try it out. So, I made it a habit to breath slowly with longer exhales while I was reading.&lt;&#x2F;p&gt;
+&lt;p&gt;There were few things I noticed in me while I did slow, deep breathing. I generally felt lighter and happier. I also noticed a change in my energy levels which were high after focused breathing. Overall, I was in a good mood.&lt;&#x2F;p&gt;
+&lt;p&gt;These results created a positive feedback loop and I have made it a habit to breath conciously, slowly and deeply.&lt;&#x2F;p&gt;
+&lt;p&gt;It could be one of the most important books I have read.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>You May Not Need Microservices</title>
+        <published>2022-09-08T00:00:00+00:00</published>
+        <updated>2022-09-08T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/you-may-not-need-microservices/" type="text/html"/>
+        <id>https://deekap.com/blog/you-may-not-need-microservices/</id>
+        <content type="html">&lt;p&gt;You most likely don&#x27;t need microservices.&lt;&#x2F;p&gt;
+&lt;p&gt;Fad is defined as&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;an intense and widely shared enthusiasm for something, especially one that is short-lived; a craze.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;When it comes to programming or application architecture, the definition is spot on. Maybe the short-lived part can be removed.&lt;&#x2F;p&gt;
+&lt;p&gt;Since last few years, I have noticed the use of microservices as the goto architecture for back-end services. Although the infection has now crept up in the front-end world too. Micro-frontends? Seriously?&lt;&#x2F;p&gt;
+&lt;p&gt;But let&#x27;s stick to microservices for now.&lt;&#x2F;p&gt;
+&lt;p&gt;You may not need them because you don&#x27;t have those problems to which are solved by microservices. You are not Netflix, Google, Facebook...&lt;&#x2F;p&gt;
+&lt;p&gt;Stop pretending that you are. Oh yes, and when&#x2F;if you do become that big, then you will have an army of engineers to deal with it.&lt;&#x2F;p&gt;
+&lt;p&gt;There, I said it.&lt;&#x2F;p&gt;
+&lt;p&gt;Now go embrace a monolith.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>ssh Key With Git Command</title>
+        <published>2022-06-21T00:00:00+00:00</published>
+        <updated>2022-06-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/ssh-key-with-git-command/" type="text/html"/>
+        <id>https://deekap.com/blog/ssh-key-with-git-command/</id>
+        <content type="html">&lt;p&gt;Use ssh key with git command&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;GIT_SSH_COMMAND&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;ssh -i ~&#x2F;.ssh&#x2F;&amp;lt;your_id&amp;gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;git push origin
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Building My Bookshelf</title>
+        <published>2022-06-01T00:00:00+00:00</published>
+        <updated>2022-06-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/building-my-bookshelf/" type="text/html"/>
+        <id>https://deekap.com/blog/building-my-bookshelf/</id>
+        <content type="html">&lt;p&gt;Few days ago, I wrote about &lt;a href=&quot;&#x2F;blog&#x2F;tracking-what-i-read&#x2F;&quot;&gt;tracking what I read&lt;&#x2F;a&gt;. What I want out of this is add books I have read to my &lt;a href=&quot;&#x2F;library&quot;&gt;bookshelf&lt;&#x2F;a&gt;. There are 116 books that I have marked as read on Goodreads and my goal is to add them to my bookshelf.&lt;&#x2F;p&gt;
+&lt;p&gt;One way of doing this is to add each book manually. Afterall 116 is not a big number. But, what&#x27;s the fun in adding them manually.&lt;&#x2F;p&gt;
+&lt;p&gt;In true developer style, I thought of automating the process.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a log of how I did it.&lt;&#x2F;p&gt;
+&lt;p&gt;Add this extension to Firefox&lt;&#x2F;p&gt;
+&lt;p&gt;https:&#x2F;&#x2F;github.com&#x2F;nirantak&#x2F;copytables&lt;&#x2F;p&gt;
+&lt;p&gt;Copy the table by selecting it on my Goodreads page.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;goodreads-capture.png&quot; alt=&quot;list-of-books&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This gives a nice csv which I can parse with some code&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;cover,title,author,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;avg rating&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,rating,shelves,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;date read&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;date added&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,Exodus,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Uris, Leon&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,4.34,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars 5 of 5 stars&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;read [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Jan 12, 2017 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Dec 22, 2016&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;edit view »&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;The Simpsons and Their Mathematical Secrets&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Singh, Simon&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,3.88,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;read [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Sep 11, 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Oct 08, 2013&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;edit view »&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;First Raj of the Sikhs: The Life and Times of Banda Singh Bahadur&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Dhillon, Harish&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,3.96,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;read , 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Jun 24, 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Jun 24, 2014&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;edit view »&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;The Secret of the Nagas (The Shiva Trilogy, #2)&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Tripathi, Amish *&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,4.08,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;1 of 5 stars 2 of 5 stars 3 of 5 stars [ 4 of 5 stars ] 5 of 5 stars&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;read , 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;May 13, 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;May 13, 2014&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;edit view »&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;The Immortals of Meluha (Shiva Trilogy, #1)&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;Tripathi, Amish *&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,4.12,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;1 of 5 stars 2 of 5 stars 3 of 5 stars 4 of 5 stars [ 5 of 5 stars ]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;read , 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;May 08, 2014 [edit]&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;May 08, 2014&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;edit view »&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;What I need is the title, author and the date I read the book. I thought of also getting the stars but my rating system is much different from what it use to be and I honestly don&#x27;t remember my rating system of that time when these books were added to Goodreads.&lt;&#x2F;p&gt;
+&lt;p&gt;The output I want for each book in the csv file is a tiny bit of markup which display the placeholder image with title and date I finished the book (if available).&lt;&#x2F;p&gt;
+&lt;p&gt;This simple and dirty Python script gives me the markup I need&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#ffffff;color:#323232;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#969896;&quot;&gt;#!&#x2F;usr&#x2F;bin&#x2F;env python3
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;csv
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;datetime &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;datetime
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#323232;&quot;&gt;parse_date&lt;&#x2F;span&gt;&lt;span&gt;(date_str):
+&lt;&#x2F;span&gt;&lt;span&gt;    date_str &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;date_str.replace(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;[edit]&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;).strip()
+&lt;&#x2F;span&gt;&lt;span&gt;    format_str &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;%b %d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;%Y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;try&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;datetime.strptime(date_str, format_str)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;date
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;except&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;with &lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;open&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;goodreads.csv&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;file:
+&lt;&#x2F;span&gt;&lt;span&gt;    csv_reader &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;csv.reader(file, delimiter&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;,&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    line_count &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;row &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;csv_reader:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;line_count &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;            parsed_date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;parse_date(row[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;])
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;parsed_date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;!= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;                month_name &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;parsed_date.strftime(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;%b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;{parsed_date.day} {month_name} {parsed_date.year}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;                date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;Date Finished: &lt;&#x2F;span&gt;&lt;span&gt;{date}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;                date &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#62a35c;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;#39;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                    &amp;lt;div class=&amp;quot;book-list-item&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                        &amp;lt;img src=&amp;quot;&#x2F;images&#x2F;covers&#x2F;placeholder.png&amp;quot; alt=&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;{row[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;]}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;quot; class=&amp;quot;book-cover&amp;quot; &#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                        &amp;lt;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                            &amp;lt;span&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;{row[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;]}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;lt;&#x2F;span&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                            &amp;lt;div&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;{date}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;&amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                        &amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                    &amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#183691;&quot;&gt;                    &amp;#39;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;                    )
+&lt;&#x2F;span&gt;&lt;span&gt;        line_count &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#a71d5d;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#0086b3;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And that&#x27;s about it. Most of the &lt;a href=&quot;&#x2F;library&quot;&gt;books I have read&lt;&#x2F;a&gt; are now in my bookshelf.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the things I need to do is add cover images for all the books I have added. Maybe I will automate that too, but I have not decided that yet.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Tracking What I Read</title>
+        <published>2022-05-22T00:00:00+00:00</published>
+        <updated>2022-05-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/tracking-what-i-need/" type="text/html"/>
+        <id>https://deekap.com/blog/tracking-what-i-need/</id>
+        <content type="html">&lt;p&gt;I have been reading books since many years and there have been times when I would read one book after another for months. There were also times when I would not pick up a book. A lot of reading happened on my commute to and from work and I figured that it was the best way to spend the commute time.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the things I never took seriously was keeping a track of what I read. For a while, I had a Goodreads account which I would update but I never took it seriously.&lt;&#x2F;p&gt;
+&lt;p&gt;The other day I was looking at my library and randomly flipping through books. A thought occurred to me that I should make an effort to catalogue all the books I have read.&lt;&#x2F;p&gt;
+&lt;p&gt;But how would I do that?&lt;&#x2F;p&gt;
+&lt;p&gt;Whenever I finish a book and if it is a printed copy (they mostly are), I write the date I finished reading it on the last page. I don&#x27;t know how I got into this habit but it is something I have been doing for years. This habit has come in handy for this project.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t think I&#x27;ll be able to add all the read books to this catalogue but hopefully I should be able to get around 80% coverage.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Wolf of the Plains</title>
+        <published>2022-05-11T00:00:00+00:00</published>
+        <updated>2022-05-11T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/wolf-of-the-plains/" type="text/html"/>
+        <id>https://deekap.com/blog/wolf-of-the-plains/</id>
+        <content type="html">&lt;p&gt;Author: Conn Iggulden&lt;&#x2F;p&gt;
+&lt;p&gt;My rating: ★★★&lt;&#x2F;p&gt;
+&lt;p&gt;I got interested in Mongolian history and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Genghis_Khan&quot;&gt;Genghis Khan&lt;&#x2F;a&gt; after watching a brilliant series called &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Marco_Polo_(TV_series)&quot;&gt;Marco Polo&lt;&#x2F;a&gt; on Netflix. After watching the series, I wanted to know more about Genghis Khan who was the founder of one of the greatest empires ever. I also wanted to be entertained so I picked up the historical fiction Conqueror series written by Conn Iggulden. These are my reflections on the first book in the series titled Wolf of the Plains.&lt;&#x2F;p&gt;
+&lt;p&gt;In the beginning was a tribe commanded by a powerful figure who seemed to have everything under control. Everything was going well until the turn of events which changed everything for the tribe and the leader’s family. A family found itself in the most difficult circumstances with one singular goal which was to survive.&lt;&#x2F;p&gt;
+&lt;p&gt;A young boy after going through the severe hardship ended up in situations where he almost died. Gradually the ruthlessness became a dominating trait and the desire to avenge became the goal of his life. After destroying the enemies, he set out to do something far bigger than just revenge. He set his eyes on ruling all the known land. And he did.&lt;&#x2F;p&gt;
+&lt;p&gt;I found the book so interesting that I found it hard to put down. While reading, I also came across a bunch of mental models.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Overconfidence (by the people against whom Temujin took his revenge)&lt;&#x2F;li&gt;
+&lt;li&gt;Collaboration&lt;&#x2F;li&gt;
+&lt;li&gt;Change&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There are five books in the series and I’m looking forward to reading them all.&lt;&#x2F;p&gt;
+&lt;p&gt;Happy reading.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;interesting-links&quot;&gt;Interesting Links&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.atlasobscura.com&#x2F;articles&#x2F;mongol-empire-women&quot;&gt;The Women Who Ran Genghis Khan&#x27;s Empire&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Dark Emu</title>
+        <published>2022-05-07T00:00:00+00:00</published>
+        <updated>2022-05-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/dark-emu/" type="text/html"/>
+        <id>https://deekap.com/blog/dark-emu/</id>
+        <content type="html">&lt;p&gt;Author: Bruce Pascoe&lt;&#x2F;p&gt;
+&lt;p&gt;My rating: ★★★&lt;&#x2F;p&gt;
+&lt;p&gt;Dark Emu by Bruce Pascoe is about natives of Australia also known as &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Aboriginal_Australians&quot;&gt;Aboriginals&lt;&#x2F;a&gt;. It is a popular belief that Aboriginals were mostly hunter gatherers who lived a nomadic life. They did not have engineering capabilities, never build houses, were not into agriculture and mostly did not do things that a civilized society would. This book challenges such beliefs and presents a different view based on documented observations by early Europeans and recent findings.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Few Thoughts on Blogging</title>
+        <published>2022-05-01T00:00:00+00:00</published>
+        <updated>2022-05-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://deekap.com/blog/few-thoughts-on-blogging/" type="text/html"/>
+        <id>https://deekap.com/blog/few-thoughts-on-blogging/</id>
+        <content type="html">&lt;p&gt;According to the &lt;a href=&quot;https:&#x2F;&#x2F;online.ndm.edu&#x2F;news&#x2F;communication&#x2F;history-of-blogging&#x2F;&quot;&gt;History of Blogging&lt;&#x2F;a&gt;, the first blog was created in 1994. The term weblog which eventually became &lt;a href=&quot;&#x2F;posts&quot;&gt;blog&lt;&#x2F;a&gt; was coined in 1997.&lt;&#x2F;p&gt;
+&lt;p&gt;For me blogging started around 2003 when Wordpress was launched. This was also the time when I was heavily invested in Microsoft ecosystem. After spending many years working with ASP and VB, I found .NET to be a relief. During this time I also got involved with the local &lt;a href=&quot;https:&#x2F;&#x2F;www.ssw.com.au&#x2F;ssw&#x2F;NETUG&#x2F;SSWUpdate&#x2F;_2006_02__Do%20you%20understand%20the%20value%20of%20consistency_.htm&quot;&gt;Microsoft community&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I created a website which I don&#x27;t remember and wrote content which is not relevant or useful to either me or anyone else (I think). This went on for few years and I finally hosted my blog on my own domain called &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20100602053942&#x2F;http:&#x2F;&#x2F;www.onedotnetway.com&#x2F;page&#x2F;2&#x2F;&quot;&gt;OneDotNetWay.com&lt;&#x2F;a&gt;. I no longer own that domain. At that time, I thought that my site looked kinda cool. You may think otherwise, and I will be in complete agreement with you.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;posts&#x2F;onedotnetway.png&quot; alt=&quot;onedotnetway.com&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Things were looking good and my blog was getting popular. The traffic was growing and other popular sites were linking to my content. It was nowhere near some of the &lt;a href=&quot;https:&#x2F;&#x2F;blog.codinghorror.com&#x2F;&quot;&gt;top technical blogs&lt;&#x2F;a&gt; of that time, but I was enjoying the attention and benefits coming my way.&lt;&#x2F;p&gt;
+&lt;p&gt;With that only-interesting-to-me history, it is time to reflect on the good and bad.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;good&quot;&gt;Good&lt;&#x2F;h2&gt;
+&lt;p&gt;Blogging as a anybody (programmer, investor, artist, cook, social worker) has many benefits. It has almost no barriers to entry but in it lies the power of Internet. One has access to limitless reach with a basic tool such as a laptop. There is a potential to form relations by expressing yourself through this medium.&lt;&#x2F;p&gt;
+&lt;p&gt;I have experienced an upward trajectory in my career because of the content I produced. People have reached out to me because of a blog post I wrote which eventually resulted in a consulting gig.&lt;&#x2F;p&gt;
+&lt;p&gt;Another big benefit is that writing is an excellent way to sharpen your skills. When you write something which other people will read, you tend to be a bit more careful about your words and the message you are delivering.&lt;&#x2F;p&gt;
+&lt;p&gt;It has also helped me identify my weak areas and there are plenty. There have been times when my assumptions around what I know were knocked to the ground as soon as I started writing about it. This motivated me to go deep into a topic which increased my level of expertise.&lt;&#x2F;p&gt;
+&lt;p&gt;The blog also served as my own repository of knowledge which I could turn to in times of need.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bad&quot;&gt;Bad&lt;&#x2F;h2&gt;
+&lt;p&gt;I don&#x27;t see anything bad about blogging or having an online presence. The only negative I can see is that I abandoned a good thing.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-now&quot;&gt;What now?&lt;&#x2F;h2&gt;
+&lt;p&gt;I have been thinking of getting back into it for sometime and I have made some trial attempts. I have been collecting notes in Notion and I feel that I have started enjoying the process of writing once again.&lt;&#x2F;p&gt;
+&lt;p&gt;One of the things I&#x27;m doing differently is that this blog&#x2F;digital-garden&#x2F;website has one and only purpose i.e. to serve me. If anyone else gets any benefit out of this, it is purely incidental.&lt;&#x2F;p&gt;
+&lt;p&gt;Also, it will not be a blog in the strict sense. It will be a bit more close to what can be called a digital garden. An assortment of stuff which I find interesting.&lt;&#x2F;p&gt;
+&lt;p&gt;I will not restrict this to be just about technology. Book reviews&#x2F;notes, photographs I take, and anything else I find interesting will find it&#x27;s way here.&lt;&#x2F;p&gt;
+&lt;p&gt;After all&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is not a race&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Thanks for reading.&lt;&#x2F;p&gt;
+&lt;p&gt;Namaste.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+</feed>

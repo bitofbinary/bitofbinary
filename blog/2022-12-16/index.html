@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{ deekap }</title>
+    <link rel="stylesheet" href="/tufte.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+            
+        <a href="https://deekap.com" class="logo-link">
+            { deekap }
+        </a>
+      </h1>
+    </header>
+
+
+    <main style="margin-top: 3rem; margin-bottom: 3rem;">
+    
+    <div class="section">
+        
+  <h1>
+    <a href="https://deekap.com/blog/2022-12-16/">DynamoDB Batch Write</a>
+  </h1>
+  <div>
+   
+  
+<span class="post-tags-inline"><span>Tags: </span>
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/til/"
+      >#til</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/aws/"
+      >#AWS</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/dynamodb/"
+      >#DynamoDB</a
+    ></span>
+
+</div>
+
+        
+  <div class="article"><p>In <a href="/tags/dynamodb">DynamoDB</a> you can write a <strong>maximum of 25 objects</strong> as a Batch Write </p>
+<pre data-lang="TypeScript" style="background-color:#ffffff;color:#323232;" class="language-TypeScript "><code class="language-TypeScript" data-lang="TypeScript"><span>  </span><span style="font-weight:bold;color:#a71d5d;">const </span><span style="color:#0086b3;">client </span><span style="font-weight:bold;color:#a71d5d;">= new </span><span>AWS.DynamoDB.DocumentClient();
+</span><span>  </span><span style="font-weight:bold;color:#a71d5d;">const </span><span style="color:#0086b3;">tableName </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>process.env.tableName;
+</span><span>  </span><span style="font-weight:bold;color:#a71d5d;">if </span><span>(tableName) {
+</span><span>    </span><span style="font-weight:bold;color:#a71d5d;">const </span><span style="color:#0086b3;">putRequests </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>users.</span><span style="font-weight:bold;color:#795da3;">map</span><span>((user) </span><span style="font-weight:bold;color:#a71d5d;">=&gt; </span><span>{
+</span><span>      </span><span style="font-weight:bold;color:#a71d5d;">return </span><span>{
+</span><span>        PutRequest: {
+</span><span>          Item: {
+</span><span>            HashKeyName: </span><span style="color:#183691;">&quot;HashKeyValue&quot;</span><span>,
+</span><span>            SortKeyname: </span><span style="color:#183691;">&quot;SortKeyValue&quot;</span><span>,
+</span><span>            </span><span style="font-weight:bold;color:#a71d5d;">...</span><span>Other attributes
+</span><span>          },
+</span><span>        },
+</span><span>      };
+</span><span>    });
+</span><span>    </span><span style="font-weight:bold;color:#a71d5d;">const </span><span style="color:#0086b3;">params </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>{
+</span><span>      [tableName]: putRequests,
+</span><span>    };
+</span><span>    client
+</span><span>      .</span><span style="font-weight:bold;color:#795da3;">batchWrite</span><span>({ RequestItems: params })
+</span><span>      .</span><span style="font-weight:bold;color:#795da3;">promise</span><span>()
+</span><span>      .</span><span style="color:#62a35c;">then</span><span>((data) </span><span style="font-weight:bold;color:#a71d5d;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#0086b3;">console</span><span>.</span><span style="color:#62a35c;">log</span><span>(</span><span style="color:#183691;">&quot;Batch successful&quot;</span><span>);
+</span><span>        </span><span style="color:#0086b3;">console</span><span>.</span><span style="color:#62a35c;">log</span><span>(data);
+</span><span>      })
+</span><span>      .</span><span style="color:#62a35c;">catch</span><span>((err) </span><span style="font-weight:bold;color:#a71d5d;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#0086b3;">console</span><span>.</span><span style="color:#62a35c;">log</span><span>(</span><span style="color:#183691;">&quot;Batch failed&quot;</span><span>);
+</span><span>        </span><span style="color:#0086b3;">console</span><span>.</span><span style="color:#62a35c;">log</span><span>(err);
+</span><span>      });
+</span><span>  }
+</span></code></pre>
+<div id="on-organizing-information"></div>
+</div> 
+
+
+        
+    </div>
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2023
+ Deepak</span>
+                    </div>
+            </div>
+    </footer>
+    
+  </body>
+</html>

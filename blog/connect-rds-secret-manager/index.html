@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{ deekap }</title>
+    <link rel="stylesheet" href="/tufte.css" />
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">
+            
+        <a href="https://deekap.com" class="logo-link">
+            { deekap }
+        </a>
+      </h1>
+    </header>
+
+
+    <main style="margin-top: 3rem; margin-bottom: 3rem;">
+    
+    <div class="section">
+        
+  <h1>
+    <a href="https://deekap.com/blog/connect-rds-secret-manager/">Connect to AWS RDS instance using boto3 and Secret Manager</a>
+  </h1>
+  <div>
+  
+<span class="post-tags-inline">
+
+  <span>Category: </span>
+  <a
+    class="post-category"
+    href="https://deekap.com/categories/technology/"
+    >technology</a
+  ></span>
+ 
+  
+<span class="post-tags-inline"><span>Tags: </span>
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/aws/"
+      >#aws</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/python/"
+      >#python</a
+    >,
+    <a
+      class="post-tag"
+      href="https://deekap.com/tags/cloud/"
+      >#cloud</a
+    ></span>
+
+</div>
+
+        
+  <div class="article"><p>Code to connect to an AWS RDS instance with <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">boto3</a> and Secret Manager</p>
+<pre data-lang="python" style="background-color:#ffffff;color:#323232;" class="language-python "><code class="language-python" data-lang="python"><span style="font-weight:bold;color:#a71d5d;">import </span><span>boto3
+</span><span style="font-weight:bold;color:#a71d5d;">import </span><span>json
+</span><span style="font-weight:bold;color:#a71d5d;">import </span><span>psycopg2
+</span><span>
+</span><span style="color:#0086b3;">REGION </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#183691;">&#39;&lt;region&gt;&#39;
+</span><span style="color:#0086b3;">PROFILE </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#183691;">&#39;&lt;profile-name&gt;&#39;
+</span><span style="color:#0086b3;">SECRET_ARN </span><span style="font-weight:bold;color:#a71d5d;">= </span><span style="color:#183691;">&#39;&lt;Secret-ARN-From-Secret-Manager&gt;&#39;
+</span><span>
+</span><span style="font-weight:bold;color:#a71d5d;">def </span><span style="font-weight:bold;color:#323232;">main</span><span>():
+</span><span>    session </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>boto3.Session(profile_name</span><span style="font-weight:bold;color:#a71d5d;">=</span><span style="color:#0086b3;">PROFILE</span><span>)
+</span><span>    client </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>session.client(</span><span style="color:#183691;">&#39;secretsmanager&#39;</span><span>, region_name</span><span style="font-weight:bold;color:#a71d5d;">=</span><span style="color:#0086b3;">REGION</span><span>)
+</span><span>
+</span><span>    </span><span style="font-style:italic;color:#969896;"># Get secret from Secret Manager
+</span><span>    secret </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>client.get_secret_value(SecretId</span><span style="font-weight:bold;color:#a71d5d;">=</span><span style="color:#0086b3;">SECRET_ARN</span><span>)
+</span><span>
+</span><span>    </span><span style="font-style:italic;color:#969896;"># Load secrets into a dictionary
+</span><span>    secret_dict </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>json.loads(secret[</span><span style="color:#183691;">&#39;SecretString&#39;</span><span>])
+</span><span>    username </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>secret_dict[</span><span style="color:#183691;">&#39;username&#39;</span><span>]
+</span><span>    password </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>secret_dict[</span><span style="color:#183691;">&#39;password&#39;</span><span>]
+</span><span>    host </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>secret_dict[</span><span style="color:#183691;">&#39;host&#39;</span><span>]
+</span><span>    port </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>secret_dict[</span><span style="color:#183691;">&#39;port&#39;</span><span>]
+</span><span>    database </span><span style="font-weight:bold;color:#a71d5d;">= </span><span>secret_dict[</span><span style="color:#183691;">&#39;dbname&#39;</span><span>]
+</span><span>
+</span><span>    </span><span style="font-style:italic;color:#969896;"># Make a connection 
+</span><span>    conn</span><span style="font-weight:bold;color:#a71d5d;">= </span><span>psycopg2.connect(
+</span><span>            user</span><span style="font-weight:bold;color:#a71d5d;">=</span><span>username,
+</span><span>            password</span><span style="font-weight:bold;color:#a71d5d;">=</span><span>password,
+</span><span>            host</span><span style="font-weight:bold;color:#a71d5d;">=</span><span>host,
+</span><span>            port</span><span style="font-weight:bold;color:#a71d5d;">=</span><span>port,
+</span><span>            database</span><span style="font-weight:bold;color:#a71d5d;">=</span><span>database,
+</span><span>            connect_timeout</span><span style="font-weight:bold;color:#a71d5d;">=</span><span style="color:#0086b3;">10
+</span><span>    )
+</span><span>
+</span><span>    </span><span style="color:#62a35c;">print</span><span>(</span><span style="color:#183691;">&quot;Connection created&quot;</span><span>)
+</span><span>
+</span><span>
+</span><span style="font-weight:bold;color:#a71d5d;">if </span><span>__name__ </span><span style="font-weight:bold;color:#a71d5d;">== </span><span style="color:#183691;">&#39;__main__&#39;</span><span>:
+</span><span>    main()
+</span></code></pre>
+</div> 
+
+
+        
+    </div>
+
+    </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                        <span>© 
+    2023
+ Deepak</span>
+                    </div>
+            </div>
+    </footer>
+    
+  </body>
+</html>
